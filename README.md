@@ -3,7 +3,7 @@ AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstru
 1. [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1DMCF_n3XT-r82lQEyoaCODNZMso6MiED?usp=sharing)  
 (optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)
 
-2. Segment Editor PP (with Ungroup tool)  
+2. Segment Editor PP (with Graphic2shape)  
 preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)  
 
 3. 3D reconstruction using 3D slicer  
