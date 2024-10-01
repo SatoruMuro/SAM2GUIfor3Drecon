@@ -59,11 +59,13 @@ Once the GUI is open, follow the steps below:
 A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)  
 
-生成されたファイルは以下の２種類です。  
-segmented_images：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
-mask_color_images：マスク画像です。こちらをStep 2で使います。 
+生成されるファイルは以下の２種類です。  
+
+**segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
+**mask_color_images**：マスク画像です。こちらをStep 2で使います。  
+
 マスク画像では、セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられます（最大20個）。  
-（R,G,B）: オブジェクト番号
+（R,G,B）: オブジェクト番号  
     (255, 0, 0): 1,     # 赤  
     (0, 0, 255): 2,     # 青  
     (0, 255, 0): 3,     # 緑  
