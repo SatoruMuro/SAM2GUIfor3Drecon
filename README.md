@@ -119,6 +119,7 @@ Open the Colab notebook and execute all cells by going to Runtime > Run all (Ctr
 SVG files can be viewed in web browsers such as Chrome.  
 There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
 
+
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
 
