@@ -24,8 +24,26 @@ preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0
 preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1r-Br00ZOcABH_HbSnZ16RnKf256pRIq3?usp=sharing)  
 
 ## Tutorial
+### Step 1: AI-Powered Segmentation
+まず、連続切片画像（連続断層画像）をjpg形式で用意してください。jpg形式でない場合、何かしらの変換ソフトでjpg形式に変換してください。こちのJPG Converterもお使いいただけます。[JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
+画像ファイル名は、番号順にソートが可能な名前にしてください（image0001.jpg, image0002.jpgなど）。画像ファイルの大きさは一辺が1000px以下を推奨します。
 
+次に、こちらにアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
+[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)  
+ノートブックが開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行し、セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。
+
+GUIを開いたら、以下の手順で操作します。  
+1. 画像（複数枚）のアップロード  
+2. セグメンテーションの基準として用いる画像の選択  
+3. 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
+4. 次の対象物のセグメンテーションを行い、２つ目の対象物のセグメンテーションを完了する（すべての対象物が完了するまで繰り返す）（一度に扱える対象物は最大20個まで）  
+5. すべての対象物のセグメンテーションが完了したら、トラッキングを開始  
+6. セグメンテーション結果の確認  
+7. 生成されたファイルのダウンロード  
+
+デモ動画は[こちら](https://youtu.be/Xz-YpWa89G4)  
 [![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)
+
 
 
 ## License
