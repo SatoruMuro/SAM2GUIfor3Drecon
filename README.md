@@ -31,7 +31,7 @@ First, prepare the image sequence (consecutive tomographic images) in JPG format
 Name the image files in a way that allows them to be sorted in numerical order (e.g., image0001.jpg, image0002.jpg, etc.). It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
 
 次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
-ノートブックが開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行し、セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。
+ノートブックが開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行し、セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
 Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing) to open the Google Colab notebook (Google login is required).  
 Once the notebook is open, execute all cells by selecting Runtime > Run all (Shortcut: Ctrl+F9). Then, click on the URL generated at the end of Cell [2] (Running on public URL) to open it. The GUI will open in a new tab. Please do not close the Colab notebook screen (tab) even after the GUI has opened in a new tab. It takes about 5 minutes for Cell [1] to complete execution, and approximately 5 seconds for Cell [2].  
 
