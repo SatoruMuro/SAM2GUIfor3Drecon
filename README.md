@@ -75,6 +75,7 @@ The generated files consist of the following two types:
 
 マスク画像では、セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられます（最大20個）。  
 In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
+
 （R,G,B）: オブジェクト番号  object number  
     (255, 0, 0): 1,     # 赤  Red  
     (0, 0, 255): 2,     # 青  Blue  
