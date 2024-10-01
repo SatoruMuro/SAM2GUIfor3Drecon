@@ -25,7 +25,7 @@ preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1r-B
 
 ## Tutorial
 
-[![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/maxresdefault.jpg)](https://youtu.be/Xz-YpWa89G4)
+[![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)
 
 
 ## License
