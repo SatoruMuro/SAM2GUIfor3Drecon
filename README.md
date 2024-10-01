@@ -56,8 +56,8 @@ Once the GUI is open, follow the steps below:
 
 
 デモ動画は[こちら](https://youtu.be/Xz-YpWa89G4)  
-A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).
-[![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)
+A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).  
+[![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)  
 
 
 
