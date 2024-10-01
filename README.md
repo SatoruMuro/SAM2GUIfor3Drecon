@@ -59,6 +59,8 @@ Once the GUI is open, follow the steps below:
 A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)  
 
+### Step 2: Interactive Refinement
+
 
 
 ## License
