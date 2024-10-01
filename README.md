@@ -91,7 +91,7 @@ A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).
 Step 1で生成されたセグメンテーションマスク画像（mask_color_images）（PNGファイル）を用います。 
 
 SAM2 GUIによる自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
-もし、SAM2 GUIによる自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。１回の作業の中で順番に色ラベルがつくため、複数のシリーズ間で、異なる対象物に同じ色がついている場合があります。その場合は、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。  
+もし、SAM2 GUIによる自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。  
 
 
 ## License
