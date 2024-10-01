@@ -118,8 +118,8 @@ Convert the segmentation mask images (PNG files) into vector format (SVG files) 
 Open the Colab notebook and execute all cells by going to Runtime > Run all (Ctrl+F9). At the end of Cell [2], use the "Choose Files" button that appears to upload your mask images. The vector conversion will be performed, and the converted mask images will be downloaded as a zip file. The time required will vary depending on the number of images being converted.  
 SVG files can be viewed in web browsers such as Chrome.  
 There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
-
-
+  
+  
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
 
