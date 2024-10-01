@@ -42,7 +42,7 @@ GUIを開いたら、以下の手順で操作します。
 4. 次の対象物のセグメンテーションを行い、２つ目の対象物のセグメンテーションを完了する（すべての対象物が完了するまで繰り返す）（一度に扱える対象物は最大20個まで）  
 5. すべての対象物のセグメンテーションが完了したら、トラッキングを開始  
 6. セグメンテーション結果の確認  
-7. 生成されたファイルのダウンロード
+7. 生成されたファイルのダウンロード  
 Once the GUI is open, follow the steps below:  
 1. Upload the images (multiple images).  
 2. Select the image to be used as a reference for segmentation.  
