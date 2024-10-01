@@ -91,7 +91,13 @@ A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).
 Step 1で生成されたセグメンテーションマスク画像（mask_color_images）（PNGファイル）を用います。 
 
 SAM2 GUIによる自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
-もし、SAM2 GUIによる自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。  
+もし、SAM2 GUIによる自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 GUIによる自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
+
+セグメンテーションマスク画像（PNGファイル）を、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター形式（SVGファイル）に変換します。  
+Colabのノートブックを開いたら、ランタイム>すべてのセルを実行（Ctrl+F9）によりすべてのセルを実行し、セル[2]の最後に生成された「ファイルを選択」ボタンから、マスク画像をアップロードしてください。ベクター変換が行われ、最後にベクター変換後のマスク画像がzipでまとめてダウンロードされます。ベクター変換を行う画像の枚数に応じて所要時間が異なります。  
+SVG形式のファイルは、Chromeなどのウェブブラウザで開くことができます。  
+変換に失敗する画像が含まれることがあります。変換に失敗したら、その画像だけ再度トライしてください。（変換失敗画像は、Windowsのエクスプローラーでサムネイル画像が全然表示されないこと、Chromeなどで開いてもエラーが出てしまうことにより、変換失敗画像だと判断できます。）  
+
 
 
 ## License
