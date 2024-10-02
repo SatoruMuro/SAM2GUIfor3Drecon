@@ -14,17 +14,17 @@ The overall workflow is summarized in the following 3 steps.The tutorial will ex
 ## 3 Steps
 
 **Step 1. AI-Powered Segmentation**  
+(optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
 [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)  
-(optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)
 
 **Step 2. Interactive Refinement**  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe))  
 (optional) preparation: [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing)  
 preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe))  
 
 **Step 3. 3D reconstruction**  
-[3D slicer](https://www.slicer.org/)  
 preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1r-Br00ZOcABH_HbSnZ16RnKf256pRIq3?usp=sharing)  
+[3D slicer](https://www.slicer.org/)  
 
 ## Tutorial
 ### Step 1: AI-Powered Segmentation
@@ -118,7 +118,45 @@ Convert the segmentation mask images (PNG files) into vector format (SVG files) 
 Open the Colab notebook and execute all cells by going to Runtime > Run all (Ctrl+F9). At the end of Cell [2], use the "Choose Files" button that appears to upload your mask images. The vector conversion will be performed, and the converted mask images will be downloaded as a zip file. The time required will vary depending on the number of images being converted.  
 SVG files can be viewed in web browsers such as Chrome.  
 There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
-  
+
+いよいよ、セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
+Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
+作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。
+
+Segment Editor PPは９個のマクロを搭載しています。  
+AaAddImages：連続断層画像の画像ファイルを配置します。（フォルダ選択）  
+AbAddMasks：ベクター変換後のマスク画像（SVG形式）を連続断層画像の上に重ねます。（ファイル選択）  
+AcDeleteBlackShapesWith70PercentTransparent：マスク画像に含まれていた余分な黒背景を削除し、マスクを70%透過にします。  
+BaSelectShapeAndRecord：選択中のマスクを記憶し編集可能な状態にします。  
+BbCutimageWithPreviousShapeAndApplyColor：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を削ります（減算）。  
+BcMergeWithPreviousShapeAndApplyColor：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を広げます（加算）。  
+CaFinalizeMasks：背景の連続断層画像を非表示にし、黒背景のマスク画像にします。  
+CbExportToPDF：PDFファイルとして出力します。  
+CcReturnToMaskEditing：マスクを編集する状態に戻します。  
+
+マクロは３つずつのグループにわかれており、Aグループは編集作業前のデータの入力、Bグループは編集作業、Cグループは編集後の出力に用います。  
+
+最初にやるべきことが２つあります。１）スライドのサイズの調整と、２）クイックアクセスツールバーへのマクロの配置です。  
+１）スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
+２）クイックアクセスツールバーへのマクロの配置：マクロのBグループをクイックアクセスツールバーの最初の３つに配置してください。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になります。（数字は配置されている順番）  
+
+続いて、マクロAグループを使ってデータの入力です。マクロAa、Abを使って、連続断層画像とマスク画像を配置します。  
+マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)を用いて、グラフィックス形式から図形に変換します。Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください。  
+図形に変換できたら、マクロAcを使って、編集前の準備完了です。  
+
+続いて、セグメンテーションマスクの確認・編集作業です。  
+作業はタッチペンやペンタブレットを用いて、右手にタッチペン（またはマウス）、左手でキーボード操作、を推奨します。キーボード操作には、[Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0)のKeyboard Managerの「キーの再マップ」を使って、以下のような配置で作業するのがおすすめです。  
+
+画像（キー配置）
+
+作業としては、PgUpとPgDnでスライドを行き来し、セグメンテーション結果を確認し、必要があれば編集します。特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小ができます。マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していきます。  
+
+全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループを使って、修正後のマスクカラー画像をPDF形式で出力します。  
+
+### Step 3: 3D reconstruction  
+
+ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
+
   
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
