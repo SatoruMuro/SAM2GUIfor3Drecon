@@ -153,6 +153,10 @@ CcReturnToMaskEditing：マスクを編集する状態に戻します。
 
 全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループを使って、修正後のマスクカラー画像をPDF形式で出力します。  
 
+デモ動画は[こちら](https://youtu.be/HToh0SFPtZw)  
+A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).  
+[![YouTubeサムネイル](https://img.youtube.com/vi/HToh0SFPtZw/hqdefault.jpg)](https://youtu.be/HToh0SFPtZw)  
+
 ### Step 3: 3D reconstruction  
 
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
