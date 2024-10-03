@@ -23,7 +23,7 @@ preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0
 [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe))  
 
 **Step 3. 3D reconstruction**  
-preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1r-Br00ZOcABH_HbSnZ16RnKf256pRIq3?usp=sharing)  
+preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)  
 [3D slicer](https://www.slicer.org/)  
 
 ## Tutorial
