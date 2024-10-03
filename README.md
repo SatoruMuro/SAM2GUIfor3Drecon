@@ -196,10 +196,36 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 ### Step 3: 3D reconstruction  
 
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
+また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールが写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
+
+セグメンテーションした対象物が複数の場合、マスクカラー画像をオブジェクトごとに分割する必要があります。Step 2で出力したマスクカラーのPDFファイルと、もとの連続断層画像ファイル１つ（サイズを参照するために用いる）を用意して、[Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)を用いてオブジェクトごとのマスク画像シリーズを取得してください。  
+セグメンテーションした対象物が一つの場合はこの作業は必要ありません。  
+
+続いて、3D slicerでの作業です。3D slicerを立ち上げて、画面上のツールバーから、表示をconventionalにしておきます。  
+Add data > Choose Directory to Addでマスク画像のフォルダを選択してください。マスク画像は、オブジェクトごとに分割されたものです。  
+Volumes > Volume Informationの画面に行き、Image spacingのz軸の値を修正します（左からx軸、ｙ軸、ｚ軸の順に並んでいます）。z軸のImage spacingには、（画像のpx/mm）×（切片の間隔mm）の値を入力してください。x軸、y軸のImage spacingは1mmのままでよいです。入力値を変えると断層画像の表示がずれることがありますが、Center Viewボタンで画像を画面の中央に配置できます。  
+
+Segment Editorの画面に行き、Addボタンを押します。Threshholdボタンを押して、選択範囲を確認し、Applyを押します。  
+Show 3D ボタンを押します。右側の▼を展開すると、smoothingの有り無しを設定できます。  
+3Dの構築像を確認します。Center Viewボタンでオブジェクトを画面の中央に配置できます。  
+Show 3Dボタンの右にある右矢印ボタン（→）の右にある▼を展開し、Export to filesを選択します。出力先のフォルダを指定して、Exportを押します。  
+
+上記の手順で、各構造物ごとにSTLファイルを作成します。一つのフォルダにまとめておくと便利です。  
+全ての構造物のSTLファイルを取得できたら、それらを3D slicerで開き、観察します。改めて3D slicerを立ち上げてください。
+
+今度は、表示を3D onlyにしておきます。  
+Add data > Choose Files to Addで作成したSTLファイルをすべて選択します。  
+Modelsの画面に行き、各Nodeの色と透明度を変更します。  
+SaveでMRML Sceneとして保存しておけば、また同じ状態を開くことができます。  
+
+以下、表示の設定方法やスクリーンショットの取得方法について説明します。  
+3D像の背景を黒にするには、View controllers > 3D View Controllersの眼のマーク> Black background。
+cubeとlabelの表示をオフにするには、View controllers > 3D View Controllersの眼のマーク>3D cubeと3D axis labelのチェックを外す。
+スクリーンショットの取得は、上のツールバーのカメラのマーク>３DViewを選択して、Save Asで保存先のフォルダとファイル名を指定>OKです。
 
   
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
 
 ## License
-The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the Apache 2.0 License.
+The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/LICENSE).
