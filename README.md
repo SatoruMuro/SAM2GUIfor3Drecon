@@ -60,9 +60,13 @@ Once the GUI is open, follow the steps below:
 
 
 
-デモ動画は[こちら](https://youtu.be/Xz-YpWa89G4)  
+デモ動画（複数オブジェクト）は[こちら](https://youtu.be/Xz-YpWa89G4)  
 A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)  
+
+デモ動画（一つのオブジェクト）は[こちら](https://youtu.be/tXG23oDyItk)  
+A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).  
+[![YouTubeサムネイル](https://img.youtube.com/vi/tXG23oDyItk/hqdefault.jpg)](https://youtu.be/tXG23oDyItk)  
 
 生成されるファイルは以下の２種類です。  
 
@@ -223,6 +227,9 @@ SaveでMRML Sceneとして保存しておけば、また同じ状態を開くこ
 cubeとlabelの表示をオフにするには、View controllers > 3D View Controllersの眼のマーク>3D cubeと3D axis labelのチェックを外す。
 スクリーンショットの取得は、上のツールバーのカメラのマーク>３DViewを選択して、Save Asで保存先のフォルダとファイル名を指定>OKです。
 
+デモ動画は[こちら](https://youtu.be/CLrHR_u2Ru0)  
+A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).  
+[![YouTubeサムネイル](https://img.youtube.com/vi/CLrHR_u2Ru0/hqdefault.jpg)](https://youtu.be/CLrHR_u2Ru0)  
   
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
