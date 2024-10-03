@@ -202,3 +202,4 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 *This tutorial is currently in progress.
 
 ## License
+The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the Apache 2.0 License.
