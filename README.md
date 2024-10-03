@@ -121,37 +121,73 @@ There might be instances where some images fail to convert. If a conversion fail
 
 いよいよ、セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
 Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
-作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。
+作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。  
 
+Now, we will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.  
+Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
+We recommend using a stylus pen or pen tablet for this task, but mouse operation is also possible.  
+  
 Segment Editor PPは９個のマクロを搭載しています。  
-AaAddImages：連続断層画像の画像ファイルを配置します。（フォルダ選択）  
-AbAddMasks：ベクター変換後のマスク画像（SVG形式）を連続断層画像の上に重ねます。（ファイル選択）  
-AcDeleteBlackShapesWith70PercentTransparent：マスク画像に含まれていた余分な黒背景を削除し、マスクを70%透過にします。  
-BaSelectShapeAndRecord：選択中のマスクを記憶し編集可能な状態にします。  
-BbCutimageWithPreviousShapeAndApplyColor：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を削ります（減算）。  
-BcMergeWithPreviousShapeAndApplyColor：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を広げます（加算）。  
-CaFinalizeMasks：背景の連続断層画像を非表示にし、黒背景のマスク画像にします。  
-CbExportToPDF：PDFファイルとして出力します。  
-CcReturnToMaskEditing：マスクを編集する状態に戻します。  
+**AaAddImages**：連続断層画像の画像ファイルを配置します。（フォルダ選択）  
+**AbAddMasks**：ベクター変換後のマスク画像（SVG形式）を連続断層画像の上に重ねます。（ファイル選択）  
+**AcDeleteBlackShapesWith70PercentTransparent**：マスク画像に含まれていた余分な黒背景を削除し、マスクを70%透過にします。  
+**BaSelectShapeAndRecord**：選択中のマスクを記憶し編集可能な状態にします。  
+**BbCutimageWithPreviousShapeAndApplyColor**：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を削ります（減算）。  
+**BcMergeWithPreviousShapeAndApplyColor**：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を広げます（加算）。  
+**CaFinalizeMasks**：背景の連続断層画像を非表示にし、黒背景のマスク画像にします。  
+**CbExportToPDF**：PDFファイルとして出力します。  
+**CcReturnToMaskEditing**：マスクを編集する状態に戻します。  
+
+Segment Editor PP includes nine macros:  
+**AaAddImages**: Places the image files of serial tomographic images. (Folder selection)  
+**AbAddMasks**: Overlays the vector-converted mask images (in SVG format) onto the serial tomographic images. (File selection)  
+**AcDeleteBlackShapesWith70PercentTransparent**: Removes any unnecessary black backgrounds included in the mask image and makes the mask 70% transparent.  
+**BaSelectShapeAndRecord**: Saves the selected mask, making it editable.  
+**BbCutImageWithPreviousShapeAndApplyColor**: Trims the mask area based on freeform or curve-drawn lines (subtraction).  
+**BcMergeWithPreviousShapeAndApplyColor**: Expands the mask area based on freeform or curve-drawn lines (addition).  
+**CaFinalizeMasks**: Hides the serial tomographic background images, leaving the mask image with a black background.  
+**CbExportToPDF**: Exports the file as a PDF.  
+**CcReturnToMaskEditing**: Returns the mask to an editable state.  
 
 マクロは３つずつのグループにわかれており、Aグループは編集作業前のデータの入力、Bグループは編集作業、Cグループは編集後の出力に用います。  
+
+The macros are divided into three groups:  
+Group A is used for data input before editing tasks.  
+Group B is used for editing tasks.  
+Group C is used for output after editing.  
 
 最初にやるべきことが２つあります。１）スライドのサイズの調整と、２）クイックアクセスツールバーへのマクロの配置です。  
 １）スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
 ２）クイックアクセスツールバーへのマクロの配置：マクロのBグループをクイックアクセスツールバーの最初の３つに配置してください。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になります。（数字は配置されている順番）  
 
+There are two things you should do first:  
+1) Adjust the slide size and 2) Add the macros to the Quick Access Toolbar.  
+1) Adjust the slide size: Check the aspect ratio (width: height) of the pixel size of the serial tomographic images in the file properties or other relevant information, and adjust the slide's aspect ratio to match. As long as the width and height ratio are the same, it will be fine.  
+2) Add the macros to the Quick Access Toolbar: Place the macros from Group B in the first three slots of the Quick Access Toolbar. Commands placed in the Quick Access Toolbar can be accessed using the "Alt + number" shortcuts, with the number corresponding to their position.  
+
 続いて、マクロAグループを使ってデータの入力です。マクロAa、Abを使って、連続断層画像とマスク画像を配置します。  
 マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)を用いて、グラフィックス形式から図形に変換します。Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください。  
 図形に変換できたら、マクロAcを使って、編集前の準備完了です。  
 
+Next, we will input the data using the Group A macros. Use macros Aa and Ab to place the serial tomographic images and the mask images.  
+To make the mask images placed with macro Ab editable, use Graphic2shape to convert the graphics format into shapes. Launch the Graphic2shape executable file and follow the instructions in the message box.  
+Once the conversion to shapes is complete, use macro Ac to finish preparing for editing.  
+
 続いて、セグメンテーションマスクの確認・編集作業です。  
 作業はタッチペンやペンタブレットを用いて、右手にタッチペン（またはマウス）、左手でキーボード操作、を推奨します。キーボード操作には、[Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0)のKeyboard Managerの「キーの再マップ」を使って、以下のような配置で作業するのがおすすめです。  
+
+Next is the verification and editing of the segmentation mask.  
+It is recommended to use a stylus pen or pen tablet for the task, with the stylus (or mouse) in your right hand and the keyboard in your left hand for keyboard operations. For keyboard operations, it is recommended to use the "Key Remapping" feature in Keyboard Manager from [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0), setting up the keys in the following layout for more efficient work.  
 
 ![Key Remapping](images/KeyRemapping.jpg)
 
 作業としては、PgUpとPgDnでスライドを行き来し、セグメンテーション結果を確認し、必要があれば編集します。特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小ができます。マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していきます。  
 
+In this task, use PgUp and PgDn to navigate between slides and review the segmentation results, editing them as needed. You can zoom in and out while selecting a specific mask by holding Ctrl and using the mouse scroll wheel. Utilize the macros from Group B along with freeform input using the stylus (or the curve tool if using a mouse) to make fine adjustments to the mask contours.  
+
 全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループを使って、修正後のマスクカラー画像をPDF形式で出力します。  
+
+Once the reviewing and modifying  of all segmentation masks are complete, use the Group C macros to export the corrected mask color images in PDF format.  
 
 デモ動画は[こちら](https://youtu.be/HToh0SFPtZw)  
 A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).  
