@@ -34,7 +34,7 @@ Image > Color > Merge Channels を選択し、Merge Channelsのウィンドウ�
 
 File > Save As > Image Sequence... で保存のウィンドウを開き、Browseで保存先のフォルダを指定し、Formatでファイル形式（JPEGなど）を、Nameでファイル名（「image」など）を指定します。Star Atは1にすると良いでしょう。Digitsは3か4ぐらいが妥当でしょう。OKを押して保存します。  
 
-おわり
+位置合わせ完了です。お疲れ様でした！
 
 
 
