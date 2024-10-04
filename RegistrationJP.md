@@ -1,5 +1,5 @@
 組織連続切片の場合、セグメンテーションの前に位置合わせ（Registration）が必要になります。  
-ここでは、Image JのプラグインであるMultiStackRegを用いた位置合わせの方法をご紹介します。  
+ここでは、Image Jのプラグインである[MultiStackReg](https://github.com/miura/MultiStackRegistration)を用いた位置合わせの方法をご紹介します。  
 
 ## Fijiのダウンロード  
 Fijiは、ImageJに最初から色々なプラグインが入っているソフトです。[こちら](https://fiji.sc/)からダウンロードしてください。  
