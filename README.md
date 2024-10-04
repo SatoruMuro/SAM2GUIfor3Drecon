@@ -11,6 +11,8 @@ The basic concept involves performing **coarse segmentation** with SAM2's traini
 For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer.  
 The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.
 
+組織連続切片の場合、セグメンテーションの前に位置合わせが必要です。位置合わせの方法は[こちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md)をご参照ください。  
+
 ## 3 Steps
 
 **Step 1. AI-Powered Segmentation**  
