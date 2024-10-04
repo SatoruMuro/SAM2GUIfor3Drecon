@@ -22,7 +22,7 @@ Fijiを起動し、File > Import > Image Sequence... で連続切片をインポ
 
 MultiStackRegはカラー画像をそのまま扱うことはできないので、画像をRGBそれぞれのチャンネルに分割します。Image > Color > Split Channels により、色分割すると、フォルダ名の後に (red) (green) (blue) がそれぞれ名前の最後についた３つの画像群（Image Stackといいます）に分割されます。  
 
-（画像）
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackReg.png" alt="インストール" width="50%">
 
 Plugins > Registration > MultiStackReg を選択し、MultiStackRegウィンドウを開きます。Stack 1の欄で位置合わせを行うスタックを選択します。どれでも良いですが、ここでは (blue) のスタックにしましょう。Action 1は Align （位置合わせを行うということ）、下から２番目のSave Transformation Fileにチェックをつけて、OKを押します。Save transformations atというウィンドウが開くので、保存場所を指定してください。ファイル名は変更しても大丈夫です（デフォルトはTransformationMatrices.txt）。位置合わせが実行されるので、完了するまで待ちます。完了したら、 (blue) のスタックをスクロールして見てみましょう。位置合わせされています。  
 
