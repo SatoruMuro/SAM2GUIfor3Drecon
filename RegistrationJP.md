@@ -6,7 +6,7 @@ Fijiは、ImageJに最初から色々なプラグインが入っているソフ�
 ダウンロードしたファイルを解凍して得られた「Fiji.app」というフォルダをCドライブ直下においてください。フォルダ内の「ImageJ-win64.exe」（Windowsの場合のファイル名）というファイルでFijiが起動します。タスクバー等にピン止めしておくと良いでしょう。  
 ## MultiStackRegとTurboRegのインストール
 
-（画像）
+![インストール](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackRegInstall.png)
 
 Fijiを起動し、Help > Update... を選択します。少し待ってImageJ Updaterというウィンドウが開いたら、Manage Update Sitesを選択してください。Searchの検索窓に「multistackreg」と入力して出てきたMultiStackRegにチェックを付けます。Apply and Close、Apply Changesを押して完了です。  
 
