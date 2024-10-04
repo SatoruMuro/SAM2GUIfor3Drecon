@@ -37,7 +37,7 @@ File > Save As > Image Sequence... で保存のウィンドウを開き、Browse
 
 位置合わせ完了です。お疲れ様でした！
 
-## 研究での使用について
+## MultiStackRegの研究での使用について
 MultiStackRegに基づく結果を発表または公開する場合は、必ず引用または謝辞を含める必要があります。詳細は[こちら](https://github.com/miura/MultiStackRegistration)をご参照ください。
 
 
