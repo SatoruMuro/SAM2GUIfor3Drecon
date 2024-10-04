@@ -4,6 +4,7 @@
 ## Fijiのダウンロード  
 Fijiは、ImageJに最初から色々なプラグインが入っているソフトです。[こちら](https://fiji.sc/)からダウンロードしてください。  
 ダウンロードしたファイルを解凍して得られた「Fiji.app」というフォルダをCドライブ直下においてください。フォルダ内の「ImageJ-win64.exe」（Windowsの場合のファイル名）というファイルでFijiが起動します。タスクバー等にピン止めしておくと良いでしょう。  
+
 ## MultiStackRegとTurboRegのインストール
 
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackRegInstall.png" alt="インストール" width="50%">
@@ -15,8 +16,8 @@ MultiStackRegの機能には、TurboRegという別のプラグインも必要�
 Fijiを一度閉じて、もう一度立ち上げるとインストールしたプラグインが反映されます。  
 Plugins > Registration の中に、MultiStackRegとTurboRegが入っていることを確認してください。  
 
-
 ## 位置合わせの操作手順
+
 位置合わせを行う連続切片の画像を一つのフォルダにまとめておいてください。画像のファイル名は番号でソート可能なものにしておいてください（image0001, image0002...など）。  
 Fijiを起動し、File > Import > Image Sequence... で連続切片をインポートします。Import Image Sequenceのウィンドウが開いたら、Brouseで連続切片画像が入っているフォルダを選択します。Countに表示される画像の枚数を確認し、Sorg names numericallyにチェックを付けて、OKを押します。  
 
@@ -35,6 +36,9 @@ Image > Color > Merge Channels を選択し、Merge Channelsのウィンドウ�
 File > Save As > Image Sequence... で保存のウィンドウを開き、Browseで保存先のフォルダを指定し、Formatでファイル形式（JPEGなど）を、Nameでファイル名（「image」など）を指定します。Star Atは1にすると良いでしょう。Digitsは3か4ぐらいが妥当でしょう。OKを押して保存します。  
 
 位置合わせ完了です。お疲れ様でした！
+
+## 研究での使用について
+MultiStackRegに基づく結果を発表または公開する場合は、必ず引用または謝辞を含める必要があります。詳細は[こちら](https://github.com/miura/MultiStackRegistration)をご参照ください。
 
 
 
