@@ -1,9 +1,15 @@
 組織連続切片の場合、セグメンテーションの前に位置合わせ（Registration）が必要になります。  
 ここでは、Image Jのプラグインである[MultiStackReg](https://github.com/miura/MultiStackRegistration)を用いた位置合わせの方法をご紹介します。  
 
+In the case of serial sections of histology, registration is required prior to segmentation.  
+Here, I introduce a method for registration using [MultiStackReg](https://github.com/miura/MultiStackRegistration), a plugin for ImageJ.  
+
 ## Fijiのダウンロード  
 Fijiは、ImageJに最初から色々なプラグインが入っているソフトです。[こちら](https://fiji.sc/)からダウンロードしてください。  
 ダウンロードしたファイルを解凍して得られた「Fiji.app」というフォルダをCドライブ直下においてください。フォルダ内の「ImageJ-win64.exe」（Windowsの場合のファイル名）というファイルでFijiが起動します。タスクバー等にピン止めしておくと良いでしょう。  
+
+Fiji is a software package that includes various plugins pre-installed in ImageJ. You can download it from [here](https://fiji.sc/).  
+After downloading, unzip the file and place the resulting “Fiji.app” folder directly under the C drive. You can launch Fiji by opening the file named “ImageJ-win64.exe” (the file name for Windows) within the folder. It’s recommended to pin this file to the taskbar for easy access.  
 
 ## MultiStackRegとTurboRegのインストール
 
