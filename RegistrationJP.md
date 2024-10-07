@@ -13,7 +13,7 @@ After downloading, unzip the file and place the resulting “Fiji.app” folder 
 
 ## MultiStackRegとTurboRegのインストール
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackRegInstall.png" alt="インストール" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackRegInstall.png" alt="インストール" width="70%">
 
 Fijiを起動し、Help > Update... を選択します。少し待ってImageJ Updaterというウィンドウが開いたら、Manage Update Sitesを選択してください。Searchの検索窓に「multistackreg」と入力して出てきたMultiStackRegにチェックを付けます。Apply and Close、Apply Changesを押して完了です。  
 
@@ -22,6 +22,15 @@ MultiStackRegの機能には、TurboRegという別のプラグインも必要�
 Fijiを一度閉じて、もう一度立ち上げるとインストールしたプラグインが反映されます。  
 Plugins > Registration の中に、MultiStackRegとTurboRegが入っていることを確認してください。  
 
+Launch Fiji, and select Help > Update.... After a short wait, a window titled “ImageJ Updater” will open. Select “Manage Update Sites”. In the Search bar, type “multistackreg,” and check the box for “MultiStackReg” once it appears. Click Apply and Close, then Apply Changes to complete the process.  
+
+The functionality of MultiStackReg requires an additional plugin called “TurboReg”, which is included in a package named “BIG-EPFL”. Using the same method as above, type “BIG-EPFL” into the Search bar, locate the package, and install it.  
+
+Afterward, close Fiji and restart it to ensure the newly installed plugins are loaded.  
+Go to Plugins > Registration to confirm that both MultiStackReg and TurboReg are available.  
+
+
+
 ## 位置合わせの操作手順
 
 位置合わせを行う連続切片の画像を一つのフォルダにまとめておいてください。画像のファイル名は番号でソート可能なものにしておいてください（image0001, image0002...など）。  
@@ -29,7 +38,7 @@ Fijiを起動し、File > Import > Image Sequence... で連続切片をインポ
 
 MultiStackRegはカラー画像をそのまま扱うことはできないので、画像をRGBそれぞれのチャンネルに分割します。Image > Color > Split Channels により、色分割すると、フォルダ名の後に (red) (green) (blue) がそれぞれ名前の最後についた３つの画像群（Image Stackといいます）に分割されます。  
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackReg.png" alt="インストール" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackReg.png" alt="インストール" width="70%">
 
 Plugins > Registration > MultiStackReg を選択し、MultiStackRegウィンドウを開きます。Stack 1の欄で位置合わせを行うスタックを選択します。どれでも良いですが、ここでは (blue) のスタックにしましょう。Action 1は Align （位置合わせを行うということ）、下から２番目のSave Transformation Fileにチェックをつけて、OKを押します。Save transformations atというウィンドウが開くので、保存場所を指定してください。ファイル名は変更しても大丈夫です（デフォルトはTransformationMatrices.txt）。位置合わせが実行されるので、完了するまで待ちます。完了したら、 (blue) のスタックをスクロールして見てみましょう。位置合わせされています。  
 
