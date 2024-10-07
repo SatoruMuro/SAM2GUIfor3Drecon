@@ -8,6 +8,8 @@ This is a **semi-automated tool for segmenting serial sections (sequential tomog
 
 組織連続切片の場合、セグメンテーションの前に位置合わせが必要です。位置合わせの方法は[こちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md)をご参照ください。  
 
+In the case of serial sections of histology, registration is required prior to segmentation. For detailed instructions on the registration process, please refer to [this page](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md).  
+
 ## 3 Steps
 
 **Step 1. AI-Powered Segmentation**  
