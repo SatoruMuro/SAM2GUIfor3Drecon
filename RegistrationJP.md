@@ -45,12 +45,26 @@ Since MultiStackReg cannot directly process color images, you need to split the 
 
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/MultiStackReg.png" alt="インストール" width="70%">
 
-Plugins > Registration > MultiStackReg を選択し、MultiStackRegウィンドウを開きます。Stack 1の欄で位置合わせを行うスタックを選択します。どれでも良いですが、ここでは (blue) のスタックにしましょう。Action 1は Align （位置合わせを行うということ）、下から２番目のSave Transformation Fileにチェックをつけて、OKを押します。Save transformations atというウィンドウが開くので、保存場所を指定してください。ファイル名は変更しても大丈夫です（デフォルトはTransformationMatrices.txt）。位置合わせが実行されるので、完了するまで待ちます。完了したら、 (blue) のスタックをスクロールして見てみましょう。位置合わせされています。  
+Plugins > Registration > MultiStackReg を選択し、MultiStackRegウィンドウを開きます。Stack 1の欄で位置合わせを行うスタックを選択します。どれでも良いですが、ここでは (blue) のスタックにしましょう。Action 1は Align （位置合わせを行うということ）、TransformationはRigid Bodyを選択してください。Transformationの種類の説明は以下です。  
+
+Translation: 平行移動のみで画像を位置合わせ。  
+Rigid Body: 回転と平行移動のみで画像を位置合わせ。  
+Scaled Rotation: 回転に加えて拡大縮小も行う。  
+Affine: 平行移動、回転、拡大縮小に加え、歪み（せん断）も含む複雑な変換。  
+
+下から２番目のSave Transformation Fileにチェックをつけて、OKを押します。Save transformations atというウィンドウが開くので、保存場所を指定してください。ファイル名は変更しても大丈夫です（デフォルトはTransformationMatrices.txt）。位置合わせが実行されるので、完了するまで待ちます。完了したら、 (blue) のスタックをスクロールして見てみましょう。位置合わせされています。  
 
 今度は、残りの２つのスタックに、 (blue) で行った位置合わせ情報（Transformation File）を適応して、位置合わせを行います。先ほどと同じようにMultiStackRegウィンドウを開き、Stack 1の欄で今度は (green) を選択します。そして、Action 1で、Load Transformation Fileを選択し、OKを押します。今度はSave Transformation Fileにチェックを付ける必要はありません。OKを押すとLoad transformation fileのウィンドウが開くので、先ほど作成された位置合わせ情報のファイル（TransformationMatrices.txtなど）を選択して開くを押します。(green) の位置合わせが実行されます。  
 同様に、 (red) のスタックに対しても、同じ位置合わせ情報のファイルを適応して位置合わせを行ってください。 
 
-Go to Plugins > Registration > MultiStackReg to open the MultiStackReg window. In the Stack 1 field, select the stack you want to register. Any stack is fine, but let's choose the (blue) stack here. For Action 1, select Align (to perform the registration), check the box for Save Transformation File (the second option from the bottom), and then click OK. A window labeled Save transformations at will open, allowing you to specify the save location. You can change the file name if desired (the default is TransformationMatrices.txt). The registration process will begin, so please wait until it completes. Once finished, scroll through the (blue) stack to confirm that it is aligned.  
+Go to Plugins > Registration > MultiStackReg to open the MultiStackReg window. In the Stack 1 field, select the stack you want to register. Any stack is fine, but let's choose the (blue) stack here. For Action 1, select Align (which means to perform alignment), and for Transformation, choose Rigid Body. The different types of Transformation are explained below:  
+
+Translation: Aligns the images using translation only.  
+Rigid Body: Aligns the images using rotation and translation only.  
+Scaled Rotation: Includes scaling along with rotation.  
+Affine: A more complex transformation that includes translation, rotation, scaling, and shearing.  
+
+Check the box for Save Transformation File, which is the second from the bottom, and then click OK. A window labeled Save transformations at will open, allowing you to specify the save location. You can change the file name if desired (the default is TransformationMatrices.txt). The registration process will begin, so please wait until it completes. Once finished, scroll through the (blue) stack to confirm that it is aligned.  
 
 Next, apply the alignment information (Transformation File) from the (blue) stack to the remaining two stacks. Open the MultiStackReg window again, and this time select the (green) stack in the Stack 1 field. For Action 1, choose Load Transformation File, and click OK. There is no need to check Save Transformation File this time. Clicking OK will open the Load transformation file window. Select the previously saved transformation file (such as TransformationMatrices.txt) and click Open to apply it. The registration for the (green) stack will now be executed.  
 Repeat this process for the (red) stack, using the same transformation file to complete its registration.  
