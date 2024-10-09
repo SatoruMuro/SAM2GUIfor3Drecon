@@ -2,7 +2,12 @@
 
 ## AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/01newmethod.JPG" alt="newmethod" width="100%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/01newmethod.JPG" alt="newmethod" width="80%">
+
+<div style="text-align: center;">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/01newmethod.JPG" alt="newmethod" width="80%">
+</div>
+
 
 Segment Anything Model 2 (SAM2)を活用した**連続切片（連続断層画像）のセグメンテーションの半自動化ツール**です。組織連続切片、解剖断面、CT、MRI、超音波画像などに応用できます。SAM2による学習不要の自動セグメンテーション（ゼロショットセグメンテーション）で**大まかなセグメンテーション**を行い、それをユーザーが**確認・修正**する、というのが基本的なコンセプトです。SAM2による自動セグメンテーションについては、連続画像（イメージシークエンス）に対応したGUI（グラフィカルユーザーインターフェース）を作成しました（SAM2 GUI for Img Seq）。ユーザーによる確認・修正作業には、Microsoft Powerpointに複数のマクロ（Visual Basic for Applications [VBA]）を導入し、UIとして活用しました。最終的にマスク画像が得られるので、3D再構築はおおむねどのソフトでも可能だと思います。ここではフリーソフトの3D Slicerを用いたやり方を紹介しています。以下の3 Stepに全体の流れをまとめました。Tutorialにやり方を解説していきます。  
 
