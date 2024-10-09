@@ -222,7 +222,7 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 ### Step 3: 3D reconstruction  
 
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
-また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールが写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
+また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールを写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
 
 セグメンテーションした対象物が複数の場合、マスクカラー画像をオブジェクトごとに分割する必要があります。Step 2で出力したマスクカラーのPDFファイルと、もとの連続断層画像ファイル１つ（サイズを参照するために用いる）を用意して、[Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)を用いてオブジェクトごとのマスク画像シリーズを取得してください。  
 セグメンテーションした対象物が一つの場合はこの作業は必要ありません。  
