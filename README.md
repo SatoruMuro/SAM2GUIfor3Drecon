@@ -192,7 +192,7 @@ Group A is used for data input before editing tasks.
 Group B is used for editing tasks.  
 Group C is used for output after editing.  
 
-<img src="images/step1-06.PNG" alt="step1" width="100%">
+<img src="images/step1-06-2.PNG" alt="step1" width="100%">
 
 最初にやるべきことが２つあります。(1) スライドのサイズの調整と、(2) クイックアクセスツールバーへのマクロの配置です。  
 (1) スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
