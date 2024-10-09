@@ -30,7 +30,10 @@ preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516
 [3D slicer](https://www.slicer.org/)  
 
 ## Tutorial
-### Step 1: AI-Powered Segmentation
+### Step 1: AI-Powered Segmentation  
+
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SAM2GUI01hi.gif" alt="newmethod" width="100%"><img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SAM2GUI02hi.gif" alt="newmethod" width="100%">
+
 まず、連続切片画像（連続断層画像）をjpg形式で用意してください。jpg形式でない場合、何かしらの変換ソフトでjpg形式に変換してください。こちらの[JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)もお使いいただけます。  
 画像ファイル名は、番号順にソートが可能な名前にしてください（image0001.jpg, image0002.jpgなど）。画像ファイルの大きさは一辺が1000px以下を推奨します。複数の画像ファイルの一括編集にはフリーソフトの[IrfanView](https://www.irfanview.com/)が便利です。  
 
