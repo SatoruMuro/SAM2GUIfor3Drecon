@@ -4,11 +4,6 @@
 
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/01newmethod.JPG" alt="newmethod" width="80%">
 
-<div style="text-align: center;">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/01newmethod.JPG" alt="newmethod" width="80%">
-</div>
-
-
 Segment Anything Model 2 (SAM2)を活用した**連続切片（連続断層画像）のセグメンテーションの半自動化ツール**です。組織連続切片、解剖断面、CT、MRI、超音波画像などに応用できます。SAM2による学習不要の自動セグメンテーション（ゼロショットセグメンテーション）で**大まかなセグメンテーション**を行い、それをユーザーが**確認・修正**する、というのが基本的なコンセプトです。SAM2による自動セグメンテーションについては、連続画像（イメージシークエンス）に対応したGUI（グラフィカルユーザーインターフェース）を作成しました（SAM2 GUI for Img Seq）。ユーザーによる確認・修正作業には、Microsoft Powerpointに複数のマクロ（Visual Basic for Applications [VBA]）を導入し、UIとして活用しました。最終的にマスク画像が得られるので、3D再構築はおおむねどのソフトでも可能だと思います。ここではフリーソフトの3D Slicerを用いたやり方を紹介しています。以下の3 Stepに全体の流れをまとめました。Tutorialにやり方を解説していきます。  
 
 This is a **semi-automated tool for segmenting serial sections (sequential tomographic images)** using the Segment Anything Model 2 (SAM2). It can be applied to various types of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images. The basic concept involves performing **coarse segmentation** with SAM2's training-free automatic segmentation (zero-shot segmentation), which the user then **reviews and modifies** as needed.A GUI (Graphical User Interface) compatible with image sequences was created for automatic segmentation using SAM2 (SAM2 GUI for Image Sequences). For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer. The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.
