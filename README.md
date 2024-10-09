@@ -52,8 +52,8 @@ Name the image files in a way that allows them to be sorted in numerical order (
 
 Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
-(2) If a warning appears, select Run Anyway.
-(3) Scroll to the bottom of the page.
+(2) If a warning appears, select Run Anyway.  
+(3) Scroll to the bottom of the page.  
 (4) At the end of cell [2], **click on the generated URL (Running on public URL)** to open it. The GUI will launch in a new tab.  
 Note: Cell [1] takes approximately 5 minutes to complete, while cell [2] takes around 5 seconds.  
 Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.  
@@ -136,12 +136,18 @@ If you have performed automatic segmentation using the SAM2 GUI only once, there
 However, if you have performed the automatic segmentation multiple times using the SAM2 GUI, you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
 セグメンテーションマスク画像（PNGファイル）を、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター形式（SVGファイル）に変換します。  
-Colabのノートブックを開いたら、ランタイム>すべてのセルを実行（Ctrl+F9）によりすべてのセルを実行し、セル[2]の最後に生成された「ファイルを選択」ボタンから、マスク画像をアップロードしてください。ベクター変換が行われ、最後にベクター変換後のマスク画像がzipでまとめてダウンロードされます。ベクター変換を行う画像の枚数に応じて所要時間が異なります。  
+(1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
+(2) 警告が表示された場合、「このまま実行」を選択してください。  
+(3) セル[2]の最後に生成された「ファイルを選択」ボタンから、マスク画像をアップロードしてください。  
+ベクター変換が行われ、最後にベクター変換後のマスク画像がzipでまとめてダウンロードされます。ベクター変換を行う画像の枚数に応じて所要時間が異なります。  
 SVG形式のファイルは、Chromeなどのウェブブラウザで開くことができます。  
 変換に失敗する画像が含まれることがあります。変換に失敗したら、その画像だけ再度トライしてください。（変換失敗画像は、Windowsのエクスプローラーでサムネイル画像が全然表示されないこと、Chromeなどで開いてもエラーが出てしまうことにより、変換失敗画像だと判断できます。）  
 
 Convert the segmentation mask images (PNG files) into vector format (SVG files) using [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing).  
-Open the Colab notebook and execute all cells by going to Runtime > Run all (Ctrl+F9). At the end of Cell [2], use the "Choose Files" button that appears to upload your mask images. The vector conversion will be performed, and the converted mask images will be downloaded as a zip file. The time required will vary depending on the number of images being converted.  
+(1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
+(2) If a warning appears, select Run Anyway.  
+(3) At the end of Cell [2], use the "Choose Files" button that appears to upload your mask images.  
+The vector conversion will be performed, and the converted mask images will be downloaded as a zip file. The time required will vary depending on the number of images being converted.  
 SVG files can be viewed in web browsers such as Chrome.  
 There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
 
@@ -182,14 +188,14 @@ Group A is used for data input before editing tasks.
 Group B is used for editing tasks.  
 Group C is used for output after editing.  
 
-最初にやるべきことが２つあります。１）スライドのサイズの調整と、２）クイックアクセスツールバーへのマクロの配置です。  
-１）スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
-２）クイックアクセスツールバーへのマクロの配置：マクロのBグループをクイックアクセスツールバーの最初の３つに配置してください。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になります。（数字は配置されている順番）  
+最初にやるべきことが２つあります。(1) スライドのサイズの調整と、(2) クイックアクセスツールバーへのマクロの配置です。  
+(1) スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
+(2) クイックアクセスツールバーへのマクロの配置：マクロのBグループをクイックアクセスツールバーの最初の３つに配置してください。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になります。（数字は配置されている順番）  
 
 There are two things you should do first:  
-1) Adjust the slide size and 2) Add the macros to the Quick Access Toolbar.  
-1) Adjust the slide size: Check the aspect ratio (width: height) of the pixel size of the serial tomographic images in the file properties or other relevant information, and adjust the slide's aspect ratio to match. As long as the width and height ratio are the same, it will be fine.  
-2) Add the macros to the Quick Access Toolbar: Place the macros from Group B in the first three slots of the Quick Access Toolbar. Commands placed in the Quick Access Toolbar can be accessed using the "Alt + number" shortcuts, with the number corresponding to their position.  
+(1) Adjust the slide size and (2) Add the macros to the Quick Access Toolbar.  
+(1) Adjust the slide size: Check the aspect ratio (width: height) of the pixel size of the serial tomographic images in the file properties or other relevant information, and adjust the slide's aspect ratio to match. As long as the width and height ratio are the same, it will be fine.  
+(2) Add the macros to the Quick Access Toolbar: Place the macros from Group B in the first three slots of the Quick Access Toolbar. Commands placed in the Quick Access Toolbar can be accessed using the "Alt + number" shortcuts, with the number corresponding to their position.  
 
 続いて、マクロAグループを使ってデータの入力です。マクロAa、Abを使って、連続断層画像とマスク画像を配置します。  
 マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)を用いて、グラフィックス形式から図形に変換します。Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください。  
@@ -205,7 +211,7 @@ Once the conversion to shapes is complete, use macro Ac to finish preparing for 
 Next is the verification and editing of the segmentation mask.  
 It is recommended to use a stylus pen or pen tablet for the task, with the stylus (or mouse) in your right hand and the keyboard in your left hand for keyboard operations. For keyboard operations, it is recommended to use the "Key Remapping" feature in Keyboard Manager from [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0), setting up the keys in the following layout for more efficient work.  
 
-![Key Remapping](images/KeyRemapping.jpg)
+<img src="images/KeyRemapping.jpg" alt="KeyRemapping" width="60%">
 
 作業としては、PgUpとPgDnでスライドを行き来し、セグメンテーション結果を確認し、必要があれば編集します。特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小ができます。マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していきます。  
 
