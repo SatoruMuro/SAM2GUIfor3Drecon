@@ -135,6 +135,8 @@ SAM2 GUIによる自動セグメンテーションを１回だけ行った場合
 If you have performed automatic segmentation using the SAM2 GUI only once, there will be just one series of mask images.  
 However, if you have performed the automatic segmentation multiple times using the SAM2 GUI, you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
+<img src="images/step1-04.PNG" alt="step1" width="100%">
+
 セグメンテーションマスク画像（PNGファイル）を、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター形式（SVGファイル）に変換します。  
 (1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
@@ -158,6 +160,8 @@ Segment Editor PPのマクロ有効パワーポイントファイル（pptm）�
 Now, we will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.  
 Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
 We recommend using a stylus pen or pen tablet for this task, but mouse operation is also possible.  
+
+<img src="images/step1-05.PNG" alt="step1" width="100%">
   
 Segment Editor PPは９個のマクロを搭載しています。  
 **AaAddImages**：連続断層画像の画像ファイルを配置します。（フォルダ選択）  
@@ -187,6 +191,8 @@ The macros are divided into three groups:
 Group A is used for data input before editing tasks.  
 Group B is used for editing tasks.  
 Group C is used for output after editing.  
+
+<img src="images/step1-06.PNG" alt="step1" width="100%">
 
 最初にやるべきことが２つあります。(1) スライドのサイズの調整と、(2) クイックアクセスツールバーへのマクロの配置です。  
 (1) スライドのサイズの調整：連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせてください。幅と高さの比率が同じになれば大丈夫です。  
