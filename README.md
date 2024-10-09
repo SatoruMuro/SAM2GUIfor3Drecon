@@ -40,29 +40,43 @@ preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516
 First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing).
 Name the image files in a way that allows them to be sorted in numerical order (e.g., image0001.jpg, image0002.jpg, etc.). It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
 
+<img src="images/step1-01.PNG" alt="newmethod" width="100%">
+
 次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
-ノートブックが開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行し、セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
+(1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
+(2) 警告が表示された場合、「このまま実行」を選択してください。  
+(3) ページの一番下まで行ってください。  
+(4) セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。  
+※セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。  
+※GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
 
 Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing) to open the Google Colab notebook (Google login is required).  
-Once the notebook is open, execute all cells by selecting Runtime > Run all (Shortcut: Ctrl+F9). Then, click on the URL generated at the end of Cell [2] (Running on public URL) to open it. The GUI will open in a new tab. Please do not close the Colab notebook screen (tab) even after the GUI has opened in a new tab. It takes about 5 minutes for Cell [1] to complete execution, and approximately 5 seconds for Cell [2].  
+(1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
+(2) If a warning appears, select Run Anyway.
+(3) Scroll to the bottom of the page.
+(4) At the end of cell [2], **click on the generated URL (Running on public URL)** to open it. The GUI will launch in a new tab.  
+Note: Cell [1] takes approximately 5 minutes to complete, while cell [2] takes around 5 seconds.  
+Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.  
+
+<img src="images/step1-02.PNG" alt="newmethod" width="100%">
 
 GUIを開いたら、以下の手順で操作します。  
-1. 画像（複数枚）のアップロード  
-2. セグメンテーションの基準として用いる画像の選択  
-3. 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
-4. 次の対象物のセグメンテーションを行い、２つ目の対象物のセグメンテーションを完了する（すべての対象物が完了するまで繰り返す）（一度に扱える対象物は最大20個まで）  
-5. すべての対象物のセグメンテーションが完了したら、トラッキングを開始  
-6. セグメンテーション結果の確認  
-7. 生成されたファイルのダウンロード
+(1) 画像（複数枚）のアップロード  
+(2) セグメンテーションの基準として用いる画像の選択  
+(3) 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
+(4) 次の対象物のセグメンテーションを行い、２つ目の対象物のセグメンテーションを完了する（すべての対象物が完了するまで繰り返す）（一度に扱える対象物は最大20個まで）  
+(5) すべての対象物のセグメンテーションが完了したら、トラッキングを開始  
+(6) セグメンテーション結果の確認  
+(7) 生成されたファイルのダウンロード
 
 Once the GUI is open, follow the steps below:  
-1. Upload the images (multiple images).  
-2. Select the image to be used as a reference for segmentation.  
-3. Perform segmentation of the target object (specify the top-left and bottom-right corners of the target object) to complete the segmentation of the first target object.  
-4. Proceed to the segmentation of the next target object, and complete the segmentation of the second target object (repeat until all target objects are completed). You can handle up to 20 target objects at a time.  
-5. Once the segmentation of all target objects is complete, start the tracking process.  
-6. Confirm the segmentation results.  
-7. Download the generated files.  
+(1) Upload the images (multiple images).  
+(2) Select the image to be used as a reference for segmentation.  
+(3) Perform segmentation of the target object (specify the top-left and bottom-right corners of the target object) to complete the segmentation of the first target object.  
+(4) Proceed to the segmentation of the next target object, and complete the segmentation of the second target object (repeat until all target objects are completed). You can handle up to 20 target objects at a time.  
+(5) Once the segmentation of all target objects is complete, start the tracking process.  
+(6) Confirm the segmentation results.  
+(7) Download the generated files.  
 
 
 
@@ -82,6 +96,8 @@ A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).
 The generated files consist of the following two types:  
 **segmented_images**: These are the overlay images combining the original image and the mask image. They can be used for confirmation or presentation purposes.  
 **mask_color_images**: These are the mask images that will be used in Step 2.  
+
+<img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
 マスク画像では、セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられます（最大20個）。  
 In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
