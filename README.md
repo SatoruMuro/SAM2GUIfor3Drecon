@@ -217,7 +217,7 @@ Once the conversion to shapes is complete, use macro Ac to finish preparing for 
 Next is the verification and editing of the segmentation mask.  
 It is recommended to use a stylus pen or pen tablet for the task, with the stylus (or mouse) in your right hand and the keyboard in your left hand for keyboard operations. For keyboard operations, it is recommended to use the "Key Remapping" feature in Keyboard Manager from [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0), setting up the keys in the following layout for more efficient work.  
 
-<img src="images/KeyRemapping.jpg" alt="KeyRemapping" width="60%">
+<img src="images/KeyRemapping.jpg" alt="KeyRemapping" width="75%">
 
 作業としては、PgUpとPgDnでスライドを行き来し、セグメンテーション結果を確認し、必要があれば編集します。特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小ができます。マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していきます。  
 
