@@ -14,7 +14,7 @@ In the case of serial sections of histology, registration is required prior to s
 
 ## 3 Steps
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/02threesteps.JPG" alt="newmethod" width="80%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/02threesteps.JPG" alt="threesteps" width="80%">
 
 **Step 1. AI-Powered Segmentation**  
 (optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
