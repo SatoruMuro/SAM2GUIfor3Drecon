@@ -125,6 +125,9 @@ In the mask images, color labels are assigned to the segmented objects in the or
     (128, 128, 0): 20   # オリーブグリーン  Olive Green  
   
 ### Step 2: Interactive Refinement
+
+<img src="images/SegmentEditorPP01.gif" alt="newmethod" width="50%">
+
 Step 2では、Step 1で生成されたセグメンテーションマスク画像（mask_color_images）（PNGファイル）を用います。 
 
 In Step 2, use the segmentation mask images (mask_color_images) generated in Step 1 (in PNG format).  
