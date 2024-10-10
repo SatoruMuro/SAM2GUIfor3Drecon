@@ -1,6 +1,6 @@
 # SAM2 GUI for 3D reconstruction
 
-## AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
+# AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
 <img src="images/01newmethod.JPG" alt="newmethod" width="100%">
 
@@ -12,7 +12,7 @@ This is a **semi-automated tool for segmenting serial sections (sequential tomog
 
 In the case of serial sections of histology, registration is required prior to segmentation. For detailed instructions on the registration process, please refer to [this page](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md).  
 
-## 3 Steps
+# 3 Steps
 
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
@@ -29,8 +29,8 @@ preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0
 preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)  
 [3D slicer](https://www.slicer.org/)  
 
-## Tutorial
-### Step 1: AI-Powered Segmentation  
+# Tutorial
+## Step 1: AI-Powered Segmentation  
 
 <img src="images/SAM2GUI01hi.gif" alt="newmethod" width="50%"><img src="images/SAM2GUI02hi.gif" alt="newmethod" width="50%">
 
@@ -124,7 +124,7 @@ In the mask images, color labels are assigned to the segmented objects in the or
     (220, 20, 60): 19,  # クリムゾンレッド  Crimson Red  
     (128, 128, 0): 20   # オリーブグリーン  Olive Green  
   
-### Step 2: Interactive Refinement
+## Step 2: Interactive Refinement
 
 <img src="images/SegmentEditorPP01.gif" alt="newmethod" width="100%">
 
@@ -234,7 +234,7 @@ Once the reviewing and modifying  of all segmentation masks are complete, use th
 A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/HToh0SFPtZw/hqdefault.jpg)](https://youtu.be/HToh0SFPtZw)  
 
-### Step 3: 3D reconstruction  
+## Step 3: 3D reconstruction  
 
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
 また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールを写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
@@ -271,5 +271,5 @@ A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).
 ※Tutorialは作成途中です。  
 *This tutorial is currently in progress.
 
-## License
+# License
 The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/LICENSE).
