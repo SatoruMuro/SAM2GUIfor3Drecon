@@ -126,7 +126,7 @@ In the mask images, color labels are assigned to the segmented objects in the or
   
 ### Step 2: Interactive Refinement
 
-<img src="images/SegmentEditorPP01.gif" alt="newmethod" width="50%">
+<img src="images/SegmentEditorPP01.gif" alt="newmethod" width="100%">
 
 Step 2では、Step 1で生成されたセグメンテーションマスク画像（mask_color_images）（PNGファイル）を用います。 
 
