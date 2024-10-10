@@ -236,6 +236,8 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 
 ## Step 3: 3D reconstruction  
 
+<img src="images/3DSlicer01.gif" alt="newmethod" width="100%">
+
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
 また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールを写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
 
