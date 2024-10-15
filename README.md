@@ -8,9 +8,9 @@ Segment Anything Model 2 (SAM2)を活用した**連続切片（連続断層画�
 
 This is a **semi-automated tool for segmenting serial sections (sequential tomographic images)** using the Segment Anything Model 2 (SAM2). It can be applied to various types of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images. The basic concept involves performing **coarse segmentation** with SAM2's training-free automatic segmentation (zero-shot segmentation), which the user then **reviews and modifies** as needed.A GUI (Graphical User Interface) compatible with image sequences was created for automatic segmentation using SAM2 (SAM2 GUI for Image Sequences). For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer. The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.
 
-組織連続切片の場合、セグメンテーションの前に位置合わせが必要です。位置合わせの方法は[こちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md)をご参照ください。  
+組織連続切片の場合、セグメンテーションの前に位置合わせが必要です。位置合わせの方法は[こちら](Registration.md)をご参照ください。  
 
-In the case of serial sections of histology, registration is required prior to segmentation. For detailed instructions on the registration process, please refer to [this page](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/RegistrationJP.md).  
+In the case of serial sections of histology, registration is required prior to segmentation. For detailed instructions on the registration process, please refer to [this page](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md).  
 
 # 3 Steps
 
