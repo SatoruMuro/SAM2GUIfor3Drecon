@@ -238,8 +238,11 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 
 <img src="images/3DSlicer01.gif" alt="newmethod" width="60%">
 
-ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。3D slicerのダウンロードが必要です。  
+ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。[3D slicerのダウンロード](https://www.slicer.org/)が必要です。  
 また、セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておいてください。画像中にスケールを写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができます。  
+
+Here, we will introduce the method using the free software [3D Slicer](https://www.slicer.org/). You will need to [download 3D Slicer](https://www.slicer.org/).  
+Additionally, please determine the pixel size per millimeter (px/mm) for the series of tomographic images on which segmentation is being performed. This can be calculated by including a scale in the image or by measuring the actual size of the specimen, which will allow you to determine px/mm.  
 
 <img src="images/step3-01.PNG" alt="step1" width="100%">
 
@@ -248,6 +251,12 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
 (3) ページの一番下まで行ってください。  
 (4) セル[2]の最後に生成されたURL（Running on public URL）をクリックして開いてください。GUIが新しいタブで開かれます。  
+
+First, you need to separate the mask color image by individual objects. Prepare the PDF file of the mask color output from Step 2 and one of the original tomographic image files (to reference its size). Then, use the [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing) to obtain a series of mask images for each object.  
+(1) Open the notebook and run all cells by selecting Runtime > Run all (shortcut: Ctrl+F9).  
+(2) If a warning appears, choose "Run Anyway."  
+(3) Scroll down to the bottom of the page.  
+(4) Click on the URL (Running on public URL) generated at the end of cell [2]. A GUI will open in a new tab.  
 
 <img src="images/step3-02.PNG" alt="step1" width="100%">
 
@@ -258,14 +267,27 @@ GUIでの操作は以下です。
 (4) 分割されたマスク画像のダウンロード（zipファイル形式）  
 オブジェクトごとのマスク画像が生成され、フォルダ別にまとめられていることをご確認ください。  
 
+In the GUI, follow these steps:  
+(1) Upload the mask color PDF file.  
+(2) Upload one of the original tomographic image files (used for size reference).  
+(3) Click the "Split Masks" button.  
+(4) Download the segmented mask images as a ZIP file.  
+Please ensure that the mask images for each object are generated and organized into separate folders.  
+
 <img src="images/step3-03.PNG" alt="step1" width="100%">
 
 続いて、3D slicerでの作業です。3D slicerを立ち上げて、画面上のツールバーから、表示をconventionalにしておきます。  
 Add data > Choose Directory to Addでマスク画像のフォルダを選択してください。マスク画像は、オブジェクトごとに分割されたものです。  
 
+Next, in 3D Slicer, launch the program and set the view to "Conventional" from the toolbar at the top of the screen.  
+Go to Add Data > Choose Directory to Add, and select the folder containing the mask images. These mask images should be separated by individual objects.  
+
 <img src="images/step3-04.PNG" alt="step1" width="100%">
 
 Volumes > Volume Informationの画面に行き、Image spacingのz軸の値を修正します（左からx軸、ｙ軸、ｚ軸の順に並んでいます）。z軸のImage spacingには、（画像のpx/mm）×（切片の間隔mm）の値を入力してください。x軸、y軸のImage spacingは1mmのままでよいです。入力値を変えると断層画像の表示がずれることがありますが、Center Viewボタンで画像を画面の中央に配置できます。  
+
+Go to Volumes > Volume Information, and adjust the value for the z-axis under Image Spacing (displayed in the order of x-axis, y-axis, and z-axis from left to right). For the z-axis Image Spacing, input the value calculated as (image px/mm) × (slice interval in mm). The x-axis and y-axis Image Spacing can remain set at 1 mm.  
+Changing these values may cause the tomographic images to shift in the display. If this happens, you can re-center the images by clicking the Center View button.  
 
 <img src="images/step3-05.PNG" alt="step1" width="100%">
 
@@ -274,25 +296,39 @@ Show 3D ボタンを押します。右側の▼を展開すると、smoothingの
 3Dの構築像を確認します。Center Viewボタンでオブジェクトを画面の中央に配置できます。  
 Show 3Dボタンの右にある右矢印ボタン（→）の右にある▼を展開し、Export to filesを選択します。出力先のフォルダを指定して、Exportを押します。  
 
+In the Segment Editor screen, click the Add button. Then, click the Threshold button to review the selected range, and press Apply.  
+Click the Show 3D button. By expanding the ▼ on the right, you can adjust the smoothing settings as needed.  
+Examine the 3D reconstructed image. You can use the Center View button to position the object at the center of the screen.  
+Expand the ▼ next to the right arrow button (→) located to the right of the Show 3D button, and select Export to files. Specify the output folder and click Export.  
+
 上記の手順で、各構造物ごとにSTLファイルを作成します。一つのフォルダにまとめておくと便利です。  
 全ての構造物のSTLファイルを取得できたら、それらを3D slicerで開き、観察します。改めて3D slicerを立ち上げてください。  
+
+Following the steps above, create an STL file for each structure. It is convenient to organize these files into a single folder.  
+Once you have obtained STL files for all structures, open them in 3D Slicer for observation. Restart 3D Slicer to proceed with this step.  
 
 今度は、表示を3D onlyにしておきます。  
 Add data > Choose Files to Addで作成したSTLファイルをすべて選択します。  
 Modelsの画面に行き、各Nodeの色と透明度を変更します。  
 SaveでMRML Sceneとして保存しておけば、また同じ状態を開くことができます。  
 
+This time, set the display to "3D only."  
+Go to Add Data > Choose Files to Add, and select all the STL files you created.  
+Navigate to the Models screen, where you can change the color and opacity of each Node.  
+By saving the session as an MRML Scene, you can reopen it later with the same configuration.  
+
 以下、表示の設定方法やスクリーンショットの取得方法について説明します。  
 3D像の背景を黒にするには、View controllers > 3D View Controllersの眼のマーク> Black background。  
 cubeとlabelの表示をオフにするには、View controllers > 3D View Controllersの眼のマーク>3D cubeと3D axis labelのチェックを外す。  
 スクリーンショットの取得は、上のツールバーのカメラのマーク>３DViewを選択して、Save Asで保存先のフォルダとファイル名を指定>OKです。  
 
+To set the background of the 3D view to black, go to View Controllers > 3D View Controllers, click the eye icon, and select Black background.  
+To turn off the display of the cube and label, go to View Controllers > 3D View Controllers, click the eye icon, and uncheck the boxes for 3D cube and 3D axis label.  
+To take a screenshot, click the camera icon on the top toolbar, select 3D View, specify the folder and file name under Save As, and click OK.  
+
 デモ動画は[こちら](https://youtu.be/CLrHR_u2Ru0)  
 A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/CLrHR_u2Ru0/hqdefault.jpg)](https://youtu.be/CLrHR_u2Ru0)  
-  
-※Tutorialは作成途中です。  
-*This tutorial is currently in progress.  
 
 # License
 The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/LICENSE).
