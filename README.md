@@ -1,12 +1,12 @@
-# SAM2 GUI for 3D reconstruction
+# SAM2  for 3D reconstruction
 
 # AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
 <img src="images/01newmethod.JPG" alt="newmethod" width="100%">
 
-Segment Anything Model 2 (SAM2)を活用した**連続切片（連続断層画像）のセグメンテーションの半自動化ツール**です。組織連続切片、解剖断面、CT、MRI、超音波画像などに応用できます。SAM2による学習不要の自動セグメンテーション（ゼロショットセグメンテーション）で**大まかなセグメンテーション**を行い、それをユーザーが**確認・修正**する、というのが基本的なコンセプトです。SAM2による自動セグメンテーションについては、連続画像（イメージシークエンス）に対応したGUI（グラフィカルユーザーインターフェース）を作成しました（SAM2 GUI for Img Seq）。ユーザーによる確認・修正作業には、Microsoft Powerpointに複数のマクロ（Visual Basic for Applications [VBA]）を導入し、UIとして活用しました。最終的にマスク画像が得られるので、3D再構築はおおむねどのソフトでも可能だと思います。ここではフリーソフトの3D Slicerを用いたやり方を紹介しています。以下の3 Stepに全体の流れをまとめました。Tutorialにやり方を解説していきます。  
+Segment Anything Model 2 (SAM2)を活用した**連続切片（連続断層画像）のセグメンテーションの半自動化ツール**です。組織連続切片、解剖断面、CT、MRI、超音波画像などに応用できます。SAM2による学習不要の自動セグメンテーション（ゼロショットセグメンテーション）で**大まかなセグメンテーション**を行い、それをユーザーが**確認・修正**する、というのが基本的なコンセプトです。SAM2による自動セグメンテーションについては、連続画像（イメージシークエンス）に対応した（グラフィカルユーザーインターフェース）を作成しました（SAM2  for Img Seq）。ユーザーによる確認・修正作業には、Microsoft Powerpointに複数のマクロ（Visual Basic for Applications [VBA]）を導入し、UIとして活用しました。最終的にマスク画像が得られるので、3D再構築はおおむねどのソフトでも可能だと思います。ここではフリーソフトの3D Slicerを用いたやり方を紹介しています。以下の3 Stepに全体の流れをまとめました。Tutorialにやり方を解説していきます。  
 
-This is a **semi-automated tool for segmenting serial sections (sequential tomographic images)** using the Segment Anything Model 2 (SAM2). It can be applied to various types of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images. The basic concept involves performing **coarse segmentation** with SAM2's training-free automatic segmentation (zero-shot segmentation), which the user then **reviews and modifies** as needed.A GUI (Graphical User Interface) compatible with image sequences was created for automatic segmentation using SAM2 (SAM2 GUI for Image Sequences). For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer. The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.
+This is a **semi-automated tool for segmenting serial sections (sequential tomographic images)** using the Segment Anything Model 2 (SAM2). It can be applied to various types of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images. The basic concept involves performing **coarse segmentation** with SAM2's training-free automatic segmentation (zero-shot segmentation), which the user then **reviews and modifies** as needed.A  (Graphical User Interface) compatible with image sequences was created for automatic segmentation using SAM2 (SAM2  for Image Sequences). For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer. The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.
 
 組織連続切片の場合、セグメンテーションの前に位置合わせが必要です。位置合わせの方法は[こちら](Registration.md)をご参照ください。  
 
@@ -18,12 +18,12 @@ In the case of serial sections of histology, registration is required prior to s
 
 **Step 1. AI-Powered Segmentation**  
 (optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)  
+[SAM2  for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing)  
 
 **Step 2. Interactive Refinement**  
 (optional) preparation: [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing)  
 preparation: [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe))  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe))  
 
 **Step 3. 3D reconstruction**  
 preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)  
@@ -42,7 +42,7 @@ Name the image files in a way that allows them to be sorted in numerical order (
 
 <img src="images/step1-01.PNG" alt="newmethod" width="100%">
 
-次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
+次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
 (1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
 (3) ページの一番下まで行ってください。  
@@ -50,7 +50,7 @@ Name the image files in a way that allows them to be sorted in numerical order (
 ※セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。  
 ※GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
 
-Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1At6ZcPM8dEHAVVYvjyuUVjKxUwFKH2cy?usp=sharing) to open the Google Colab notebook (Google login is required).  
+Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
 (2) If a warning appears, select Run Anyway.  
 (3) Scroll to the bottom of the page.  
@@ -132,11 +132,11 @@ Step 2では、Step 1で生成されたセグメンテーションマスク画�
 
 In Step 2, use the segmentation mask images (mask_color_images) generated in Step 1 (in PNG format).  
 
-SAM2 GUIによる自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
-もし、SAM2 GUIによる自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 GUIによる自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
+SAM2 による自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
+もし、SAM2 による自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 による自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
 
-If you have performed automatic segmentation using the SAM2 GUI only once, there will be just one series of mask images.  
-However, if you have performed the automatic segmentation multiple times using the SAM2 GUI, you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
+If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
+However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
 <img src="images/step1-04.PNG" alt="step1" width="100%">
 
@@ -156,7 +156,7 @@ The vector conversion will be performed, and the converted mask images will be d
 SVG files can be viewed in web browsers such as Chrome.  
 There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
 
-いよいよ、セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
+いよいよ、セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
 Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
 作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。  
 
@@ -331,4 +331,4 @@ A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).
 [![YouTubeサムネイル](https://img.youtube.com/vi/CLrHR_u2Ru0/hqdefault.jpg)](https://youtu.be/CLrHR_u2Ru0)  
 
 # License
-The code for the JPG Converter, SAM2 GUI for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/LICENSE).
+The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
