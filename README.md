@@ -130,9 +130,9 @@ In the mask images, color labels are assigned to the segmented objects in the or
 
 <img src="images/SegmentEditorPP01.gif" alt="newmethod" width="60%">
 
-Step 2では、Step 1で生成されたセグメンテーションマスク画像（mask_color_images）（PNGファイル）を用います。 
+Step 2では、Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用います。  
 
-In Step 2, use the segmentation mask images (mask_color_images) generated in Step 1 (in PNG format).  
+In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).  
 
 SAM2 による自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
 もし、SAM2 による自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 による自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
@@ -140,29 +140,11 @@ SAM2 による自動セグメンテーションを１回だけ行った場合は
 If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
 However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
-<img src="images/step1-04.PNG" alt="step1" width="100%">
-
-セグメンテーションマスク画像（PNGファイル）を、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター形式（SVGファイル）に変換します。  
-(1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
-(2) 警告が表示された場合、「このまま実行」を選択してください。  
-(3) セル[2]の最後に生成された「ファイルを選択」ボタンから、マスク画像をアップロードしてください。  
-ベクター変換が行われ、最後にベクター変換後のマスク画像がzipでまとめてダウンロードされます。ベクター変換を行う画像の枚数に応じて所要時間が異なります。  
-SVG形式のファイルは、Chromeなどのウェブブラウザで開くことができます。  
-変換に失敗する画像が含まれることがあります。変換に失敗したら、その画像だけ再度トライしてください。（変換失敗画像は、Windowsのエクスプローラーでサムネイル画像が全然表示されないこと、Chromeなどで開いてもエラーが出てしまうことにより、変換失敗画像だと判断できます。）  
-
-Convert the segmentation mask images (PNG files) into vector format (SVG files) using [Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing).  
-(1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
-(2) If a warning appears, select Run Anyway.  
-(3) At the end of Cell [2], use the "Choose Files" button that appears to upload your mask images.  
-The vector conversion will be performed, and the converted mask images will be downloaded as a zip file. The time required will vary depending on the number of images being converted.  
-SVG files can be viewed in web browsers such as Chrome.  
-There might be instances where some images fail to convert. If a conversion fails, please try again for that specific image. You can identify a failed conversion if the thumbnail does not display properly in Windows Explorer, or if an error appears when trying to open the image in a browser like Chrome.  
-
-いよいよ、セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
+セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
 Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
 作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。  
 
-Now, we will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.  
+We will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.  
 Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
 We recommend using a stylus pen or pen tablet for this task, but mouse operation is also possible.  
 
@@ -333,7 +315,7 @@ A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).
 [![YouTubeサムネイル](https://img.youtube.com/vi/CLrHR_u2Ru0/hqdefault.jpg)](https://youtu.be/CLrHR_u2Ru0)  
 
 # Update
-
+2024.10.17 SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を追加しました（SAM2GUIforImgSeqv3.4.ipynb）。これにより、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター変換作業を別で行う必要がなくなりました。  
 
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
