@@ -18,7 +18,7 @@ In the case of serial sections of histology, registration is required prior to s
 
 **Step 1. AI-Powered Segmentation**  
 (optional) preparation: [JPG Converter](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
-[SAM2  for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing)  
+[SAM2  for Img Seq](https://colab.research.google.com/drive/1zEa-NXVlNkndbnNfZVbjF7rQpyGPZdT1?usp=sharing)  
 
 **Step 2. Interactive Refinement**  
 (optional) preparation: [ColorChanger](https://colab.research.google.com/drive/1Jwlghv5zdJuB8PC-QpPYpB8eOxum_yub?usp=sharing)  
@@ -42,7 +42,7 @@ Name the image files in a way that allows them to be sorted in numerical order (
 
 <img src="images/step1-01.PNG" alt="newmethod" width="100%">
 
-次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
+次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1zEa-NXVlNkndbnNfZVbjF7rQpyGPZdT1?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
 (1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
 (3) ページの一番下まで行ってください。  
@@ -50,7 +50,7 @@ Name the image files in a way that allows them to be sorted in numerical order (
 ※セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。  
 ※GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
 
-Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1AWYgGIkbkCLp9_9DG6sEeL3WiCYV7q03?usp=sharing) to open the Google Colab notebook (Google login is required).  
+Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1zEa-NXVlNkndbnNfZVbjF7rQpyGPZdT1?usp=sharing) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
 (2) If a warning appears, select Run Anyway.  
 (3) Scroll to the bottom of the page.  
@@ -88,14 +88,16 @@ A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).
 A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/tXG23oDyItk/hqdefault.jpg)](https://youtu.be/tXG23oDyItk)  
 
-生成されるファイルは以下の２種類です。  
+生成されるファイルは以下の３種類です。  
 
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
-**mask_color_images**：マスク画像です。こちらをStep 2で使います。  
+**mask_color_images**：マスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。 
+**mask_svgs**：マスク画像のSVGファイル（ベクター画像）です。こちらをStep 2で使います。  
 
 The generated files consist of the following two types:  
 **segmented_images**: These are the overlay images combining the original image and the mask image. They can be used for confirmation or presentation purposes.  
-**mask_color_images**: These are the mask images that will be used in Step 2.  
+**mask_color_images**: These are PNG files of the mask images. They can be used for confirmation or presentation purposes.  
+**mask_svgs**: These are SVG files (vector images) of the mask images that will be used in Step 2.  
 
 <img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
@@ -330,5 +332,10 @@ To take a screenshot, click the camera icon on the top toolbar, select 3D View, 
 A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/CLrHR_u2Ru0/hqdefault.jpg)](https://youtu.be/CLrHR_u2Ru0)  
 
+# Update
+
+
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
+
+# Citation
