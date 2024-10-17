@@ -90,7 +90,7 @@ A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).
 生成されるファイルは以下の３種類です。  
 
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
-**mask_color_images**：マスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。 
+**mask_color_images**：マスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。  
 **mask_svgs**：マスク画像のSVGファイル（ベクター画像）です。こちらをStep 2で使います。  
 
 The generated files consist of the following two types:  
