@@ -57,7 +57,7 @@ Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive
 Note: Cell [1] takes approximately 5 minutes to complete, while cell [2] takes around 5 seconds.  
 Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.  
 
-<img src="images/step1-02.PNG" alt="newmethod" width="100%">
+<img src="images/step1-02-2.PNG" alt="newmethod" width="100%">
 
 GUIを開いたら、以下の手順で操作します。  
 (1) 画像（複数枚）のアップロードとアップロードしたファイルの確認  
