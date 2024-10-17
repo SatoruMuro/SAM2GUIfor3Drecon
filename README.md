@@ -60,7 +60,7 @@ Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.
 <img src="images/step1-02.PNG" alt="newmethod" width="100%">
 
 GUIを開いたら、以下の手順で操作します。  
-(1) 画像（複数枚）のアップロード  
+(1) 画像（複数枚）のアップロードとアップロードしたファイルの確認  
 (2) セグメンテーションの基準として用いる画像の選択  
 (3) 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
 (4) 次の対象物のセグメンテーションを行い、２つ目の対象物のセグメンテーションを完了する（すべての対象物が完了するまで繰り返す）（一度に扱える対象物は最大20個まで）  
@@ -69,7 +69,7 @@ GUIを開いたら、以下の手順で操作します。
 (7) 生成されたファイルのダウンロード
 
 Once the GUI is open, follow the steps below:  
-(1) Upload the images (multiple images).  
+(1) Upload the images (multiple images) and confirm Uploaded Files.  
 (2) Select the image to be used as a reference for segmentation.  
 (3) Perform segmentation of the target object (specify the top-left and bottom-right corners of the target object) to complete the segmentation of the first target object.  
 (4) Proceed to the segmentation of the next target object, and complete the segmentation of the second target object (repeat until all target objects are completed). You can handle up to 20 target objects at a time.  
