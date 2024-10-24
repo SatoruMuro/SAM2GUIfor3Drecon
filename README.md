@@ -1,4 +1,4 @@
-# SAM2  for 3D reconstruction
+# SAM2 GUI for 3D reconstruction
 
 # AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
