@@ -20,7 +20,7 @@ In the case of serial sections of histology, registration is required prior to s
 [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1ohiZfxKf6o6rUZV52kvGk5mfjLeZdNXb?usp=sharing)  
 
 **Step 2. Interactive Refinement**  
-(optional) preparation: [ColorChanger](https://colab.research.google.com/drive/1cjLQhuIVZerblYQMNLJGmacTkMvmTB9y?usp=sharing)  
+(optional) preparation: [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)  
 [Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe))  
 
 **Step 3. 3D reconstruction**  
@@ -113,10 +113,10 @@ Step 2では、Step 1で生成されたセグメンテーションマスクの�
 In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).  
 
 SAM2 による自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
-もし、SAM2 による自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://colab.research.google.com/drive/1cjLQhuIVZerblYQMNLJGmacTkMvmTB9y?usp=sharing) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 による自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
+もし、SAM2 による自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 による自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
 
 If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
-However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://colab.research.google.com/drive/1cjLQhuIVZerblYQMNLJGmacTkMvmTB9y?usp=sharing) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
+However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
 セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
 Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
@@ -301,6 +301,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 
 # Link of tools  
 JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
+Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/drive/1cjLQhuIVZerblYQMNLJGmacTkMvmTB9y?usp=sharing)  
 
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
