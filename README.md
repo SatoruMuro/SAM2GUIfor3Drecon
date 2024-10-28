@@ -115,7 +115,7 @@ In the mask images, color labels are assigned to the segmented objects in the or
     (0, 128, 128): 10,  # 青緑  Teal  
     (255, 192, 203): 11,# ピンク  Pink  
     (255, 20, 147): 12, # ローズ  Rose  
-    (0, 128, 0): 13,    # オリーブ  Olive  
+    (0, 128, 0): 13,    # 深緑  Dark Green  
     (128, 0, 0): 14,    # マルーン  Maroon  
     (0, 255, 230): 15,  # シアン  Cyan  
     (255, 215, 0): 16,  # ゴールド  Gold  
