@@ -102,27 +102,7 @@ The generated files consist of the following two types:
 マスク画像では、セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられます（最大20個）。  
 In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
 
-（R,G,B）: オブジェクト番号  object number  
-    (255, 0, 0): 1,     # 赤  Red  
-    (0, 0, 255): 2,     # 青  Blue  
-    (0, 255, 0): 3,     # 緑  Green  
-    (255, 255, 0): 4,   # 黄  Yellow  
-    (128, 0, 128): 5,   # 紫  Purple  
-    (255, 165, 0): 6,   # オレンジ  Orange  
-    (0, 255, 255): 7,   # 水色  Light Blue  
-    (173, 255, 47): 8,  # 黄緑  Yellow-Green  
-    (128, 128, 128): 9, # グレー  Gray  
-    (0, 128, 128): 10,  # 青緑  Teal  
-    (255, 192, 203): 11,# ピンク  Pink  
-    (255, 20, 147): 12, # ローズ  Rose  
-    (0, 128, 0): 13,    # 深緑  Dark Green  
-    (128, 0, 0): 14,    # マルーン  Maroon  
-    (0, 255, 230): 15,  # シアン  Cyan  
-    (255, 215, 0): 16,  # ゴールド  Gold  
-    (255, 69, 0): 17,   # インディアンレッド  Indian Red  
-    (0, 0, 128): 18,    # ネイビーブルー  Navy Blue  
-    (220, 20, 60): 19,  # クリムゾンレッド  Crimson Red  
-    (128, 128, 0): 20   # オリーブグリーン  Olive Green  
+<img src="images/colorlist.png" alt="colorlist" width="100%">  
   
 ## Step 2: Interactive Refinement
 
