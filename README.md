@@ -17,15 +17,14 @@ In the case of serial sections of histology, registration is required prior to s
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 **Step 1. AI-Powered Segmentation**  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1ohiZfxKf6o6rUZV52kvGk5mfjLeZdNXb?usp=sharing)  
-- [Google Colabで開く](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb)
+[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb)
 
 **Step 2. Interactive Refinement**  
-(optional) preparation: [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)  
+(optional) preparation: [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 [Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe))  
 
 **Step 3. 3D reconstruction**  
-preparation: [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)  
+preparation: [Object Mask Splitter](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb)  
 [3D slicer](https://www.slicer.org/)  
 
 # Tutorial
@@ -41,7 +40,7 @@ Please name the image files as image0001.jpg, image0002.jpg, and so on in sequen
 
 <img src="images/step1-01.PNG" alt="newmethod" width="100%">
 
-次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1ohiZfxKf6o6rUZV52kvGk5mfjLeZdNXb?usp=sharing)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
+次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
 (1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
 (3) ページの一番下まで行ってください。  
@@ -49,7 +48,7 @@ Please name the image files as image0001.jpg, image0002.jpg, and so on in sequen
 ※セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。  
 ※GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
 
-Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1ohiZfxKf6o6rUZV52kvGk5mfjLeZdNXb?usp=sharing) to open the Google Colab notebook (Google login is required).  
+Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
 (2) If a warning appears, select Run Anyway.  
 (3) Scroll to the bottom of the page.  
@@ -209,13 +208,13 @@ Additionally, please determine the pixel size per millimeter (px/mm) for the ser
 
 <img src="images/step3-01.PNG" alt="step1" width="100%">
 
-まず、マスクカラー画像をオブジェクトごとに分割する必要があります。Step 2で出力したマスクカラーのPDFファイルと、もとの連続断層画像ファイル１つ（サイズを参照するために用いる）を用意して、[Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing)を用いてオブジェクトごとのマスク画像シリーズを取得してください。  
+まず、マスクカラー画像をオブジェクトごとに分割する必要があります。Step 2で出力したマスクカラーのPDFファイルと、もとの連続断層画像ファイル１つ（サイズを参照するために用いる）を用意して、[Object Mask Splitter](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb)を用いてオブジェクトごとのマスク画像シリーズを取得してください。  
 (1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：Ctrl+F9）によりすべてのセルを実行してください。  
 (2) 警告が表示された場合、「このまま実行」を選択してください。  
 (3) ページの一番下まで行ってください。  
 (4) セル[2]の最後に生成されたURL（Running on public URL）をクリックして開いてください。GUIが新しいタブで開かれます。  
 
-First, you need to separate the mask color image by individual objects. Prepare the PDF file of the mask color output from Step 2 and one of the original tomographic image files (to reference its size). Then, use the [Object Mask Splitter](https://colab.research.google.com/drive/1516VL6LmuczVHk0BBdtpaIyGboeYSPXD?usp=sharing) to obtain a series of mask images for each object.  
+First, you need to separate the mask color image by individual objects. Prepare the PDF file of the mask color output from Step 2 and one of the original tomographic image files (to reference its size). Then, use the [Object Mask Splitter](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb) to obtain a series of mask images for each object.  
 (1) Open the notebook and run all cells by selecting Runtime > Run all (shortcut: Ctrl+F9).  
 (2) If a warning appears, choose "Run Anyway."  
 (3) Scroll down to the bottom of the page.  
@@ -301,8 +300,8 @@ SAM2 GUI for Img Seqにグレースケールのマスク画像の出力機能を
 SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を追加しました（SAM2GUIforImgSeqv3.4.ipynb）。これにより、[Vectorizer Colab](https://colab.research.google.com/drive/1GKhSyR0zwri5OcwivF4DK3HLpuIa8Bad?usp=sharing)を用いてベクター変換作業を行う必要がなくなりました。同様にColorChangerにもベクター化機能を追加しました（ColorChanger_v1.3.ipynb）。  
 
 # Link of tools  
-JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/drive/1eMO7cU1i63Z8ftnkuzwoSDXdWUyFzsN2?usp=sharing)  
-Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/drive/1cjLQhuIVZerblYQMNLJGmacTkMvmTB9y?usp=sharing)  
+JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/JPGconverter_v1_1.ipynb)  
+Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
