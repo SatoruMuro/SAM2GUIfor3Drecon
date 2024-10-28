@@ -18,6 +18,7 @@ In the case of serial sections of histology, registration is required prior to s
 
 **Step 1. AI-Powered Segmentation**  
 [SAM2 GUI for Img Seq](https://colab.research.google.com/drive/1ohiZfxKf6o6rUZV52kvGk5mfjLeZdNXb?usp=sharing)  
+- [Google Colabで開く](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb)
 
 **Step 2. Interactive Refinement**  
 (optional) preparation: [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)  
