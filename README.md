@@ -22,13 +22,13 @@ In the case of serial sections of histology, registration is required prior to s
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 **Step 1. AI-Powered Segmentation**  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb)
+SAM2 GUI for Img Seq
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
 **Step 2. Interactive Refinement**  
-(optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
+(optional) ColorChanger
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
@@ -107,7 +107,7 @@ A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).
 A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).  
 [![YouTubeサムネイル](https://img.youtube.com/vi/tXG23oDyItk/hqdefault.jpg)](https://youtu.be/tXG23oDyItk)  
 
-生成されるファイルは以下の３種類です。  
+【生成されるファイル】    
 
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
 **mask_color_images**：マスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。  
@@ -120,7 +120,7 @@ The generated files consist of the following two types:
 
 <img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
-マスク画像では、セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられます（最大20個）。  
+セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられる。  
 In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
 
 <img src="images/colorlist.png" alt="colorlist" width="100%">  
