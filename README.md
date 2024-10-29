@@ -52,20 +52,22 @@ JPG Converter
 </a>  
 ・画像ファイル名は、image0001.jpg, image0002.jpg...  
 ・画像ファイルの大きさは一辺が1000px以下を推奨  
-（複数の画像ファイルの一括編集には[IrfanView](https://www.irfanview.com/)が便利です。  
+（複数の画像ファイルの一括編集には[IrfanView](https://www.irfanview.com/)を推奨）  
 
 First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter).
 Please name the image files as image0001.jpg, image0002.jpg, and so on in sequential numbering. It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
 
 <img src="images/step1-01.PNG" alt="newmethod" width="100%">
 
-次に、こちら[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb)にアクセスしてgoogle colabのノートブックを開いてください（googleのログインが必要）。  
-(1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）によりすべてのセルを実行してください。  
-(2) 警告が表示された場合、「このまま実行」を選択してください。  
-(3) ページの一番下まで行ってください。  
-(4) セル[2]の最後に生成された**URL（Running on public URL）をクリック**して開いてください。GUIが新しいタブで開かれます。  
-※セル[1]は実行完了までに約5分、セル[2]は5秒程度を要します。  
-※GUIが新しいタブで開かれても、colabのノートブックの画面（タブ）は閉じないでください。  
+SAM2 GUI for Img Seqを開く
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+</a>  
+(1) ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）。  
+(2) 警告ダイアログで「このまま実行」を選択（実行完了まで約5分）。  
+(3) ページの最下部までスクロール。  
+(4) セル[2]の最後に生成されたURL（Running on public URL）を開く。  
+※GUIを開いた後もcolabのノートブックの画面は閉じないこと。  
 
 Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
