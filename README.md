@@ -63,7 +63,7 @@ SAM2 GUI for Img Seqを開く
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_7.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
-(1) ランタイム>すべてのセルを実行（ショートカット：**Ctrl+F9**）。  
+(1) ランタイム>すべてのセルを実行。  
 (2) 警告ダイアログで「このまま実行」を選択（実行完了まで約5分）。  
 (3) ページの最下部までスクロール。  
 (4) セル[2]の最後に生成されたURL（Running on public URL）を開く。  
