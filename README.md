@@ -79,7 +79,7 @@ Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.
 
 <img src="images/step1-02-2.PNG" alt="newmethod" width="100%">
 
-GUIを開いたら、以下の手順で操作します。  
+【GUI操作手順】  
 (1) 画像（複数枚）のアップロードとアップロードしたファイルの確認  
 (2) セグメンテーションの基準として用いる画像の選択  
 (3) 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
