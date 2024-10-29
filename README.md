@@ -43,7 +43,11 @@ preparation: [Object Mask Splitter](https://colab.research.google.com/github/Sat
 
 <img src="images/SAM2GUI01hi.gif" alt="newmethod" width="50%"><img src="images/SAM2GUI02hi.gif" alt="newmethod" width="50%">
 
-まず、連続切片画像（連続断層画像）をjpg形式で用意してください。jpg形式でない場合、何かしらの変換ソフトでjpg形式に変換してください。こちらの[JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter)もお使いいただけます。  
+【用意する画像】  
+・連続切片画像（連続断層画像）  
+・jpg形式  
+JPG Converter
+）](https://huggingface.co/spaces/SatoruMuro/JPGconverter)もお使いいただけます。  
 画像ファイル名は、image0001.jpg, image0002.jpg...という連続番号のファイル名にしてください。画像ファイルの大きさは一辺が1000px以下を推奨します。複数の画像ファイルの一括編集にはフリーソフトの[IrfanView](https://www.irfanview.com/)が便利です。  
 
 First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter).
