@@ -27,13 +27,13 @@ Note: For histological serial sections, registration (alignment) is required bef
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 **Step 1. AI-Powered Segmentation**  
-SAM2 GUI for Img Seq >>
+[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb) 
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
 **Step 2. Interactive Refinement**  
-(optional) ColorChanger >>
+(optional) [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) 
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
@@ -115,8 +115,9 @@ A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).
 【生成されるファイル】    
 
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
-**mask_color_images**：マスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。  
+**mask_color_images**：RGBカラーのマスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。  
 **mask_svgs**：マスク画像のSVGファイル（ベクター画像）です。こちらをStep 2で使います。  
+**grayscale_masks**：グレースケールのマスク画像のPNGファイルです。Step 2を省略してStep 3に進むときに使います。（詳細は後述）
 
 The generated files consist of the following two types:  
 **segmented_images**: These are the overlay images combining the original image and the mask image. They can be used for confirmation or presentation purposes.  
@@ -125,7 +126,7 @@ The generated files consist of the following two types:
 
 <img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
-セグメンテーションを行った順番に、対象物に対して以下の色ラベルがあてられる。  
+【セグメンテーションの色ラベル】    
 In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
 
 <img src="images/colorlist.png" alt="colorlist" width="100%">  
@@ -134,21 +135,19 @@ In the mask images, color labels are assigned to the segmented objects in the or
 
 <img src="images/SegmentEditorPP01.gif" alt="newmethod" width="60%">
 
-Step 2では、Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用います。  
-
-In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).  
-
-SAM2 による自動セグメンテーションを１回だけ行った場合は、マスク画像は１シリーズのみです。  
-もし、SAM2 による自動セグメンテーションを複数回にわけて行った場合、マスク画像を２シリーズ以上取得していることになります。その場合、複数のシリーズ間で異なる対象物に同じ色がついているため、[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) を用いて色ラベルを変換し、１つの対象物に１つの色が対応するようにしてください。SAM2 による自動セグメンテーションを１回だけ行った場合は色変換の操作は必要ありません。  
+Step 1の自動セグメンテーションを複数回行った場合　→　重複を避けるための色ラベル変換　[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)
+<a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
+</a>  
 
 If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
 However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
-セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。    
+セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用います。      
 Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
 作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。  
 
-We will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.  
+We will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).    
 Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
 We recommend using a stylus pen or pen tablet for this task, but mouse operation is also possible.  
 
