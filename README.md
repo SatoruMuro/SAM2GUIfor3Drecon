@@ -13,9 +13,14 @@
 
 ※組織連続切片ではセグメンテーションの前に位置合わせが必要です。MultiStackRegによる自動位置合わせの方法は[こちら](Registration.md)。  
 
-This is a **semi-automated tool for segmenting serial sections (sequential tomographic images)** using the Segment Anything Model 2 (SAM2). It can be applied to various types of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images. The basic concept involves performing **coarse segmentation** with SAM2's training-free automatic segmentation (zero-shot segmentation), which the user then **reviews and modifies** as needed. A GUI (Graphical User Interface) compatible with image sequences was created for automatic segmentation using SAM2 (SAM2 GUI for Image Sequences). For the user review and modification process, multiple macros (Visual Basic for Applications [VBA]) were incorporated into Microsoft PowerPoint, which serves as the user interface (UI).Finally, the mask images obtained can be used for 3D reconstruction, which should be possible with most software. Here, we introduce a method using the free software 3D Slicer. The overall workflow is summarized in the following 3 steps.The tutorial will explain the procedure in detail.  
+- Automatic Segmentation Tool Specialized for Serial Sections (Continuous Tomographic Images)  
+- Supports a wide range of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images.  
+- Zero-shot segmentation using the Segment Anything Model 2 (SAM2), eliminating the need for training.  
+- Web-based GUI (Graphical User Interface) that does not require PC environment setup.  
+- Allows users to review and edit segmentation masks with a correction tool.  
+- Supports import into 3D Slicer for rapid 3D reconstruction.  
 
-In the case of serial sections of histology, registration is required prior to segmentation. For detailed instructions on the registration process, please refer to [this page](Registration.md).  
+Note: For histological serial sections, registration (alignment) is required before segmentation. See [this page](Registration.md) for the method of automatic alignment using MultiStackReg.  
 
 # 3 Steps
 
