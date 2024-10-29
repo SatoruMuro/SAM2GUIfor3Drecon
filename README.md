@@ -143,9 +143,11 @@ Step 1の自動セグメンテーションを複数回行った場合　→　�
 If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
 However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
 
-セグメンテーションマスクの確認・修正作業を行います。こちらから[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロードしてください。Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用います。      
-Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開いて下さい。マクロが無効になっている場合はマクロを許可し有効にしてください。  
-作業にはタッチペン、ペンタブレット等の使用を推奨しますが、マウス操作でも可能です。  
+【セグメンテーションマスクの確認・修正作業】  
+・[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.1.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロード。  
+・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意。        
+・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）。  
+・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）。  
 
 We will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.1.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).    
 Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
