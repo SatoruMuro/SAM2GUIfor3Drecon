@@ -28,7 +28,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 
 **Step 1. AI-Powered Segmentation**  
 SAM2 GUI for Img Seq
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb">
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
@@ -65,7 +65,7 @@ Please name the image files as image0001.jpg, image0002.jpg, and so on in sequen
 <img src="images/step1-01.PNG" alt="newmethod" width="100%">
 
 SAM2 GUI for Img Seqを開く
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb">
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 (1) ランタイム>すべてのセルを実行。  
@@ -74,7 +74,7 @@ SAM2 GUI for Img Seqを開く
 (4) セル[2]の最後に生成されたURL（Running on public URL）を開く。  
 ※GUIを開いた後もcolabのノートブックの画面は閉じないこと。  
 
-Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb) to open the Google Colab notebook (Google login is required).  
+Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb) to open the Google Colab notebook (Google login is required).  
 (1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
 (2) If a warning appears, select Run Anyway.  
 (3) Scroll to the bottom of the page.  
@@ -327,7 +327,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 
 # Link of tools  
 JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/JPGconverter_v1_1.ipynb)  
-SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_8.ipynb)(*High-power model running on GPU, this is recommended)  
+SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)(*High-power model running on GPU, this is recommended)  
 Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 
 # License
