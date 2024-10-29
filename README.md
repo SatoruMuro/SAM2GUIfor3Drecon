@@ -28,7 +28,7 @@ In the case of serial sections of histology, registration is required prior to s
 </a>  
 
 **Step 2. Interactive Refinement**  
-(optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
+(optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="130">
 </a>  
