@@ -47,8 +47,12 @@ preparation: [Object Mask Splitter](https://colab.research.google.com/github/Sat
 ・連続切片画像（連続断層画像）  
 ・jpg形式  
 JPG Converter
-）](https://huggingface.co/spaces/SatoruMuro/JPGconverter)もお使いいただけます。  
-画像ファイル名は、image0001.jpg, image0002.jpg...という連続番号のファイル名にしてください。画像ファイルの大きさは一辺が1000px以下を推奨します。複数の画像ファイルの一括編集にはフリーソフトの[IrfanView](https://www.irfanview.com/)が便利です。  
+<a href="https://huggingface.co/spaces/SatoruMuro/JPGconverter">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
+</a>  
+・画像ファイル名は、image0001.jpg, image0002.jpg...  
+・画像ファイルの大きさは一辺が1000px以下を推奨  
+（複数の画像ファイルの一括編集には[IrfanView](https://www.irfanview.com/)が便利です。  
 
 First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter).
 Please name the image files as image0001.jpg, image0002.jpg, and so on in sequential numbering. It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
