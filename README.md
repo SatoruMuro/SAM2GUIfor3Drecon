@@ -239,7 +239,7 @@ Additionally, please determine the pixel size per millimeter (px/mm) for the ser
 <img src="images/step3-03.PNG" alt="step1" width="100%">
 
 続いて、3D slicerでの作業です。3D slicerを立ち上げて、画面上のツールバーから、表示をconventionalにしておきます。  
-Add data > Choose Directory to Addでマスク画像のフォルダを選択してください。マスク画像は、オブジェクトごとに分割されたものです。  
+Add data > Choose Directory to Addでマスク画像のフォルダを選択してください。マスク画像は、Segment Editor PPのマクロCbExportToGrayPNGで出力したグレースケールの画像を用います。  
 
 Next, in 3D Slicer, launch the program and set the view to "Conventional" from the toolbar at the top of the screen.  
 Go to Add Data > Choose Directory to Add, and select the folder containing the mask images. These mask images should be separated by individual objects.  
