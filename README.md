@@ -282,7 +282,7 @@ Volumes > Volume Informationの画面に行き、Image spacingのz軸の値を�
 Go to Volumes > Volume Information, and adjust the value for the z-axis under Image Spacing (displayed in the order of x-axis, y-axis, and z-axis from left to right). For the z-axis Image Spacing, input the value calculated as (image px/mm) × (slice interval in mm). The x-axis and y-axis Image Spacing can remain set at 1 mm.  
 Changing these values may cause the tomographic images to shift in the display. If this happens, you can re-center the images by clicking the Center View button.  
 
-<img src="images/step3-05.PNG" alt="step1" width="100%">
+<img src="images/step3-06.PNG" alt="step1" width="100%">
 
 Segment Editorの画面に行き、Addボタンを押します。Threshholdボタンを押して、選択範囲を確認し、Applyを押します。  
 Show 3D ボタンを押します。右側の▼を展開すると、smoothingの有り無しを設定できます。  
@@ -293,6 +293,8 @@ In the Segment Editor screen, click the Add button. Then, click the Threshold bu
 Click the Show 3D button. By expanding the ▼ on the right, you can adjust the smoothing settings as needed.  
 Examine the 3D reconstructed image. You can use the Center View button to position the object at the center of the screen.  
 Expand the ▼ next to the right arrow button (→) located to the right of the Show 3D button, and select Export to files. Specify the output folder and click Export.  
+
+<img src="images/step3-07.PNG" alt="step1" width="80%">
 
 上記の手順で、各構造物ごとにSTLファイルを作成します。一つのフォルダにまとめておくと便利です。  
 全ての構造物のSTLファイルを取得できたら、それらを3D slicerで開き、観察します。改めて3D slicerを立ち上げてください。  
