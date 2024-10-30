@@ -163,7 +163,9 @@ Segment Editor PPは９個のマクロを搭載しています。
 **BbCutimageWithPreviousShapeAndApplyColor**：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を削ります（減算）。  
 **BcMergeWithPreviousShapeAndApplyColor**：フリーフォームや曲線ツールで描いた曲線をもとに、マスクの範囲を広げます（加算）。  
 **CaFinalizeMasks**：背景の連続断層画像を非表示にし、黒背景のマスク画像にします。  
+**CbExportToGrayPNG**：グレースケールのPNGファイルとして出力します。  
 **CbExportToPDF**：PDFファイルとして出力します。  
+**CbExportToPNG**：PNGファイルとして出力します。  
 **CcReturnToMaskEditing**：マスクを編集する状態に戻します。  
 
 Segment Editor PP includes nine macros:  
@@ -215,7 +217,9 @@ It is recommended to use a stylus pen or pen tablet for the task, with the stylu
 
 In this task, use PgUp and PgDn to navigate between slides and review the segmentation results, editing them as needed. You can zoom in and out while selecting a specific mask by holding Ctrl and using the mouse scroll wheel. Utilize the macros from Group B along with freeform input using the stylus (or the curve tool if using a mouse) to make fine adjustments to the mask contours.  
 
-全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループを使って、修正後のマスクカラー画像をPDF形式で出力します。  
+全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループの**CbExportToGrayPNG**を使って、修正後のマスクカラー画像をグレースケールで出力します。  
+オブジェクトごとに、以下のグレースケール値が対応します。  
+(255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
 
 Once the reviewing and modifying  of all segmentation masks are complete, use the Group C macros to export the corrected mask color images in PDF format.  
 
