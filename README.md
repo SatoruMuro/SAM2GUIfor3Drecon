@@ -295,6 +295,9 @@ A demonstration video can be found [here](https://youtu.be/CLrHR_u2Ru0).
 
 # Update  
 **2024.10.25**  
+Segment Editor PPにグレースケールのマスク画像の出力機能を追加しました（SegmentEditorPPv1.2.pptm）。これにより、3D slicerでのセグメント認識がより簡便になります。Tutorialの記載を更新しました。  
+
+**2024.10.25**  
 SAM2 GUI for Img Seqにグレースケールのマスク画像の出力機能を追加しました（SAM2GUIforImgSeqv3.6.ipynb）。これにより、3D slicerでのセグメント認識がより簡便になります。（詳細は後日Tutorialを更新して記載します）  
 
 **2024.10.17**  
