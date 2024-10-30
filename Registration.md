@@ -35,7 +35,7 @@ Go to Plugins > Registration to confirm that both MultiStackReg and TurboReg are
 
 デモ動画 Demo movie→→
 <a href="https://youtu.be/bWF2HW5yjOI">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchmovieicon.svg" alt="Open in YouTube" width="120">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon.png" alt="Open in YouTube" width="120">
 </a>  
 
 位置合わせを行う連続切片の画像を一つのフォルダにまとめておいてください。画像のファイル名は番号でソート可能なものにしておいてください（image0001, image0002...など）。  
