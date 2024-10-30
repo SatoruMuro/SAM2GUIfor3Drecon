@@ -251,10 +251,10 @@ Volumes > Volume Informationの画面に行き、Image spacingのz軸の値を�
 Go to Volumes > Volume Information, and adjust the value for the z-axis under Image Spacing (displayed in the order of x-axis, y-axis, and z-axis from left to right). For the z-axis Image Spacing, input the value calculated as (image px/mm) × (slice interval in mm). The x-axis and y-axis Image Spacing can remain set at 1 mm.  
 Changing these values may cause the tomographic images to shift in the display. If this happens, you can re-center the images by clicking the Center View button.  
 
-<img src="images/step3-06-2.PNG" alt="step1" width="100%">
+<img src="images/step3-06-3.PNG" alt="step1" width="100%">
 
 Segment Editorの画面に行き、Addボタンを押します。Threshhold機能を使って、特定の対象物の中でクリック＆ドラッグすることで、そのグレースケール値の構造物を選択します。選択範囲を確認し、Applyを押します。  
-この操作を全てのオブジェクトで行います。　　
+この操作を全てのオブジェクトで行います。  
 Show 3D ボタンを押し、3D像を確認します（右側の▼を展開すると、smoothingの有り無しを設定できます）。Center Viewボタンでオブジェクトを画面の中央に配置できます。  
 
 In the Segment Editor screen, click the Add button. Then, click the Threshold button to review the selected range, and press Apply.  
