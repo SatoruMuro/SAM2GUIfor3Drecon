@@ -237,36 +237,6 @@ A demonstration video can be found [here](https://youtu.be/HToh0SFPtZw).
 Here, we will introduce the method using the free software [3D Slicer](https://www.slicer.org/). You will need to [download 3D Slicer](https://www.slicer.org/).  
 Additionally, please determine the pixel size per millimeter (px/mm) for the series of tomographic images on which segmentation is being performed. This can be calculated by including a scale in the image or by measuring the actual size of the specimen, which will allow you to determine px/mm.  
 
-<img src="images/step3-01.PNG" alt="step1" width="100%">
-
-まず、マスクカラー画像をオブジェクトごとに分割する必要があります。Step 2で出力したマスクカラーのPDFファイルと、もとの連続断層画像ファイル１つ（サイズを参照するために用いる）を用意して、[Object Mask Splitter](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb)を用いてオブジェクトごとのマスク画像シリーズを取得してください。  
-(1) ノートブックを開いたら、ランタイム>すべてのセルを実行（ショートカット：Ctrl+F9）によりすべてのセルを実行してください。  
-(2) 警告が表示された場合、「このまま実行」を選択してください。  
-(3) ページの一番下まで行ってください。  
-(4) セル[2]の最後に生成されたURL（Running on public URL）をクリックして開いてください。GUIが新しいタブで開かれます。  
-
-First, you need to separate the mask color image by individual objects. Prepare the PDF file of the mask color output from Step 2 and one of the original tomographic image files (to reference its size). Then, use the [Object Mask Splitter](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb) to obtain a series of mask images for each object.  
-(1) Open the notebook and run all cells by selecting Runtime > Run all (shortcut: Ctrl+F9).  
-(2) If a warning appears, choose "Run Anyway."  
-(3) Scroll down to the bottom of the page.  
-(4) Click on the URL (Running on public URL) generated at the end of cell [2]. A GUI will open in a new tab.  
-
-<img src="images/step3-02.PNG" alt="step1" width="100%">
-
-GUIでの操作は以下です。  
-(1) マスクカラーのPDFファイルをアップロード  
-(2) もとの連続断層画像ファイル１つ（サイズを参照するために用いる）をアップロード  
-(3) 実行ボタン（Split Masks）  
-(4) 分割されたマスク画像のダウンロード（zipファイル形式）  
-オブジェクトごとのマスク画像が生成され、フォルダ別にまとめられていることをご確認ください。  
-
-In the GUI, follow these steps:  
-(1) Upload the mask color PDF file.  
-(2) Upload one of the original tomographic image files (used for size reference).  
-(3) Click the "Split Masks" button.  
-(4) Download the segmented mask images as a ZIP file.  
-Please ensure that the mask images for each object are generated and organized into separate folders.  
-
 <img src="images/step3-03.PNG" alt="step1" width="100%">
 
 続いて、3D slicerでの作業です。3D slicerを立ち上げて、画面上のツールバーから、表示をconventionalにしておきます。  
@@ -284,10 +254,9 @@ Changing these values may cause the tomographic images to shift in the display. 
 
 <img src="images/step3-06.PNG" alt="step1" width="100%">
 
-Segment Editorの画面に行き、Addボタンを押します。Threshholdボタンを押して、選択範囲を確認し、Applyを押します。  
-Show 3D ボタンを押します。右側の▼を展開すると、smoothingの有り無しを設定できます。  
-3Dの構築像を確認します。Center Viewボタンでオブジェクトを画面の中央に配置できます。  
-Show 3Dボタンの右にある右矢印ボタン（→）の右にある▼を展開し、Export to filesを選択します。出力先のフォルダを指定して、Exportを押します。  
+Segment Editorの画面に行き、Addボタンを押します。Threshhold機能を使って、特定の対象物の中でクリック＆ドラッグすることで、そのグレースケール値の構造物を選択します。選択範囲を確認し、Applyを押します。  
+この操作を全てのオブジェクトで行います。　　
+Show 3D ボタンを押し、3D像を確認します（右側の▼を展開すると、smoothingの有り無しを設定できます）。Center Viewボタンでオブジェクトを画面の中央に配置できます。  
 
 In the Segment Editor screen, click the Add button. Then, click the Threshold button to review the selected range, and press Apply.  
 Click the Show 3D button. By expanding the ▼ on the right, you can adjust the smoothing settings as needed.  
@@ -296,8 +265,8 @@ Expand the ▼ next to the right arrow button (→) located to the right of the 
 
 <img src="images/step3-07.PNG" alt="step1" width="80%">
 
-上記の手順で、各構造物ごとにSTLファイルを作成します。一つのフォルダにまとめておくと便利です。  
-全ての構造物のSTLファイルを取得できたら、それらを3D slicerで開き、観察します。改めて3D slicerを立ち上げてください。  
+Segmentationsの画面に行き、Export to filesからSTL出力してください。  
+STLファイルを取得できたら、それらを3D slicerで開き、観察します。改めて3D slicerを立ち上げてください。  
 
 Following the steps above, create an STL file for each structure. It is convenient to organize these files into a single folder.  
 Once you have obtained STL files for all structures, open them in 3D Slicer for observation. Restart 3D Slicer to proceed with this step.  
@@ -336,6 +305,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/JPGconverter_v1_1.ipynb)  
 SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)(*High-power model running on GPU, this is recommended)  
 Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
+Object Mask Splitter: [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb) 
 
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
