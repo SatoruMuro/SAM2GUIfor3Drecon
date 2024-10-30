@@ -4,6 +4,17 @@
 In the case of serial sections of histology, registration is required prior to segmentation.  
 Here, I introduce a method for registration using [MultiStackReg](https://github.com/miura/MultiStackRegistration), a plugin for ImageJ.  
 
+## 操作デモ動画  Demo Videos
+**ImageJ/Fiji Tutorial: Registration (Alignment) of Histological Serial Section using MultiStackReg (YouTube)**  
+<a href="https://youtu.be/bWF2HW5yjOI">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="120">
+</a>  
+
+**ImageJ/Fiji  Tutorial: How to Easily Crop an Image Sequence (YouTube)**   
+<a href="https://youtu.be/Rx8TdUN40ig">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="120">
+</a>  
+
 ## Fijiのダウンロード  Downloading Fiji  
 Fijiは、ImageJに最初から色々なプラグインが入っているソフトです。[こちら](https://fiji.sc/)からダウンロードしてください。  
 ダウンロードしたファイルを解凍して得られた「Fiji.app」というフォルダをCドライブ直下においてください。フォルダ内の「ImageJ-win64.exe」（Windowsの場合のファイル名）というファイルでFijiが起動します。タスクバー等にピン止めしておくと良いでしょう。  
@@ -32,10 +43,6 @@ Go to Plugins > Registration to confirm that both MultiStackReg and TurboReg are
 
 
 ## 位置合わせの操作手順　Procedure for Registration
-
-<a href="https://youtu.be/bWF2HW5yjOI">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="120">
-</a>  
 
 位置合わせを行う連続切片の画像を一つのフォルダにまとめておいてください。画像のファイル名は番号でソート可能なものにしておいてください（image0001, image0002...など）。  
 Fijiを起動し、File > Import > Image Sequence... で連続切片をインポートします。Import Image Sequenceのウィンドウが開いたら、Brouseで連続切片画像が入っているフォルダを選択します。Countに表示される画像の枚数を確認し、Sorg names numericallyにチェックを付けて、OKを押します。  
