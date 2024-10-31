@@ -1,5 +1,3 @@
-# SAM2 GUI for 3D reconstruction
-
 # AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
 <img src="images/01newmethod.JPG" alt="newmethod" width="100%">
