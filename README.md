@@ -214,7 +214,7 @@ It is recommended to use a stylus pen or pen tablet for the task, with the stylu
 
 In this task, use PgUp and PgDn to navigate between slides and review the segmentation results, editing them as needed. You can zoom in and out while selecting a specific mask by holding Ctrl and using the mouse scroll wheel. Utilize the macros from Group B along with freeform input using the stylus (or the curve tool if using a mouse) to make fine adjustments to the mask contours.  
 
-全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループの**CbExportToGrayPNG**を使って、修正後のマスクカラー画像をグレースケールで出力します。  
+全てのセグメンテーションマスクの確認・修正が完了したら、マクロCグループの**CaFinalizeMasks**で出力用の画像を生成し、**CbExportToGrayPNG**を使って修正後のマスク画像をグレースケールで出力します。  
 オブジェクトごとに、以下のグレースケール値が対応します。  
 (255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
 
