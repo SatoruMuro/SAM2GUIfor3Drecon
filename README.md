@@ -152,7 +152,7 @@ We recommend using a stylus pen or pen tablet for this task, but mouse operation
 
 <img src="images/step1-05.PNG" alt="step1" width="100%">
   
-Segment Editor PPは９個のマクロを搭載しています。  
+Segment Editor PPは3グループ11個のマクロを搭載しています。  
 **AaAddImages**：連続断層画像の画像ファイルを配置します。（フォルダ選択）  
 **AbAddMasks**：ベクター変換後のマスク画像（SVG形式）を連続断層画像の上に重ねます。（ファイル選択）  
 **AcDeleteBlackShapesWith70PercentTransparent**：マスク画像に含まれていた余分な黒背景を削除し、マスクを70%透過にします。  
