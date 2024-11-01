@@ -59,7 +59,7 @@ JPG Converter
 First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter).
 Please name the image files as image0001.jpg, image0002.jpg, and so on in sequential numbering. It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
 
-<img src="images/step1-01.PNG" alt="newmethod" width="100%">
+<img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
 SAM2 GUI for Img Seqを開く
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
