@@ -60,7 +60,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 
 <img src="images/SAM2GUI01hi.gif" alt="newmethod" width="50%"><img src="images/SAM2GUI02hi.gif" alt="newmethod" width="50%">
 
-【用意する画像】  
+【用意する画像】　Images to Prepare  
 ・連続切片画像（連続断層画像）  
 ・jpg形式  
 JPG Converter
@@ -71,12 +71,20 @@ JPG Converter
 ・画像ファイルの大きさは一辺が1000px以下を推奨  
 （複数の画像ファイルの一括編集には[IrfanView](https://www.irfanview.com/)を推奨）  
 
-First, prepare the image sequence (consecutive tomographic images) in JPG format. If they are not in JPG format, convert them using a conversion software. You can also use this [JPG Converter](https://huggingface.co/spaces/SatoruMuro/JPGconverter).
-Please name the image files as image0001.jpg, image0002.jpg, and so on in sequential numbering. It is recommended that the image size does not exceed 1000px on any side. For batch editing multiple image files, the free software [IrfanView](https://www.irfanview.com/) can be convenient.
+Sequential Slice Images (Sequential Tomographic Images)  
+JPG format  
+JPG Converter
+<a href="https://huggingface.co/spaces/SatoruMuro/JPGconverter">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
+</a>  
+File names should follow the format: image0001.jpg, image0002.jpg, ...  
+Recommended image size: no more than 1000px on each side  
+(For batch editing of multiple image files, [IrfanView](https://www.irfanview.com/) is recommended)  
+
 
 <img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
-SAM2 GUI for Img Seqを開く
+【SAM2 GUI for Img Seqの起動】　Launching SAM2 GUI for Image Sequence  
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
@@ -86,17 +94,15 @@ SAM2 GUI for Img Seqを開く
 (4) セル[2]の最後に生成されたURL（Running on public URL）を開く  
 ※GUIを開いた後もcolabのノートブックの画面は閉じないこと  
 
-Next, access this [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb) to open the Google Colab notebook (Google login is required).  
-(1) Open the notebook and run all cells by going to Runtime > Run all (shortcut: **Ctrl+F9**).  
-(2) If a warning appears, select Run Anyway.  
-(3) Scroll to the bottom of the page.  
-(4) At the end of cell [2], **click on the generated URL (Running on public URL)** to open it. The GUI will launch in a new tab.  
-Note: Cell [1] takes approximately 5 minutes to complete, while cell [2] takes around 5 seconds.  
-Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.  
+Go to Runtime > Run all cells.  
+In the warning dialog, select Run Anyway (execution takes approximately 5 minutes).  
+Scroll to the bottom of the page.  
+Open the URL generated at the end of Cell [2] (displayed as "Running on public URL").  
+Note: Do not close the Colab notebook screen after opening the GUI.  
 
 <img src="images/step1-02-2.PNG" alt="newmethod" width="100%">
 
-【GUI操作手順】  
+【GUI操作手順】　GUI Operation Instructions  
 (1) 画像（複数枚）のアップロードとアップロードしたファイルの確認  
 (2) セグメンテーションの基準として用いる画像の選択  
 (3) 対象物のセグメンテーション（対象物の左上と右下をそれぞれ指定する）を行い、１つ目の対象物のセグメンテーションを完了する  
@@ -105,32 +111,31 @@ Note: Even if the GUI opens in a new tab, do not close the Colab notebook tab.
 (6) セグメンテーション結果の確認  
 (7) 生成されたファイルのダウンロード
 
-Once the GUI is open, follow the steps below:  
-(1) Upload the images (multiple images) and confirm Uploaded Files.  
-(2) Select the image to be used as a reference for segmentation.  
-(3) Perform segmentation of the target object (specify the top-left and bottom-right corners of the target object) to complete the segmentation of the first target object.  
-(4) Proceed to the segmentation of the next target object, and complete the segmentation of the second target object (repeat until all target objects are completed). You can handle up to 20 target objects at a time.  
-(5) Once the segmentation of all target objects is complete, start the tracking process.  
-(6) Confirm the segmentation results.  
-(7) Download the generated files.  
+(1) Upload and Verify Files: Upload multiple images and confirm the uploaded files.
+(2) Select Image for Segmentation Reference: Choose an image to use as a reference for segmentation.
+(3) Segment the First Object: Perform segmentation by specifying the top-left and bottom-right corners of the object. Complete segmentation for the first object.
+(4) Segment Additional Objects: Perform segmentation on the next object and complete it. Repeat this process for each object until all target objects are segmented (up to a maximum of 20 objects at once).
+(5) Start Tracking: Once segmentation of all objects is complete, initiate tracking.
+(6) Verify Segmentation Results: Review the segmentation results.
+(7) Download Generated Files: Download the generated files.
 
 
-【生成されるファイル】    
+【生成されるファイル】　Generated Files  
 
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像（確認用）  
 **mask_color_images**：RGBカラーのマスク画像のPNGファイル（確認用）  
 **mask_svgs**：マスク画像のSVGファイル（ベクター画像） → **Step 2で使用**  
 **grayscale_masks**：グレースケールのマスク画像のPNGファイル（Step 2を省略してStep 3に進むときに使用：詳細は後述）
 
-The generated files consist of the following two types:  
-**segmented_images**: These are the overlay images combining the original image and the mask image. They can be used for confirmation or presentation purposes.  
-**mask_color_images**: These are PNG files of the mask images. They can be used for confirmation or presentation purposes.  
-**mask_svgs**: These are SVG files (vector images) of the mask images that will be used in Step 2.  
+**segmented_images**: Overlaid images of the original and mask images for verification purposes.  
+**mask_color_images**: PNG files of RGB-colored mask images for verification purposes.  
+**mask_svgs**: SVG files of mask images (vector images) → **To be used in Step 2.**  
+**grayscale_masks**: Grayscale mask images in PNG format (used when skipping Step 2 and proceeding directly to Step 3; details provided later).  
+
 
 <img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
-【セグメンテーションの色ラベル】    
-In the mask images, color labels are assigned to the segmented objects in the order in which segmentation is performed (up to a maximum of 20 objects). The color labels correspond to the object numbers as follows:  
+【セグメンテーションの色ラベル】　Segmentation Color Labels  
 
 <img src="images/colorlist.png" alt="colorlist" width="100%">  
   
