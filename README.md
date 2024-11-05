@@ -148,23 +148,27 @@ Step 1の自動セグメンテーションを複数回行った場合　→　�
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
 
-If you have performed automatic segmentation using the SAM2  only once, there will be just one series of mask images.  
-However, if you have performed the automatic segmentation multiple times using the SAM2 , you will have obtained more than one series of mask images. In such cases, the same color may be assigned to different objects across multiple series. To ensure that each object is assigned a unique color, use [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) to convert the color labels. This process is not necessary if the automatic segmentation was done only once.  
+When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Label Conversion to Avoid Duplicates　[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)
+<a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
+</a>  
 
-【セグメンテーションマスクの確認・修正作業】  
+
+【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
 ・[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロード  
 ・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意        
 ・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）  
 ・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）  
 
-We will proceed with the reviewing and modifying of the segmentation mask. Please download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/SegmentEditorPPv1.2.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe) from the provided links.In Step 2, use the vector images of segmentation mask (mask_color_images) generated in Step 1 (in SVG format).    
-Open the Segment Editor PP macro-enabled PowerPoint file (.pptm). If macros are disabled, please allow and enable them.  
-We recommend using a stylus pen or pen tablet for this task, but mouse operation is also possible.  
+Download [Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe).  
+Prepare the vector images (SVG files) of the segmentation masks generated in Step 1 (mask_svgs).  
+Open the macro-enabled PowerPoint file (pptm) for Segment Editor PP. If macros are disabled, enable them to proceed.  
+It is recommended to use a stylus pen, pen tablet, or similar device for the task (mouse operation is also possible).  
 
 <img src="images/step1-05.PNG" alt="step1" width="100%">
 
 
-【Segment Editor PPに含まれる3グループ11個のマクロ】  
+【Segment Editor PPに含まれる3グループ11個のマクロ】　Three Groups of 11 Macros Included in Segment Editor PP  
 **グループA　編集作業前のデータの入力**  
 **AaAddImages**：連続断層画像の画像ファイルを配置する（フォルダ選択）  
 **AbAddMasks**：ベクター変換後のマスク画像（SVG形式）を連続断層画像の上に重ねる（ファイル選択）  
@@ -180,66 +184,69 @@ We recommend using a stylus pen or pen tablet for this task, but mouse operation
 **CbExportToPNG**：PNGファイルとして出力する  
 **CcReturnToMaskEditing**：マスクを編集する状態に戻す  
 
-Segment Editor PP includes nine macros:  
-**AaAddImages**: Places the image files of serial tomographic images. (Folder selection)  
-**AbAddMasks**: Overlays the vector-converted mask images (in SVG format) onto the serial tomographic images. (File selection)  
-**AcDeleteBlackShapesWith70PercentTransparent**: Removes any unnecessary black backgrounds included in the mask image and makes the mask 70% transparent.  
-**BaSelectShapeAndRecord**: Saves the selected mask, making it editable.  
-**BbCutImageWithPreviousShapeAndApplyColor**: Trims the mask area based on freeform or curve-drawn lines (subtraction).  
-**BcMergeWithPreviousShapeAndApplyColor**: Expands the mask area based on freeform or curve-drawn lines (addition).  
-**CaFinalizeMasks**: Hides the serial tomographic background images, leaving the mask image with a black background.  
-**CbExportToPDF**: Exports the file as a PDF.  
-**CcReturnToMaskEditing**: Returns the mask to an editable state.  
-
-The macros are divided into three groups:  
-Group A is used for data input before editing tasks.  
-Group B is used for editing tasks.  
-Group C is used for output after editing.  
+**Group A: Data Input Before Editing**  
+**AaAddImages**: Place the image files of sequential tomographic images (select folder).  
+**AbAddMasks**: Overlay the vector-converted mask images (in SVG format) onto the sequential tomographic images (select files).  
+**AcDeleteBlackShapesWith70PercentTransparent**: Remove unnecessary black backgrounds included in the mask images and set the mask transparency to 70%.  
+**Group B: Editing Process**  
+**BaSelectShapeAndRecord**: Record the selected mask and make it editable.  
+**BbCutimageWithPreviousShapeAndApplyColor**: Trim the mask area based on a freeform or curve tool-drawn outline (subtract).  
+**BcMergeWithPreviousShapeAndApplyColor**: Expand the mask area based on a freeform or curve tool-drawn outline (add).  
+**Group C: Output After Editing**  
+**CaFinalizeMasks**: Hide the background sequential tomographic images and set the mask images to have a black background.  
+**CbExportToGrayPNG**: Export as grayscale PNG files → Use the exported files in Step 3.  
+**CbExportToPDF**: Export as PDF files.  
+**CbExportToPNG**: Export as PNG files.  
+**CcReturnToMaskEditing**: Return to the mask editing mode.  
 
 <img src="images/step1-06-2.PNG" alt="step1" width="100%">
 
-【最初にやること】  
+【最初にやること】  Things to Do First  
 **(1) スライドのサイズの調整**  
 連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせる。幅と高さの比率が同じになればOK。  
 **(2) クイックアクセスツールバーへのマクロの配置**  
 マクロのBグループをクイックアクセスツールバーの最初の３つに配置する。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になる（数字は配置されている順番）。  
 
-There are two things you should do first:  
-(1) Adjust the slide size and (2) Add the macros to the Quick Access Toolbar.  
-(1) Adjust the slide size: Check the aspect ratio (width: height) of the pixel size of the serial tomographic images in the file properties or other relevant information, and adjust the slide's aspect ratio to match. As long as the width and height ratio are the same, it will be fine.  
-(2) Add the macros to the Quick Access Toolbar: Place the macros from Group B in the first three slots of the Quick Access Toolbar. Commands placed in the Quick Access Toolbar can be accessed using the "Alt + number" shortcuts, with the number corresponding to their position.  
+**(1) Adjust Slide Size**  
+Check the aspect ratio of the pixel size of the sequential tomographic images in the file properties or similar. Adjust the slide’s aspect ratio to match. As long as the width-to-height ratio is the same, it should be fine.  
+**(2) Add Macros to the Quick Access Toolbar**  
+Place the Group B macros as the first three items on the Quick Access Toolbar. Commands in the Quick Access Toolbar can be accessed with the shortcut "Alt + Number" (the number corresponds to their position in the toolbar).  
 
 
-【編集作業前のデータの入力：マクログループA】  
+【編集作業前のデータの入力：マクログループA】　Data Input Before Editing: Macro Group A  
 ・マクロAa、Abを使って、連続切片画像とマスク画像を配置する  
 ・マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)を用いて、グラフィックス形式から図形に変換する（Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください）  
 ・マクロAcで、余分な黒背景を削除し、マスクを70%透過にする  
 
-Next, we will input the data using the Group A macros. Use macros Aa and Ab to place the serial tomographic images and the mask images.  
-To make the mask images placed with macro Ab editable, use Graphic2shape to convert the graphics format into shapes. Launch the Graphic2shape executable file and follow the instructions in the message box.  
-Once the conversion to shapes is complete, use macro Ac to finish preparing for editing.  
+Use macros Aa and Ab to place the sequential slice images and mask images.  
+To make the mask images placed with macro Ab editable, convert them from graphic format to shapes using Graphic2shape. Launch the Graphic2shape executable file and follow the instructions in the message box.  
+Use macro Ac to remove the unnecessary black background and set the mask transparency to 70%.  
 
 
-【編集作業：マクログループB】  
+【編集作業：マクログループB】　Editing Process: Macro Group B  
 ・作業はタッチペンやペンタブレットを用いて、右手にタッチペン（またはマウス）、左手でキーボード操作、を推奨
 ・キーボード操作には、[Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0)のKeyboard Managerの「キーの再マップ」を使って、以下のような配置で作業するのがおすすめ  
 ・作業としては、PgUpとPgDnでスライドを行き来し、セグメンテーション結果を確認し、必要があれば編集する  
 ・特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小  
 ・マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していく  
 
-Next is the verification and editing of the segmentation mask.  
-It is recommended to use a stylus pen or pen tablet for the task, with the stylus (or mouse) in your right hand and the keyboard in your left hand for keyboard operations. For keyboard operations, it is recommended to use the "Key Remapping" feature in Keyboard Manager from [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0), setting up the keys in the following layout for more efficient work.  
+It is recommended to work with a stylus pen or pen tablet, using the stylus (or mouse) in your right hand and the keyboard with your left hand.  
+For keyboard operations, consider using the "Key Remapping" feature in [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) Keyboard Manager to set up a layout optimized for the following tasks.  
+Navigate between slides with PgUp and PgDn to review the segmentation results and make edits as needed.  
+While selecting a specific mask, use "Ctrl + Mouse Scroll" to zoom in and out.  
+Use the Group B macros and freeform input with the stylus (or the Curve Tool if using a mouse) to make fine adjustments to the mask contours.  
 
-In this task, use PgUp and PgDn to navigate between slides and review the segmentation results, editing them as needed. You can zoom in and out while selecting a specific mask by holding Ctrl and using the mouse scroll wheel. Utilize the macros from Group B along with freeform input using the stylus (or the curve tool if using a mouse) to make fine adjustments to the mask contours.  
 
 <img src="images/KeyRemapping.jpg" alt="KeyRemapping" width="75%">
 
-【編集後の出力：マクログループC】  
+【編集後の出力：マクログループC】　Output After Editing: Macro Group C  
 ・全てのセグメンテーションマスクの確認・修正が完了したら、マクロCaで出力用の画像を生成し、マクロCbで修正後のマスク画像をグレースケールで出力する  
 ・オブジェクトごとに、以下のグレースケール値が対応する。  
 (255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
 
-Once the reviewing and modifying  of all segmentation masks are complete, use the Group C macros to export the corrected mask color images in PDF format.  
+Once verification and corrections of all segmentation masks are complete, use macro Ca to generate images for output and macro Cb to export the corrected mask images in grayscale.  
+Each object corresponds to the following grayscale values: (255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
+
 
 
 
