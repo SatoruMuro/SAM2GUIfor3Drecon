@@ -121,7 +121,6 @@ Note: Do not close the Colab notebook screen after opening the GUI.
 
 
 【生成されるファイル】　Generated Files  
-
 **segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像（確認用）  
 **mask_color_images**：RGBカラーのマスク画像のPNGファイル（確認用）  
 **mask_svgs**：マスク画像のSVGファイル（ベクター画像） → **Step 2で使用**  
@@ -136,7 +135,6 @@ Note: Do not close the Colab notebook screen after opening the GUI.
 <img src="images/step1-03.PNG" alt="newmethod" width="100%">
 
 【セグメンテーションの色ラベル】　Segmentation Color Labels  
-
 <img src="images/colorlist.png" alt="colorlist" width="100%">  
   
 ## Step 2: Interactive Refinement
