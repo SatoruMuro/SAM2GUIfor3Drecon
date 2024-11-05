@@ -255,21 +255,23 @@ Each object corresponds to the following grayscale values: (255, 248, 237, 226, 
 <img src="images/3DSlicer01.gif" alt="newmethod" width="60%">
 
 ここでは、フリーソフトの[3D slicer](https://www.slicer.org/)を用いたやりかたを紹介します。Amira-AvizoやImageJなど他のソフトでも、Step 2で生成した画像を取り込んでThretholdを用いることでマスクを抽出し、3D構築することができます。  
+Here, I introduce a method using the free software [3D Slicer](https://www.slicer.org/). Other software, such as Amira-Avizo or ImageJ, can also be used to import the images generated in Step 2, extract masks using thresholding, and perform 3D reconstruction.  
 
 ・[3D slicerのダウンロード](https://www.slicer.org/)  
 ・セグメンテーションを行っている連続断層画像における実測1mmあたりのpxサイズ（px/mm）を求めておく（画像中にスケールを写しておいたり、標本サイズを実測しておくことで、px/mmを求めることができる）  
 
-Here, we will introduce the method using the free software [3D Slicer](https://www.slicer.org/). You will need to [download 3D Slicer](https://www.slicer.org/).  
-Additionally, please determine the pixel size per millimeter (px/mm) for the series of tomographic images on which segmentation is being performed. This can be calculated by including a scale in the image or by measuring the actual size of the specimen, which will allow you to determine px/mm.  
+[Download 3D Slicer](https://www.slicer.org/)  
+Determine the pixel size per millimeter (px/mm) in the sequential tomographic images being segmented. This can be calculated by including a scale bar in the images or by measuring the actual size of the specimen.  
+
 
 <img src="images/step3-03.PNG" alt="step1" width="100%">
 
-【画像の取り込みとスケール調整】  
+【画像の取り込みとスケール調整】　Image Import and Scale Adjustment  
 ・3D slicerを立ち上げて、画面上のツールバーから、表示をconventionalにしておく  
 ・Add data > Choose Directory to Addでマスク画像のフォルダを選択（マスク画像は、Segment Editor PPのマクロCbで出力したグレースケールの画像を用いる）  
 
-Next, in 3D Slicer, launch the program and set the view to "Conventional" from the toolbar at the top of the screen.  
-Go to Add Data > Choose Directory to Add, and select the folder containing the mask images. These mask images should be separated by individual objects.  
+Launch 3D Slicer and set the display mode to Conventional from the toolbar.  
+Go to Add data > Choose Directory to Add and select the folder containing the mask images (use the grayscale images exported from Segment Editor PP using macro Cb).  
 
 <img src="images/step3-04.PNG" alt="step1" width="100%">
 
@@ -277,12 +279,15 @@ Go to Add Data > Choose Directory to Add, and select the folder containing the m
 ・z軸のImage spacingには、（画像のpx/mm）×（切片の間隔mm）の値を入力する（x軸、y軸のImage spacingは1mmのままでよい）  
 ・入力値を変えると断層画像の表示がずれることがあるが、Center Viewボタンで画像を画面の中央に配置できる  
 
-Go to Volumes > Volume Information, and adjust the value for the z-axis under Image Spacing (displayed in the order of x-axis, y-axis, and z-axis from left to right). For the z-axis Image Spacing, input the value calculated as (image px/mm) × (slice interval in mm). The x-axis and y-axis Image Spacing can remain set at 1 mm.  
-Changing these values may cause the tomographic images to shift in the display. If this happens, you can re-center the images by clicking the Center View button.  
+Go to Volumes > Volume Information and adjust the Image Spacing for the z-axis (the order is x-axis, y-axis, and z-axis from left to right).  
+For the z-axis Image Spacing, enter the value of (pixel size per mm) × (slice interval in mm). The Image Spacing for the x-axis and y-axis can remain at 1 mm.  
+Changing the input values may cause the tomographic image display to shift. Use the Center View button to center the image on the screen.  
+
+
 
 <img src="images/step3-06-3.PNG" alt="step1" width="100%">
 
-【セグメントマスクの抽出と3D構築】  
+【セグメントマスクの抽出と3D構築】　Segmentation Mask Extraction and 3D Reconstruction  
 ・Segment Editorの画面に行き、Addボタンを押す
 ・Threshhold機能を使って、特定の対象物の中でクリック＆ドラッグすることで、そのグレースケール値の構造物を選択する
 ・選択範囲を確認し、Applyを押す  
@@ -290,41 +295,46 @@ Changing these values may cause the tomographic images to shift in the display. 
 ・Show 3D ボタンを押し、3D像を確認する（右側の▼を展開すると、smoothingの有り無しを設定できる）
 ・Center Viewボタンでオブジェクトを画面の中央に配置できる  
 
-In the Segment Editor screen, click the Add button. Then, click the Threshold button to review the selected range, and press Apply.  
-Click the Show 3D button. By expanding the ▼ on the right, you can adjust the smoothing settings as needed.  
-Examine the 3D reconstructed image. You can use the Center View button to position the object at the center of the screen.  
-Expand the ▼ next to the right arrow button (→) located to the right of the Show 3D button, and select Export to files. Specify the output folder and click Export.  
+Go to the Segment Editor screen and press the Add button.  
+Use the Threshold tool, and click and drag within the specific object to select structures with that grayscale value.  
+Review the selection area, then press Apply.  
+Repeat this process for each object.  
+Press the Show 3D button to view the 3D rendering (expand the ▼ on the right to adjust smoothing options).  
+Use the Center View button to center the object on the screen.  
+
 
 <img src="images/step3-07.PNG" alt="step1" width="80%">
 
-【STLファイルの出力】  
+【STLファイルの出力】　Exporting STL Files  
 ・Segmentationsの画面に行き、Export to filesからSTLファイルを出力  
 
+Go to the Segmentations screen and select Export to files to output the STL file.  
 
-【3Dデータの観察】  
+
+【3Dデータの観察】　3D Data Observation  
 ・改めて3D slicerを立ち上げる  
 ・表示を3D onlyにしておく。  
 ・Add data > Choose Files to Addで作成したSTLファイルをすべて選択し取り込む  
 ・Modelsの画面に行き、各Nodeの色と透明度を変更する  
 ・SaveでMRML Sceneとして保存しておけば、また同じ状態を開くことができる  
 
-Following the steps above, create an STL file for each structure. It is convenient to organize these files into a single folder.  
-Once you have obtained STL files for all structures, open them in 3D Slicer for observation. Restart 3D Slicer to proceed with this step.  
-
-This time, set the display to "3D only."  
-Go to Add Data > Choose Files to Add, and select all the STL files you created.  
-Navigate to the Models screen, where you can change the color and opacity of each Node.  
-By saving the session as an MRML Scene, you can reopen it later with the same configuration.  
+Launch 3D Slicer again.  
+Set the display mode to 3D only.  
+Go to Add data > Choose Files to Add and select all the STL files you created to import them.  
+Navigate to the Models screen to change the color and transparency of each node.  
+Save the current setup as an MRML Scene to reopen it later in the same state.  
 
 
-【表示の設定方法やスクリーンショットの取得方法】
+
+【表示の設定方法やスクリーンショットの取得方法】　Display Settings and Screenshot Capture Method  
 ・3D像の背景を黒にするには、View controllers > 3D View Controllersの眼のマーク> Black background  
 ・cubeとlabelの表示をオフにするには、View controllers > 3D View Controllersの眼のマーク>3D cubeと3D axis labelのチェックを外す  
 ・スクリーンショットの取得は、上のツールバーのカメラのマーク>３DViewを選択して、Save Asで保存先のフォルダとファイル名を指定>OK  
 
-To set the background of the 3D view to black, go to View Controllers > 3D View Controllers, click the eye icon, and select Black background.  
-To turn off the display of the cube and label, go to View Controllers > 3D View Controllers, click the eye icon, and uncheck the boxes for 3D cube and 3D axis label.  
-To take a screenshot, click the camera icon on the top toolbar, select 3D View, specify the folder and file name under Save As, and click OK.  
+To set the 3D view background to black, go to View controllers > 3D View Controllers, click the eye icon, and select Black background.  
+To turn off the cube and label display, go to View controllers > 3D View Controllers, click the eye icon, and uncheck 3D cube and 3D axis label.  
+To capture a screenshot, click the camera icon in the top toolbar, select 3D View, specify the destination folder and file name in Save As, and click OK.  
+
 
 
 
