@@ -33,7 +33,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 </a>  
 
 
-# 3 Steps
+## 作業工程　3 Steps
 
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
@@ -53,7 +53,9 @@ Note: For histological serial sections, registration (alignment) is required bef
 **Step 3. 3D reconstruction**  
 [3D slicer](https://www.slicer.org/)  
 
-# Tutorial
+
+
+# 使い方　Tutorial
 ## Step 1: AI-Powered Segmentation  
 
 <img src="images/SAM2GUI01hi.gif" alt="newmethod" width="50%"><img src="images/SAM2GUI02hi.gif" alt="newmethod" width="50%">
@@ -113,21 +115,12 @@ Once the GUI is open, follow the steps below:
 (7) Download the generated files.  
 
 
-
-デモ動画（複数オブジェクト）は[こちら](https://youtu.be/Xz-YpWa89G4)  
-A demonstration video can be found [here](https://youtu.be/Xz-YpWa89G4).  
-[![YouTubeサムネイル](https://img.youtube.com/vi/Xz-YpWa89G4/hqdefault.jpg)](https://youtu.be/Xz-YpWa89G4)  
-
-デモ動画（一つのオブジェクト）は[こちら](https://youtu.be/tXG23oDyItk)  
-A demonstration video can be found [here](https://youtu.be/tXG23oDyItk).  
-[![YouTubeサムネイル](https://img.youtube.com/vi/tXG23oDyItk/hqdefault.jpg)](https://youtu.be/tXG23oDyItk)  
-
 【生成されるファイル】    
 
-**segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像です。確認用やプレゼンテーション用にお使いください。  
-**mask_color_images**：RGBカラーのマスク画像のPNGファイルです。確認用やプレゼンテーション用にお使いください。  
-**mask_svgs**：マスク画像のSVGファイル（ベクター画像）です。こちらをStep 2で使います。  
-**grayscale_masks**：グレースケールのマスク画像のPNGファイルです。Step 2を省略してStep 3に進むときに使います。（詳細は後述）
+**segmented_images**：オリジナル画像とマスク画像の重ね合わせ画像（確認用）  
+**mask_color_images**：RGBカラーのマスク画像のPNGファイル（確認用）  
+**mask_svgs**：マスク画像のSVGファイル（ベクター画像） → **Step 2で使用**  
+**grayscale_masks**：グレースケールのマスク画像のPNGファイル（Step 2を省略してStep 3に進むときに使用：詳細は後述）
 
 The generated files consist of the following two types:  
 **segmented_images**: These are the overlay images combining the original image and the mask image. They can be used for confirmation or presentation purposes.  
