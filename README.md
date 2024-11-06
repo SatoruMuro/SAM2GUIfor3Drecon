@@ -48,7 +48,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe))  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.2))  
 
 **Step 3. 3D reconstruction**  
 [3D slicer](https://www.slicer.org/)  
