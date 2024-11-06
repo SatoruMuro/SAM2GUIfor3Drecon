@@ -48,7 +48,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.2))  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
 
 **Step 3. 3D reconstruction**  
 [3D slicer](https://www.slicer.org/)  
@@ -153,12 +153,12 @@ When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Lab
 
 
 【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
-・[Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm)と [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe)をダウンロード  
+・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
 ・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意        
 ・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）  
 ・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）  
 
-Download [Segment Editor PP](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/SegmentEditorPPv1.2.pptm) and [Graphic2shape](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/graphic2shape_v1.2.exe).  
+Download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2).  
 Prepare the vector images (SVG files) of the segmentation masks generated in Step 1 (mask_svgs).  
 Open the macro-enabled PowerPoint file (pptm) for Segment Editor PP. If macros are disabled, enable them to proceed.  
 It is recommended to use a stylus pen, pen tablet, or similar device for the task (mouse operation is also possible).  
@@ -213,11 +213,11 @@ Place the Group B macros as the first three items on the Quick Access Toolbar. C
 
 【編集作業前のデータの入力：マクログループA】　Data Input Before Editing: Macro Group A  
 ・マクロAa、Abを使って、連続切片画像とマスク画像を配置する  
-・マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/graphic2shape_v1.2.exe)を用いて、グラフィックス形式から図形に変換する（Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください）  
+・マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)を用いて、グラフィックス形式から図形に変換する（Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください）  
 ・マクロAcで、余分な黒背景を削除し、マスクを70%透過にする  
 
 Use macros Aa and Ab to place the sequential slice images and mask images.  
-To make the mask images placed with macro Ab editable, convert them from graphic format to shapes using Graphic2shape. Launch the Graphic2shape executable file and follow the instructions in the message box.  
+To make the mask images placed with macro Ab editable, convert them from graphic format to shapes using [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2). Launch the Graphic2shape executable file and follow the instructions in the message box.  
 Use macro Ac to remove the unnecessary black background and set the mask transparency to 70%.  
 
 
