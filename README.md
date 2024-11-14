@@ -44,9 +44,9 @@ Note: For histological serial sections, registration (alignment) is required bef
 </a>  
 
 **Step 2. Interactive Refinement**  
-(optional) [ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger) 
-<a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
-  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
+(optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb) 
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
 
@@ -141,12 +141,12 @@ Note: Do not close the Colab notebook screen after opening the GUI.
 
 <img src="images/SegmentEditorPP01.gif" alt="newmethod" width="60%">
 
-Step 1の自動セグメンテーションを複数回行った場合　→　重複を避けるための色ラベル変換　[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)
+Step 1の自動セグメンテーションを複数回行った場合　→　重複を避けるための色ラベル変換　[ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
 
-When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Label Conversion to Avoid Duplicates　[ColorChanger](https://huggingface.co/spaces/SatoruMuro/ColorChanger)
+When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Label Conversion to Avoid Duplicates　[ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
 <a href="https://huggingface.co/spaces/SatoruMuro/ColorChanger">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-xl.svg" alt="Open in Spaces" width="120">
 </a>  
