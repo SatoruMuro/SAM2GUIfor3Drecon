@@ -286,7 +286,7 @@ Changing the input values may cause the tomographic image display to shift. Use 
 <img src="images/step3-06-3.PNG" alt="step1" width="100%">
 
 【セグメントマスクの抽出と3D構築】　Segmentation Mask Extraction and 3D Reconstruction  
-・Segment Editorの画面に行き、Addボタンを押す
+・Segment Editorの画面に行き、Addボタンを押す  
 ・Threshhold機能を使って、特定の対象物の中でクリック＆ドラッグすることで、そのグレースケール値の構造物を選択する
 ・選択範囲を確認し、Applyを押す  
 ・この操作を全てのオブジェクトで行う  
