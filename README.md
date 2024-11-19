@@ -290,7 +290,7 @@ Changing the input values may cause the tomographic image display to shift. Use 
 ・Threshhold機能を使って、特定の対象物の中でクリック＆ドラッグすることで、そのグレースケール値の構造物を選択する
 ・選択範囲を確認し、Applyを押す  
 ・この操作を全てのオブジェクトで行う  
-・Show 3D ボタンを押し、3D像を確認する（右側の▼を展開すると、smoothingの有り無しを設定できる）
+・Show 3D ボタンを押し、3D像を確認する（右側の▼を展開すると、smoothingの有り無しを設定できる）  
 ・Center Viewボタンでオブジェクトを画面の中央に配置できる  
 
 Go to the Segment Editor screen and press the Add button.  
