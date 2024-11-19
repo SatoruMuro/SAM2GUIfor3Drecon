@@ -84,7 +84,7 @@ Recommended image size: no more than 1000px on each side
 
 <img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
-【SAM2 GUI for Img Seqの起動】　Launching SAM2 GUI for Image Sequence  
+【SAM2 GUI for Img Seqの起動】　Launching SAM2 GUI for Image Sequence 
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
