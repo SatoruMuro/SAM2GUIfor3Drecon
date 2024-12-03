@@ -37,13 +37,13 @@ Note: For histological serial sections, registration (alignment) is required bef
 
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
-**Step 1. AI-Powered Segmentation**  
+**Step 1. Seg: AI-Powered Segmentation**  
 [SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb) 
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
-**Step 2. Interactive Refinement**  
+**Step 2. Ref: Interactive Refinement**  
 (optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb) 
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
