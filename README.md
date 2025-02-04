@@ -247,7 +247,9 @@ Use the Group B macros and freeform input with the stylus (or the Curve Tool if 
 Once verification and corrections of all segmentation masks are complete, use macro Ca to generate images for output and macro Cb to export the corrected mask images in grayscale.  
 Each object corresponds to the following grayscale values: (255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
 
+SAM2 GUI for Img Seqをリセットさせるには、GradioのGUIを一旦閉じ、Colabのノートブックに戻り、ランタイム > ランタイムを接続解除して削除 を実行し、その後、再度 ランタイム > すべてのセルを実行 を行ってください。  
 
+To reset SAM2 GUI for Img Seq, first, close the Gradio interface. Then, return to the Colab notebook and navigate to Runtime > Disconnect and delete runtime. Finally, re-run all cells by selecting Runtime > Run all.  
 
 
 ## Step 3: 3D reconstruction  
