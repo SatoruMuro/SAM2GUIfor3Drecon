@@ -18,6 +18,7 @@
 - Allows users to review and edit segmentation masks with a correction tool.  
 - Supports import into 3D Slicer for rapid 3D reconstruction.  
 
+※こちらのStep 2で使用するツールはWindows用に開発されているため、Mac等他のOSでの動作には制限がある可能性があります。
 Note: For histological serial sections, registration (alignment) is required before segmentation. See [this page](Registration.md) for the method of automatic alignment using MultiStackReg.  
 
 
