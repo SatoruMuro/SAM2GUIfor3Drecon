@@ -38,8 +38,8 @@ Note: For histological serial sections, registration (alignment) is required bef
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 **Step 1. Seg: AI-Powered Segmentation**  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb) 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb">
+[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_2.ipynb) 
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_2.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
@@ -48,7 +48,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.4))  
 
 **Step 3. 3D reconstruction**  
 [3D slicer](https://www.slicer.org/)  
@@ -85,7 +85,7 @@ Recommended image size: no more than 1000px on each side
 <img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
 【SAM2 GUI for Img Seqの起動】　Launching SAM2 GUI for Image Sequence 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb">
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_2.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 (1) ランタイム>すべてのセルを実行  
@@ -153,12 +153,12 @@ When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Lab
 
 
 【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
-・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
+・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.4)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.4)をダウンロード  
 ・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意        
 ・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）  
 ・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）  
 
-Download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.2) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2).  
+Download [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.4) and [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.4).  
 Prepare the vector images (SVG files) of the segmentation masks generated in Step 1 (mask_svgs).  
 Open the macro-enabled PowerPoint file (pptm) for Segment Editor PP. If macros are disabled, enable them to proceed.  
 It is recommended to use a stylus pen, pen tablet, or similar device for the task (mouse operation is also possible).  
@@ -337,6 +337,10 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 
 # Update  
+**2025.2.4**  
+SAM2 GUI for Img Seqのリセット方法を明記（SAM2GUIforImgSeqv4.2.ipynb）。　　
+SegmentEditorPPの新しいバージョンを追加(SegmentEditorPP1.4.pptm)。  
+
 **2024.11.19**  
 SAM2 GUI for Img Seqの中身をSAM2からSAM2.1にグレードアップさせました（SAM2GUIforImgSeqv4.0.ipynb）。これにより精度向上が期待されます（使用実感としてはあまり変わらないかもです）。  
 
@@ -351,7 +355,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 
 # Link of tools  
 JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/JPGconverter_v1_1.ipynb)  
-SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_0.ipynb)(*High-power model running on GPU, this is recommended) , [GoogleColab(previous version](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)   
+SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_2.ipynb)(*High-power model running on GPU, this is recommended) , [GoogleColab(previous version](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)   
 Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 Object Mask Splitter: [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb) 
 
