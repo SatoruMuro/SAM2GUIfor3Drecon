@@ -338,7 +338,7 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 # Update  
 **2025.2.4**  
-SAM2 GUI for Img Seqのリセット方法を明記（SAM2GUIforImgSeqv4.2.ipynb）。　　
+SAM2 GUI for Img Seqのリセット方法を明記（SAM2GUIforImgSeqv4.2.ipynb）。  
 SegmentEditorPPの新しいバージョンを追加(SegmentEditorPP1.4.pptm)。  
 
 **2024.11.19**  
