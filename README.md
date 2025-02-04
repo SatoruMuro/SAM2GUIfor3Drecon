@@ -137,6 +137,11 @@ Note: Do not close the Colab notebook screen after opening the GUI.
 
 【セグメンテーションの色ラベル】　Segmentation Color Labels  
 <img src="images/colorlist.png" alt="colorlist" width="100%">  
+
+SAM2 GUI for Img Seqをリセットさせるには、GradioのGUIを一旦閉じ、Colabのノートブックに戻り、ランタイム > ランタイムを接続解除して削除 を実行し、その後、再度 ランタイム > すべてのセルを実行 を行ってください。  
+
+To reset SAM2 GUI for Img Seq, first, close the Gradio interface. Then, return to the Colab notebook and navigate to Runtime > Disconnect and delete runtime. Finally, re-run all cells by selecting Runtime > Run all.  
+
   
 ## Step 2: Interactive Refinement
 
@@ -277,10 +282,11 @@ To use the Group B macros, you must first select a shape before running the macr
 Once verification and corrections of all segmentation masks are complete, use macro Ca to generate images for output and macro Cb to export the corrected mask images in grayscale.  
 Each object corresponds to the following grayscale values: (255, 248, 237, 226, 215, 204, 193, 182, 171, 160, 149, 138, 127, 116, 105, 94, 83, 72, 61, 50)  
 
-SAM2 GUI for Img Seqをリセットさせるには、GradioのGUIを一旦閉じ、Colabのノートブックに戻り、ランタイム > ランタイムを接続解除して削除 を実行し、その後、再度 ランタイム > すべてのセルを実行 を行ってください。  
+出力された画像は、"edittedmasks" というフォルダーに保存されます。このフォルダーは、作業中の Segment Editor PP ファイルと同じ場所に作成されます。  
+なお、保存先に "edittedmasks" フォルダーがすでに存在する場合、それは上書きされるため、注意が必要です。  
 
-To reset SAM2 GUI for Img Seq, first, close the Gradio interface. Then, return to the Colab notebook and navigate to Runtime > Disconnect and delete runtime. Finally, re-run all cells by selecting Runtime > Run all.  
-
+The output images are stored in a folder named "edittedmasks", which is saved in the same location as the working Segment Editor PP file.  
+If a folder named "edittedmasks" already exists in the save location, it will be overwritten, so caution is required.  
 
 ## Step 3: 3D reconstruction  
 
