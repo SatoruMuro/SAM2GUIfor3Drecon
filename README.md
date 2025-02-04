@@ -70,7 +70,7 @@ JPG Converter
 </a>  
 ・画像ファイル名は、image0001.jpg, image0002.jpg...  
 ・画像ファイルの大きさは一辺が1000px以下を推奨  
-（複数の画像ファイルの一括編集には[IrfanView](https://www.irfanview.com/)を推奨）  
+（複数の画像ファイルの一括編集には[ImageJ](https://imagej.net/ij/)のScale機能か、[IrfanView](https://www.irfanview.com/)のbatch conversionが利用可能です。IrfanViewはWindowsのみ対応しています。）  
 
 Sequential Slice Images (Sequential Tomographic Images)  
 JPG format  
@@ -80,7 +80,7 @@ JPG Converter
 </a>  
 File names should follow the format: image0001.jpg, image0002.jpg, ...  
 Recommended image size: no more than 1000px on each side  
-(For batch editing of multiple image files, [IrfanView](https://www.irfanview.com/) is recommended)  
+For batch resizing multiple image files, you can use the Image > Scale function in [ImageJ](https://imagej.net/ij/) or the batch conversion feature in [IrfanView](https://www.irfanview.com/) (Windows-only app).  
 
 
 <img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
