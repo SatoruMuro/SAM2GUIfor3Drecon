@@ -220,7 +220,7 @@ Macros can be accessed from either the Developer tab or the View tab. By default
 【編集作業前のデータの入力：マクログループA】　Data Input Before Editing: Macro Group A  
 ・マクロAa、Abを使って、連続切片画像とマスク画像を配置する  
 ・マクロAbで配置したマスク画像を編集可能にするために、[Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)を用いて、グラフィックス形式から図形に変換する（Graphic2shapeのexeファイルを起動し、メッセージボックスの指示通りに操作してください）  
-　　※Graphic2shapeのexeファイルはマクロAbの直後に使用します。
+　　※Graphic2shapeのexeファイルはマクロAbの直後に使用します。  
 ・マクロAcで、余分な黒背景を削除し、マスクを70%透過にする  
 
 Use macros Aa and Ab to place the sequential slice images and mask images.  
