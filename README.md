@@ -151,6 +151,7 @@ When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Lab
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
+Note: The applications used in Step 2, Segment Editor PP and Graphic2shape, have OS dependencies. Since they are developed for Windows OS, their functionality may be limited or restricted on other operating systems.  
 
 【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
 ・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
