@@ -206,11 +206,15 @@ It is recommended to use a stylus pen, pen tablet, or similar device for the tas
 連続断層画像のピクセルサイズのアスペクト比（幅：高さ）をファイルのプロパティ等で確認し、スライドのアスペクト比をそれに合わせる。幅と高さの比率が同じになればOK。  
 **(2) クイックアクセスツールバーへのマクロの配置**  
 マクロのBグループをクイックアクセスツールバーの最初の３つに配置する。クイックアクセスツールバーにあるコマンドは「Alt＋数字」のショートカットが有効になる（数字は配置されている順番）。  
+**(3) 「開発」タブの追加**  
+マクロは開発タブまたは表示タブからアクセス可能です。PowerPointの初期設定では開発タブは非表示であるため、ファイル > オプション > PoerPointのオプション内 > リボンのユーザー設定 > メインタブ > 開発 から開発タブを追加してください。  
 
 **(1) Adjust Slide Size**  
 Check the aspect ratio of the pixel size of the sequential tomographic images in the file properties or similar. Adjust the slide’s aspect ratio to match. As long as the width-to-height ratio is the same, it should be fine.  
 **(2) Add Macros to the Quick Access Toolbar**  
 Place the Group B macros as the first three items on the Quick Access Toolbar. Commands in the Quick Access Toolbar can be accessed with the shortcut "Alt + Number" (the number corresponds to their position in the toolbar).  
+**(3) Add Developer tab to Main Tabs**  
+Macros can be accessed from either the Developer tab or the View tab. By default, the Developer tab is not displayed in PowerPoint. To add it, follow these steps: File > Options ("PowerPoint Options") > Customize Ribbon > Main Tabs > Developer.  
 
 
 【編集作業前のデータの入力：マクログループA】　Data Input Before Editing: Macro Group A  
