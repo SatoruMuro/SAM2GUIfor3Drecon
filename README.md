@@ -237,11 +237,34 @@ Use macro Ac to remove the unnecessary black background and set the mask transpa
 ・特定のマスクを選択しながら「Ctrl＋マウスのスクロール」で表示の拡大縮小  
 ・マクロのBグループと、タッチペンでのフリーフォーム入力（マウス操作の場合は曲線ツールがおすすめ）を駆使しながら、マスクの輪郭を微修正していく  
 
+セグメンテーションマスクの修正作業は、グループBのマクロを使用して行います。グループBのマクロは以下のとおりです。  
+　　マクロBa: 編集対象を宣言する。  
+　　マクロBb: セグメンテーションマスクの領域を縮小する。  
+　　マクロBc: セグメンテーションマスクの領域を拡大する。  
+効率的な編集作業のために、グループBのマクロをアクセスしやすいキーボードショートカットに再割り当てすると良いです（KeyのRemapping）。  
+
+グループBのマクロを使用するには、マクロを実行する前に図形を選択しておく必要があります。以下の手順で行います。  
+1. 編集したい図形（セグメンテーションマスク）を選択し、マクロBa を実行します。  
+2. マクロBa を実行した後、フリーフォームツール を選択し、目的の形状（輪郭）を描画します。描画した図形が選択されたままであることを確認してください。  
+3. 描画した形状が選択された状態のまま、マクロBb を実行するとセグメンテーションマスクの領域が縮小され、マクロBc を実行すると拡大されます。  
+
 It is recommended to work with a stylus pen or pen tablet, using the stylus (or mouse) in your right hand and the keyboard with your left hand.  
 For keyboard operations, consider using the "Key Remapping" feature in [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) Keyboard Manager to set up a layout optimized for the following tasks.  
 Navigate between slides with PgUp and PgDn to review the segmentation results and make edits as needed.  
 While selecting a specific mask, use "Ctrl + Mouse Scroll" to zoom in and out.  
 Use the Group B macros and freeform input with the stylus (or the Curve Tool if using a mouse) to make fine adjustments to the mask contours.  
+
+Segmentation mask modifications are performed using the Group B macros. The Group B macros consist of:  
+    Macro Ba: Declares the target for editing.  
+    Macro Bb: Reduces the segmentation mask area.  
+    Macro Bc: Expands the segmentation mask area.  
+For more efficient editing, consider remapping the Group B macros to easily accessible keyboard shortcuts.  
+
+To use the Group B macros, you must first select a shape before running the macro. Follow these steps:  
+1. Select the shape you want to edit and run Macro Ba.  
+2. After running Macro Ba, choose the Freeform (Scribble) tool, draw the desired shape, and ensure that the drawn shape remains selected.  
+3. With the drawn shape still selected, run Macro Bb to reduce the segmentation mask area or Macro Bc to expand it.  
+
 
 
 <img src="images/KeyRemapping.jpg" alt="KeyRemapping" width="75%">
