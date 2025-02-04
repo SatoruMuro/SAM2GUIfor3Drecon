@@ -48,7 +48,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.4))  
+[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
 
 **Step 3. 3D reconstruction**  
 [3D slicer](https://www.slicer.org/)  
@@ -153,7 +153,7 @@ When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Lab
 
 
 【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
-・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/sv1.4)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.4)をダウンロード  
+・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
 ・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意        
 ・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）  
 ・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）  
