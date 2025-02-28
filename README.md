@@ -375,20 +375,6 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 
 
-# Citation  
-本ツールを研究等に使用した場合は、以下の論文を引用してください。  
-If you use this tool for research or other academic purposes, please cite the following paper:  
-
-Muro S, Ibara T, Nimura A, Akita K.  
-Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.  
-Microscopy (Oxf). (in press)  
-
-@article{Muro2025,
-  author    = {Muro, Satoru and Ibara, T. and Nimura, A. and Akita, K.},
-  title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
-  journal   = {Microscopy (Oxford)},
-  year      = {in press}
-}
 
 
 
@@ -418,4 +404,19 @@ Object Mask Splitter: [GoogleColab](https://colab.research.google.com/github/Sat
 # License
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
 
-# Citation
+
+# Citation  
+本ツールを研究等に使用した場合は、以下の論文を引用してください。  
+If you use this tool for research or other academic purposes, please cite the following paper:  
+
+Muro S, Ibara T, Nimura A, Akita K.  
+Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.  
+Microscopy (Oxf). (in press)  
+
+```bibtex
+@article{Muro2025,
+  author    = {Muro, Satoru and Ibara, T. and Nimura, A. and Akita, K.},
+  title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
+  journal   = {Microscopy (Oxford)},
+  year      = {in press}
+}
