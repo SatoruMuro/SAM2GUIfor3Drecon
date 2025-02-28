@@ -412,6 +412,7 @@ If you use this tool for research or other academic purposes, please cite the fo
 Muro S, Ibara T, Nimura A, Akita K.  
 Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.  
 Microscopy (Oxf). (in press)  
+DOI: 10.1093/jmicro/dfaf015  
 
 ```bibtex
 @article{Muro2025,
@@ -419,4 +420,5 @@ Microscopy (Oxf). (in press)
   title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
   journal   = {Microscopy (Oxford)},
   year      = {in press}
+  doi       = {10.1093/jmicro/dfaf015}
 }
