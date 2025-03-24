@@ -393,6 +393,9 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 # Update  
 **2025.3.11**  
+No module named 'sam2'となるエラーを修正（SAM2GUIforImgSeqv4.6.ipynb）。  
+
+**2025.3.11**  
 PyTorch + CUDA + cuDNNの互換性を修正（SAM2GUIforImgSeqv4.3.ipynb）。  
 
 **2025.2.4**  
