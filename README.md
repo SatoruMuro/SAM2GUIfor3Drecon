@@ -52,8 +52,8 @@ Note: For histological serial sections, registration (alignment) is required bef
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 **Step 1. Seg: AI-Powered Segmentation**  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_3.ipynb) 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_3.ipynb">
+[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb) 
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 
@@ -99,7 +99,7 @@ For batch resizing multiple image files, you can use the Image > Scale function 
 <img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
 【SAM2 GUI for Img Seqの起動】　Launching SAM2 GUI for Image Sequence 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_3.ipynb">
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
 (1) ランタイム>すべてのセルを実行  
@@ -413,7 +413,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 
 # Link of tools  
 JPG Converter: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/JPGconverter),[GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/JPGconverter_v1_1.ipynb)  
-SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_3.ipynb)(*High-power model running on GPU, this is recommended) , [GoogleColab(previous version](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)   
+SAM2 GUI for Img Seq: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/SAM2GUIforImgSeq)(*Low-precision model running slowly on CPU), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)(*High-power model running on GPU, this is recommended) , [GoogleColab(previous version](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv3_9.ipynb)   
 Color Changer: [HuggingFace](https://huggingface.co/spaces/SatoruMuro/ColorChanger), [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 Object Mask Splitter: [GoogleColab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_5.ipynb) , [GoogleColab(new ver)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ObjectMaskSplitterv2_8.ipynb)   
 
