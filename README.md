@@ -5,20 +5,17 @@
   
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
 - 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-</a>  
   
  🎨 **Step 2. Ref: Interactive Refinement (Optional)**  
-- 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
-  <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-  </a>  
+- 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
 - 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
   
 🧱 **Step 3. 3D Reconstruction**  
-Import the refined masks into [3D Slicer](https://www.slicer.org/) to perform 3D reconstruction and visualization.  
-<img src="images/02threesteps.JPG" alt="threesteps" width="100%">   
+- 🔗 [3D Slicer](https://www.slicer.org/)
+  
+<img src="images/02threesteps.JPG" alt="threesteps" width="100%">
+
+   
 
 
 # "Seg & Ref": AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
