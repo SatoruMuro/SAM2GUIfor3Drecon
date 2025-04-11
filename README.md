@@ -1,4 +1,4 @@
-## 🛠 Workflow: 3 Steps (with Step 0 for preprocessing)
+## 🛠 Workflow
 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
 - 🧬 **Histological sections**  → Perform **image registration** to align the slices.    🔗 [See Registration Instructions](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
 - 🏥 **CT or MRI in DICOM format**  → Convert to **JPEG (.jpg) format** for use in segmentation.    🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
@@ -6,8 +6,8 @@
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
 - 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
   
- 🎨 **Step 2. Ref: Interactive Refinement (Optional)**  
-- 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
+ 🎨 **Step 2. Ref: Interactive Refinement**  
+- 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  (Optional)  
 - 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
   
 🧱 **Step 3. 3D Reconstruction**  
