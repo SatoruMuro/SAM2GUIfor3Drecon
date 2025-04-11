@@ -4,7 +4,7 @@
 - 🏥 **CT or MRI in DICOM format**  → Convert to **JPEG (.jpg) format** for use in segmentation.    🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
   
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
-- 🔗 [SAM2 GUI for Image Sequences (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
+- 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
 <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
 </a>  
@@ -14,7 +14,7 @@
   <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>  
-- 🔗 [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
+- 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
   
 🧱 **Step 3. 3D Reconstruction**  
 Import the refined masks into [3D Slicer](https://www.slicer.org/) to perform 3D reconstruction and visualization.  
