@@ -1,11 +1,8 @@
 ## 🛠 Workflow: 3 Steps (with Step 0 for preprocessing)
-### 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
-Depending on the type of source images, preprocessing is required before segmentation:
-- 🧬 **Histological sections**  → Perform **image registration** to align the slices.  
-  🔗 [See Registration Instructions](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
-- 🏥 **CT or MRI in DICOM format**  → Convert to **JPEG (.jpg) format** for use in segmentation.  
-  🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
-### 🧠 **Step 1. Seg: AI-Powered Segmentation**
+🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
+- 🧬 **Histological sections**  → Perform **image registration** to align the slices.    🔗 [See Registration Instructions](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
+- 🏥 **CT or MRI in DICOM format**  → Convert to **JPEG (.jpg) format** for use in segmentation.    🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
+🧠 **Step 1. Seg: AI-Powered Segmentation**
 
 Use Segment Anything Model (SAM) to automatically segment anatomical structures.
 
