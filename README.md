@@ -1,3 +1,55 @@
+## 🛠 Workflow: 3 Steps (with Step 0 for preprocessing)
+
+<img src="images/02threesteps.JPG" alt="threesteps" width="100%">
+
+---
+
+### 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
+
+Depending on the type of source images, preprocessing is required before segmentation:
+
+- 🧬 **Histological sections**  
+  → Perform **image registration** to align the slices.  
+  🔗 [See Registration Instructions](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
+
+- 🏥 **CT or MRI in DICOM format**  
+  → Convert to **JPEG (.jpg) format** for use in segmentation.  
+  🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
+
+---
+
+### 🧠 **Step 1. Seg: AI-Powered Segmentation**
+
+Use Segment Anything Model (SAM) to automatically segment anatomical structures.
+
+🔗 [SAM2 GUI for Image Sequences (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)  
+<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+</a>
+
+---
+
+### 🎨 **Step 2. Ref: Interactive Refinement (Optional)**
+
+Refine segmentation manually or semi-automatically.
+
+- [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
+  <a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>  
+
+- [Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))
+
+---
+
+### 🧱 **Step 3. 3D Reconstruction**
+
+Import the refined masks into [3D Slicer](https://www.slicer.org/) to perform 3D reconstruction and visualization.
+
+
+
+
+
 # "Seg & Ref": AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 
 <img src="images/01newmethod.JPG" alt="newmethod" width="100%">
