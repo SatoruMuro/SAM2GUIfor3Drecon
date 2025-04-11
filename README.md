@@ -1,9 +1,4 @@
 ## 🛠 Workflow: 3 Steps (with Step 0 for preprocessing)
-
-<img src="images/02threesteps.JPG" alt="threesteps" width="100%">
-
----
-
 ### 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
 
 Depending on the type of source images, preprocessing is required before segmentation:
@@ -46,7 +41,7 @@ Refine segmentation manually or semi-automatically.
 
 Import the refined masks into [3D Slicer](https://www.slicer.org/) to perform 3D reconstruction and visualization.
 
-
+<img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
 
 
