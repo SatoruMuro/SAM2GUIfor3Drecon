@@ -25,6 +25,7 @@
 - メモ帳で保存時に `"`.slicerrc.py`"`（ダブルクォーテーション付き）と入力  
 - または、エクスプローラーでリネームして `.txt` を削除してください。  
   
+
   
 ## 🧰 DICOM Processing Tools for 3D Slicer
 
