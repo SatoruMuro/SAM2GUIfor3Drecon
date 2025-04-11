@@ -67,26 +67,6 @@ Note: For histological serial sections, registration (alignment) is required bef
 </a>  
 
 
-## 作業工程　3 Steps
-
-<img src="images/02threesteps.JPG" alt="threesteps" width="100%">
-
-**Step 1. Seg: AI-Powered Segmentation**  
-[SAM2 GUI for Img Seq](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb) 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-</a>  
-
-**Step 2. Ref: Interactive Refinement**  
-(optional) [ColorChanger](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb) 
-<a href="https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-</a>  
-[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/v1.4) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
-
-**Step 3. 3D reconstruction**  
-[3D slicer](https://www.slicer.org/)  
-
 
 
 # 使い方　Tutorial
