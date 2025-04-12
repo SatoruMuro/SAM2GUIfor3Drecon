@@ -31,9 +31,9 @@
 
 This `.slicerrc.py` script **automatically adds the following buttons** to the 3D Slicer toolbar:
 
-- 📷 **DICOM/NRRD → JPG**: Exports volume slices as JPEG images based on the current window/level settings.
-- 💾 **Save Volume Info**: Saves volume metadata (dimensions, spacing, origin) to a CSV file.
-- 📂 **Load Volume Info**: Loads metadata from a CSV file and applies it to the currently loaded volume.
+- 📷 **DICOM/NRRD→JPG**: Exports volume slices as JPEG images based on the current window/level settings.
+- 💾 **SaveVolumeInf**: Saves volume metadata (dimensions, spacing, origin) to a CSV file.
+- 📂 **ApplyVolumeInf**: Loads metadata from a CSV file and applies it to the currently loaded volume.
 
 **A convenient toolset for medical image preprocessing, data sharing, and visualization.**
 
