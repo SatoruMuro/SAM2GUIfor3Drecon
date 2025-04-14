@@ -392,6 +392,9 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 
 # Update  
+**2025.4.14**  
+Segment Editor PPに一括処理などのマクロを複数追加（SegmentEditorPPv1.9.pptm）
+
 **2025.3.11**  
 No module named 'sam2'となるエラーを修正（SAM2GUIforImgSeqv4.6.ipynb）。  
 
