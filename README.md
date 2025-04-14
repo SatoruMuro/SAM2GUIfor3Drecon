@@ -8,7 +8,7 @@
   
  🎨 **Step 2. Ref: Interactive Refinement**  
 - 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  (Optional)  
-- 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/ref) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
+- 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/ref2.0) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
   
 🧱 **Step 3. 3D Reconstruction**  
 - 🔗 [3D Slicer](https://www.slicer.org/)
@@ -173,7 +173,7 @@ When Step 1 Automatic Segmentation is Performed Multiple Times　→　Color Lab
 Note: The applications used in Step 2, Segment Editor PP and Graphic2shape, have OS dependencies. Since they are developed for Windows OS, their functionality may be limited or restricted on other operating systems.  
 
 【セグメンテーションマスクの確認・修正作業】  Segmentation Mask Verification and Correction Process  
-・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/ref)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
+・[Segment Editor PP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/ref2.0)と [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2)をダウンロード  
 ・Step 1で生成されたセグメンテーションマスクのベクター画像（mask_svgs）（SVGファイル）を用意        
 ・Segment Editor PPのマクロ有効パワーポイントファイル（pptm）を開く（マクロが無効になっている場合はマクロを許可し有効にする）  
 ・作業にはタッチペン、ペンタブレット等の使用を推奨（マウス操作でも可能）  
@@ -393,7 +393,7 @@ To capture a screenshot, click the camera icon in the top toolbar, select 3D Vie
 
 # Update  
 **2025.4.14**  
-Segment Editor PPに一括処理などのマクロを複数追加（SegmentEditorPPv1.9.pptm）
+Segment Editor PPに一括処理などのマクロを複数追加（SegmentEditorPPv2.0.pptm）
 
 **2025.3.11**  
 No module named 'sam2'となるエラーを修正（SAM2GUIforImgSeqv4.6.ipynb）。  
