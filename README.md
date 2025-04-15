@@ -427,11 +427,7 @@ Object Mask Splitter: [GoogleColab](https://colab.research.google.com/github/Sat
 The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
 
 
-# Seg & Ref
-
-[![DOI](https://img.shields.io/badge/DOI-10.1093%2Fjmicro%2Fdfaf015-blue)](https://doi.org/10.1093/jmicro/dfaf015)
-
-## Citation
+# Citation
 本ツールを研究などに使用した場合は、以下の論文を引用してください。  
 If you use this tool for research or other academic purposes, please cite the following article:
 
