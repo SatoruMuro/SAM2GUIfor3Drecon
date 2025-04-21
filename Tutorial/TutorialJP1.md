@@ -80,8 +80,8 @@ Gradio GUIの動作がおかしい場合は、以下の手順でリセットし�
 
 ### ▶️ 次のステップへ進む 🔗
 
-- 👉 [Step 2：マスク修正](./TutorialJP2.md)
-- 👉 [Step 3：3D再構築](./TutorialJP3.md)
+- 👉 [Step 2：マスク修正](./Tutorial/TutorialJP2.md)
+- 👉 [Step 3：3D再構築](./Tutorial/TutorialJP3.md)
 
 ---
 
