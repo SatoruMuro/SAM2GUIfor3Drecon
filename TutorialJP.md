@@ -62,7 +62,7 @@
 
 ### 🎨 セグメンテーションの色ラベル
 
-![colorlist](images/colorlabels.jpg)
+![colorlist](images/colorlabels1.jpg)
 
 ---
 
