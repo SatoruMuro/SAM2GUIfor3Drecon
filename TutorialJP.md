@@ -10,9 +10,9 @@
 - **形式**：JPEG（`.jpg`）形式の画像  
 - **ファイル名**：`image0001.jpg`, `image0002.jpg`, ... のように連番で保存  
 - **推奨サイズ**：1辺が **1000ピクセル以下** （大きい画像も可能ですが、処理時間が長くなります）    
-  ※一括リサイズには以下のツールが便利です：  
-  - [ImageJ（Mac/Windows対応）](https://imagej.net/ij/) の "Scale" 機能  
-  - [IrfanView（Windows専用）](https://www.irfanview.com/) のバッチ変換機能  
+  ※一括リサイズには以下のツールが便利です：
+  - 🔗 [ImageJ（Mac/Windows対応）](https://imagej.net/ij/) ←
+  - 🔗 [IrfanView（Windows専用）](https://www.irfanview.com/)
 
 ---
 
