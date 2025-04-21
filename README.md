@@ -114,12 +114,12 @@ Full-length live demonstration with step-by-step operation
 # 使い方（日本語）
 
 0. 🛠️ Step 0：画像の前処理（位置合わせ・DICOM変換）
-   - 🧬 組織切片画像の位置合わせ → [Registration](./Registration.md)
-   - 🏥 CT・MRI（DICOM形式）の変換 → [DICOM Conversion](./toolforDICOM.md)
+   - 🧬 組織切片画像の位置合わせ → [Registration](./Tutorial/Registration.md)
+   - 🏥 CT・MRI（DICOM形式）の変換 → [DICOM Conversion](./Tutorial/toolforDICOM.md)
 
-1. 🟢 [Step 1：AIによる自動セグメンテーション](./TutorialJP1.md)
-2. ✍️ [Step 2：セグメンテーションマスクの修正](./TutorialJP2.md)
-3. 🧱 [Step 3：3D再構築とSTL出力](./TutorialJP3.md)
+1. 🟢 [Step 1：AIによる自動セグメンテーション](./Tutorial/TutorialJP1.md)
+2. ✍️ [Step 2：セグメンテーションマスクの修正](./Tutorial/TutorialJP2.md)
+3. 🧱 [Step 3：3D再構築とSTL出力](./Tutorial/TutorialJP3.md)
 
 
 ---
@@ -127,12 +127,12 @@ Full-length live demonstration with step-by-step operation
 # How to Use (English)
 
 0. 🛠️ Step 0: Image Preprocessing (Registration / DICOM Conversion)  
-   - 🧬 Registration of histological section images → [Registration](./Registration.md)  
-   - 🏥 Conversion of CT/MRI (DICOM format) → [DICOM Conversion](./toolforDICOM.md)
+   - 🧬 Registration of histological section images → [Registration](./Tutorial/Registration.md)  
+   - 🏥 Conversion of CT/MRI (DICOM format) → [DICOM Conversion](./Tutorial/toolforDICOM.md)
 
-1. 🟢 [Step 1: AI-Powered Automatic Segmentation](./TutorialEN1.md)  
-2. ✍️ [Step 2: Refining Segmentation Masks](./TutorialEN2.md)  
-3. 🧱 [Step 3: 3D Reconstruction and STL Export](./TutorialEN3.md)
+1. 🟢 [Step 1: AI-Powered Automatic Segmentation](./Tutorial/TutorialEN1.md)  
+2. ✍️ [Step 2: Refining Segmentation Masks](./Tutorial/TutorialEN2.md)  
+3. 🧱 [Step 3: 3D Reconstruction and STL Export](./Tutorial/TutorialEN3.md)
 
 
 ---
