@@ -1,6 +1,6 @@
-## Step 3: 3D再構築（3D Reconstruction）
+# Seg&Refの使い方 - Step 3
 
-<img src="images/3DSlicer01.gif" alt="3D Slicer Demo" width="60%">
+## 3D再構築
 
 このステップでは、無料ソフトウェア [3D Slicer](https://www.slicer.org/) を使って、Step 2 で修正したマスク画像から3Dモデルを構築します。  
 Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマスク**を使って同様の処理が可能です。
@@ -17,29 +17,27 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
 
 ### 🗂 1. マスク画像の読み込みとスケール調整
 
-<img src="images/step3-03.PNG" alt="Import Image" width="100%">
-
 1. 3D Slicer を起動  
 2. 画面上部メニューから表示モードを **"Conventional"** に設定  
 3. `Add Data > Choose Directory to Add` を選択し、  
-　**Step 2 で出力されたグレースケールマスク（mask_gray_png）** のフォルダを選択して読み込み
-
-<img src="images/step3-04.PNG" alt="Volume Info" width="100%">
-
+　**Step 2 で出力されたグレースケールマスク（mask_gray_png）** のフォルダを選択して読み込み  
 4. `Volumes > Volume Information` に進み、**Image Spacing** を修正  
 　- 左から順に：`X軸`, `Y軸`, `Z軸`  
 　- `Z軸` に入力する値：  
 　　**px/mm × 切片の間隔（mm）**  
 　　（例：2.96 px/mm × 0.2 mm = 0.592）
-
-💡 `X軸` と `Y軸` の spacing は通常そのまま（1.0）でOK  
+💡 `X軸` と `Y軸` の spacing は通常そのまま（1.0）でOK
+💡 `X軸`, `Y軸`, `Z軸` 値の比を維持すれば数値は変更可能（実寸や10倍スケールなど、もとの標本サイズに応じて扱いやすい大きさにすればよい）  
 💡 表示がずれた場合は、`Center View` ボタンで中央に表示を調整
+
+<img src="images/step3-03.PNG" alt="Import Image" width="50%">
+
+<img src="images/step3-04.PNG" alt="Volume Info" width="50%">
+
 
 ---
 
 ### 🧱 2. セグメントマスクの抽出と3D構築
-
-<img src="images/step3-06-3.PNG" alt="Segment Editor" width="100%">
 
 1. `Segment Editor` モジュールに切り替える  
 2. `Add` ボタンでセグメントを追加  
@@ -51,23 +49,25 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
 　（右の▼から Smoothing のON/OFFも切り替え可能）  
 7. 表示がずれていたら `Center View` で中央に戻す
 
+<img src="images/step3-06-3.PNG" alt="Segment Editor" width="50%">
+
 ---
 
 ### 💾 3. STLファイルの出力
-
-<img src="images/step3-07.PNG" alt="STL Export" width="80%">
 
 1. `Segmentations` モジュールに切り替える  
 2. `Export to files` を選択  
 3. STL形式で保存する（ファイルごとに分割されます）
 
+<img src="images/step3-07.PNG" alt="STL Export" width="50%">
+
 ---
 
-### 🔍 4. 3Dデータの観察と調整
+### 🔍 4. 3Dデータの表示
 
 1. 新たに 3D Slicer を立ち上げる  
 2. 表示を `3D only` に変更  
-3. `Add Data > Choose Files to Add` で、保存したSTLファイルを全て読み込む  
+3. `Add Data > Choose Files to Add` で、保存したSTLファイルを全て読み込む（ドラッグ＆ドロップでも読み込み可） 
 4. `Models` モジュールに切り替え、各オブジェクトの**色・透明度**を調整  
 5. `Save` を押し、MRML Scene（プロジェクトファイル）として保存  
 　→ 後から同じ状態を再現可能！
@@ -89,6 +89,3 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
 　3. `Save As` で保存場所とファイル名を指定 → `OK`
 
 ---
-
-これで Step 3 は完了です 🎉  
-次に進む場合は、必要に応じて Step 4 をご案内できます！
