@@ -68,7 +68,7 @@ Note: For histological serial sections, registration (alignment) is required bef
 
 # 使い方（日本語）
 
-0. 🛠️ [Step 0：画像の前処理（位置合わせ・DICOM変換）](#step-0)
+0. 🛠️ Step 0：画像の前処理（位置合わせ・DICOM変換）
    - 🧬 組織切片画像の位置合わせ → [Registration](./Registration.md)
    - 🏥 CT・MRI（DICOM形式）の変換 → [DICOM Conversion](./toolforDICOM.md)
 
