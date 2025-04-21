@@ -46,7 +46,7 @@
 
 ### ⚠️ 注意｜Notes
 
-- 🧬 **組織連続切片**を使用する場合は、セグメンテーション前に**位置合わせ（Registration）**が必要です  
+- 🧬 **組織連続切片**を使用する場合は、セグメンテーション前に**位置合わせ**が必要です  
 　→ 自動位置合わせの方法は 🔗 [こちら（MultiStackReg）](Registration.md)  
 　*Histological serial sections require registration before segmentation. See [this page](Registration.md) for details.*
 
