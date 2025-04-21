@@ -88,3 +88,8 @@ Other software such as Amira-Avizo or ImageJ can also be used to generate 3D mod
 
 ---
 
+### ✅ All Done!
+
+That's it — you're finished! 🎉  
+Great job completing the full Seg&Ref workflow. Thank you for your hard work!
+
