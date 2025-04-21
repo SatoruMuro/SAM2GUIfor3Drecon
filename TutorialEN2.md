@@ -1,4 +1,4 @@
-## How to Use Seg&Ref - Step 2
+# How to Use Seg&Ref - Step 2
 
 ## Step 2: Refining Segmentation Masks
 
