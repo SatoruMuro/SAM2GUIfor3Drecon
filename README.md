@@ -14,7 +14,7 @@
 🧱 **Step 3. 3D Reconstruction**  
 - 🔗 [3D Slicer](https://www.slicer.org/)
   
-<img src="images/graphical_abstract_v01jpg.jpg" alt="threesteps" width="100%">
+<img src="images/graphical_abstract_v01jpg.jpg" alt="threesteps" width="50%">
 
    
 # What is "Seg & Ref"?  
