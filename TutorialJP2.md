@@ -1,4 +1,6 @@
-## Step 2: Interactive Refinement（セグメンテーションの修正）
+# Seg&Refの使い方 - Step 2
+
+## セグメンテーションマスクの修正
 
 ---
 
@@ -12,9 +14,6 @@
 自動セグメンテーション（Step 1）を複数回行った場合、**ラベルの重複を防ぐ**ために、以下のカラーツールでラベルを再整理してください：
 
 🔗 [ColorChanger（Colab）](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)
-
-<img src="images/SegmentEditorPP01.gif" alt="SegmentEditorPP demo" width="60%">
 
 ---
 
