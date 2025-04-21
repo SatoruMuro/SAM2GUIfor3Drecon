@@ -66,7 +66,18 @@ Note: For histological serial sections, registration (alignment) is required bef
 
 
 
-# 使い方　Tutorial
+# 使い方（日本語）
+
+0. 🛠️ [Step 0：画像の前処理（位置合わせ・DICOM変換）](#step-0)
+   - 🧬 組織切片画像の位置合わせ → [Registration](./Registration.md)
+   - 🏥 CT・MRI（DICOM形式）の変換 → [DICOM Conversion](./toolforDICOM.md)
+
+1. 🟢 [Step 1：AIによる自動セグメンテーション](./TutorialJP1.md)
+2. ✍️ [Step 2：インタラクティブな修正作業](./TutorialJP2.md)
+3. 🧱 [Step 3：3D再構築とSTL出力](./TutorialJP3.md)
+
+# Tutorial (English)
+
 ## Step 1: AI-Powered Segmentation  
 
 <img src="images/SAM2GUI01hi.gif" alt="newmethod" width="50%"><img src="images/SAM2GUI02hi.gif" alt="newmethod" width="50%">
