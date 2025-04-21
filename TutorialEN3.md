@@ -1,4 +1,4 @@
-## How to Use Seg&Ref - Step 3
+# How to Use Seg&Ref - Step 3
 
 ## Step 3: 3D Reconstruction and STL Export
 
