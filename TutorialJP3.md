@@ -31,9 +31,9 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
   （実寸や10倍スケールなど、もとの標本サイズに応じて扱いやすい大きさにすればよい）  
 💡 表示がずれた場合は、`Center View` ボタンで中央に表示を調整
 
-<img src="images/step3-03.PNG" alt="Import Image" width="80%">
+<img src="images/step3-03.PNG" alt="Import Image" width="90%">
 
-<img src="images/step3-04.PNG" alt="Volume Info" width="80%">
+<img src="images/step3-04.PNG" alt="Volume Info" width="90%">
 
 
 ---
@@ -50,7 +50,7 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
 　（右の▼から Smoothing のON/OFFも切り替え可能）  
 7. 表示がずれていたら `Center View` で中央に戻す
 
-<img src="images/step3-06-3.PNG" alt="Segment Editor" width="80%">
+<img src="images/step3-06-3.PNG" alt="Segment Editor" width="70%">
 
 ---
 
@@ -60,7 +60,7 @@ Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマ�
 2. `Export to files` を選択  
 3. STL形式で保存する（ファイルごとに分割されます）
 
-<img src="images/step3-07.PNG" alt="STL Export" width="80%">
+<img src="images/step3-07.PNG" alt="STL Export" width="50%">
 
 ---
 
