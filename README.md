@@ -378,7 +378,7 @@ The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Cola
 
 ---
 
-## 📚 Citation｜引用
+# 📚 Citation｜引用
 
 本ツールを研究・論文等で使用される場合は、以下の論文を引用してください。  
 If you use this tool for research or academic purposes, please cite the following article:
