@@ -50,12 +50,13 @@
 
 ### 📁 出力されるファイル
 
-| フォルダ名 | 内容 |
-|-----------|------|
-| `segmented_images` | 元画像とマスクを重ねた確認用画像 |
-| `mask_color_images` | RGBマスク画像（PNG形式） |
-| `mask_svgs` | ベクター形式マスク（SVG形式）→ Step 2で使用 |
-| `grayscale_masks` | グレースケールマスク（Step 3で使用） |
+| フォルダ名 | 内容 | 使用用途 |
+|-----------|------|----------|
+| `segmented_images` | 元画像とマスクを重ねた確認用画像 | 確認・記録・プレゼン |
+| `mask_color_images` | RGBマスク画像（PNG形式） | 確認・記録・プレゼン |
+| `mask_svgs` | ベクター形式マスク（SVG形式）→ Step 2で使用 | Step 2の修正作業 |
+| `grayscale_masks` | グレースケールマスク（Step 3で使用） | Step 3の3D再構築 |
+
 
 ---
 
