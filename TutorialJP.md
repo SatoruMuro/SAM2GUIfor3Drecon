@@ -62,7 +62,8 @@
 
 ### 🎨 セグメンテーションの色ラベル
 
-![colorlist](images/colorlabels1.jpg)
+<img src="images/colorlabels1.jpg" alt="colorlist" width="50%">
+
 
 ---
 
