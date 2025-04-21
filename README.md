@@ -4,8 +4,8 @@
 
 ## 🛠 Workflow
 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
-- 🧬 **Histological sections**  →  🔗 [Registration](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
-- 🏥 **CT or MRI in DICOM format**  →  🔗 [DICOM Conversion](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
+- 🧬 **Histological sections**  →  🔗 [Registration](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/Registration.md)
+- 🏥 **CT or MRI in DICOM format**  →  🔗 [DICOM Conversion](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/toolforDICOM.md)
   
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
 - 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
@@ -50,12 +50,12 @@
 ### ⚠️ 注意｜Notes
 
 - 🧬 **組織連続切片**を使用する場合は、セグメンテーション前に**位置合わせ**が必要です  
-　→ 自動位置合わせの方法は 🔗 [こちら（MultiStackReg）](Registration.md)  
-　*Histological serial sections require registration before segmentation. See [this page](Registration.md) for details.*
+　→ 自動位置合わせの方法は 🔗 [こちら（MultiStackReg）](Tutorial/Registration.md)  
+　*Histological serial sections require registration before segmentation. See [this page](Tutorial/Registration.md) for details.*
 
 - 🏥 **CTやMRIなどのDICOM画像は、事前にJPEG（.jpg）形式へ変換**しておく必要があります  
-　→ DICOM画像からJPEGへの変換ツールは 🔗 [こちら（DICOM Conversion）](toolforDICOM.md)  
-　*CT or MRI DICOM images must be converted to .jpg format before use. See [DICOM Conversion](toolforDICOM.md).*
+　→ DICOM画像からJPEGへの変換ツールは 🔗 [こちら（DICOM Conversion）](Tutorial/toolforDICOM.md)  
+　*CT or MRI DICOM images must be converted to .jpg format before use. See [DICOM Conversion](Tutorial/toolforDICOM.md).*
 
 - 🪟 **Step 2で使用する修正ツール**（Segment Editor PP / Graphic2shape）は**Windows専用**です  
 　Macなど他のOSでは動作に制限があります  
