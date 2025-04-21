@@ -152,6 +152,6 @@ Use [PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) to 
 
 ### ▶️ Proceed to Next Step 🔗
 
-👉 [Step 3: 3D Reconstruction](./Tutorial/TutorialEN03.md)
+👉 [Step 3: 3D Reconstruction](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialEN3.md)
 
 ---
