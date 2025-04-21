@@ -82,7 +82,7 @@ If the Gradio GUI becomes unresponsive, follow these steps to reset:
 
 ### ▶️ Proceed to the Next Step 🔗
 
-- 👉 [Step 2: Interactive Mask Refinement](./TutorialEN2.md)
-- 👉 [Step 3: 3D Reconstruction](./TutorialEN3.md)
+- 👉 [Step 2: Interactive Mask Refinement](./Tutorial/TutorialEN2.md)
+- 👉 [Step 3: 3D Reconstruction](./Tutorial/TutorialEN3.md)
 
 ---
