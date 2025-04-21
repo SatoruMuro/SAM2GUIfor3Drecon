@@ -58,30 +58,55 @@
 　Macなど他のOSでは動作に制限があります  
 　*Correction tools used in Step 2 are developed for Windows and may not work on macOS or Linux.*
 
+---
+
+## 🎥 解説・デモ動画（Demo Videos）
+
+### 📘 ツールの紹介｜Introduction to Seg & Ref
+
+<table>
+<tr>
+<td align="center">
+<b>🔹 日本語紹介動画</b><br>
+<a href="https://youtu.be/Zs4pfO2FmXE">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Seg&Ref JP Intro" width="100">
+</a><br>
+「Seg & Ref」ツールの概要と使い方（日本語）
+</td>
+<td align="center">
+<b>🔹 English Intro Video</b><br>
+<a href="https://youtu.be/rz2QdxfIM9w">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Seg&Ref EN Intro" width="100">
+</a><br>
+Introduction to "Seg & Ref" Segmentation Tool (English)
+</td>
+</tr>
+</table>
+
+### 🛠 操作デモ｜Usage Demonstrations
+
+<table>
+<tr>
+<td align="center">
+<b>🕒 10分で分かる操作デモ</b><br>
+<a href="https://youtu.be/12ihvPAgfps">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="10-min Demo" width="100">
+</a><br>
+基本操作をまとめたショートデモ（10分）
+</td>
+<td align="center">
+<b>🎬 フルライブデモ</b><br>
+<a href="https://youtu.be/-0zrfhaeAX4">
+  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Full Live Demo" width="100">
+</a><br>
+操作を実演するライブ収録（フルバージョン）
+</td>
+</tr>
+</table>
 
 
 
-   
-# What is "Seg & Ref"?  
 
-・連続切片（連続断層画像）に特化した自動セグメンテーションツール  
-・組織連続切片、解剖断面、CT、MRI、超音波画像など幅広い画像に対応  
-・Segment Anything Model 2 (SAM2)による学習不要の自動セグメンテーション（Zero-shot segmentation）  
-・PCの環境構築が必要ないWeb GUI (Graphical User Interface)  
-・セグメンテーションマスクの修正ツールでユーザーによる確認・修正が可能  
-・3D Slicerへのインポートと迅速な3D再構築に対応  
-
-※組織連続切片ではセグメンテーションの前に位置合わせが必要です。MultiStackRegによる自動位置合わせの方法は[こちら](Registration.md)。  
-
-- Automatic Segmentation Tool Specialized for Serial Sections (Continuous Tomographic Images)  
-- Supports a wide range of images, including histological serial sections, anatomical cross-sections, CT, MRI, and ultrasound images.  
-- Zero-shot segmentation using the Segment Anything Model 2 (SAM2), eliminating the need for training.  
-- Web-based GUI (Graphical User Interface) that does not require PC environment setup.  
-- Allows users to review and edit segmentation masks with a correction tool.  
-- Supports import into 3D Slicer for rapid 3D reconstruction.  
-
-※こちらのStep 2で使用するツールはWindows用に開発されているため、Mac等他のOSでの動作には制限がある可能性があります。
-Note: For histological serial sections, registration (alignment) is required before segmentation. See [this page](Registration.md) for the method of automatic alignment using MultiStackReg.  
 
 
 ## 解説動画  Demo Videos
