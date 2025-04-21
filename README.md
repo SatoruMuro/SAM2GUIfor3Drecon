@@ -1,7 +1,8 @@
+# "Seg & Ref": AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
 ## 🛠 Workflow
 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
-- 🧬 **Histological sections**  → Perform **image registration** to align the slices.    🔗 [See Registration Instructions](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
-- 🏥 **CT or MRI in DICOM format**  → Convert to **JPEG (.jpg) format** for use in segmentation.    🔗 [See DICOM Conversion Guide](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
+- 🧬 **Histological sections**  →  🔗 [Registration](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
+- 🏥 **CT or MRI in DICOM format**  →  🔗 [DICOM Conversion](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/toolforDICOM.md)
   
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
 - 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
@@ -16,11 +17,7 @@
 <img src="images/02threesteps.JPG" alt="threesteps" width="100%">
 
    
-
-
-# "Seg & Ref": AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
-
-<img src="images/01newmethod.JPG" alt="newmethod" width="100%">
+# What is "Seg & Ref"?  
 
 ・連続切片（連続断層画像）に特化した自動セグメンテーションツール  
 ・組織連続切片、解剖断面、CT、MRI、超音波画像など幅広い画像に対応  
