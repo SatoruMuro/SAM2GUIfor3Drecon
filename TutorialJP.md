@@ -28,7 +28,7 @@
    → Gradio GUIが開きます  
 ⚠️ **Colabノートブックの画面は閉じないでください！**
 
-<img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
+<img src="images/step1-01-2.PNG" alt="newmethod" width="50%">
 
 ---
 
