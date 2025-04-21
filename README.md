@@ -16,6 +16,51 @@
   
 <img src="images/graphical_abstract_v01jpg.jpg" alt="threesteps" width="50%">
 
+
+
+# What is "Seg & Ref"?  
+
+**Seg & Ref（セグレフ）**は、3D再構築のための連続断層画像に特化した **Webベースの自動セグメンテーションツール**です。
+
+### 🧠 主な特徴｜Key Features
+
+- 🧩 **連続切片に特化**  
+  組織連続切片・解剖断面・CT・MRI・超音波などに対応  
+  *Specialized for serial sections including histology, anatomy, CT, MRI, and ultrasound*
+
+- 🤖 **SAM2によるゼロショット自動セグメンテーション**  
+  学習不要で対象を自動抽出  
+  *Zero-shot segmentation using Segment Anything Model 2 (SAM2), no training needed*
+
+- 💻 **インストール不要のWeb GUI**  
+  ブラウザ上で動作、PCへの環境構築不要  
+  *Runs entirely in a browser. No local setup required.*
+
+- ✍️ **マスク修正ツール付き**  
+  セグメンテーション結果をユーザー自身で確認・修正可能  
+  *Includes an interactive correction tool for mask editing*
+
+- 🧱 **3D Slicerとの連携**  
+  出力マスクはそのまま3D Slicerで読み込み、迅速な3D再構築が可能  
+  *Outputs can be directly imported into 3D Slicer for quick reconstruction*
+
+### ⚠️ 注意｜Notes
+
+- 🧬 **組織連続切片**を使用する場合は、セグメンテーション前に**位置合わせ（Registration）**が必要です  
+　→ 自動位置合わせの方法は 🔗 [こちら（MultiStackReg）](Registration.md)  
+　*Histological serial sections require registration before segmentation. See [this page](Registration.md) for details.*
+
+- 🏥 **CTやMRIなどのDICOM画像は、事前にJPEG（.jpg）形式へ変換**しておく必要があります  
+　→ DICOM画像からJPEGへの変換ツールは 🔗 [こちら（DICOM Conversion）](toolforDICOM.md)  
+　*CT or MRI DICOM images must be converted to .jpg format before use. See [DICOM Conversion](toolforDICOM.md).*
+
+- 🪟 **Step 2で使用する修正ツール**（Segment Editor PP / Graphic2shape）は**Windows専用**です  
+　Macなど他のOSでは動作に制限があります  
+　*Correction tools used in Step 2 are developed for Windows and may not work on macOS or Linux.*
+
+
+
+
    
 # What is "Seg & Ref"?  
 
