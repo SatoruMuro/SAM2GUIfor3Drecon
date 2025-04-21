@@ -1,4 +1,7 @@
 # "Seg & Ref": AI-Powered Segmentation and Interactive Refinement for Labor-Saving 3D Reconstruction  
+
+---
+
 ## 🛠 Workflow
 🔹 **Step 0. Image Preprocessing (Registration or DICOM Conversion)**
 - 🧬 **Histological sections**  →  🔗 [Registration](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Registration.md)
@@ -16,7 +19,7 @@
   
 <img src="images/graphical_abstract_v01jpg.jpg" alt="threesteps" width="50%">
 
-
+---
 
 # What is "Seg & Ref"?  
 
