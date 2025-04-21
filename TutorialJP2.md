@@ -25,7 +25,7 @@
 
 ---
 
-### ✅ 作業開始前にやること（初期設定）
+### ✅ 作業開始前にやること1（ファイルの初期設定）
 
 **(1) マクロを有効にする（pptmファイル）**  
 ダウンロードした `.pptm` ファイル（Segment Editor PP）は、初回実行時にマクロが無効化されていることがあります。以下の手順でマクロを有効にしてください（Windows）：
@@ -57,7 +57,12 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 マクロは「開発」または「表示」タブから実行できます。PowerPointの初期設定では「開発」タブは非表示なので、以下の手順で表示します：  
 `ファイル > オプション > リボンのユーザー設定 > メインタブ > 開発` にチェックを入れてください。
 
-**(5) 作業姿勢と環境のセッティング**  
+---
+
+### ✅ 作業開始前にやること2（作業環境セッティング）
+
+
+**(1) 作業姿勢と環境のセッティング**  
 修正作業は、以下のような作業環境が推奨されます：
 
 - タッチ対応PC（例：Microsoft Surface Book）＋Surfaceペン  
@@ -73,7 +78,7 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 
 <img src="images/setting01.jpg" alt="Settig" width="50%">
 
-**(6) キー配置の最適化（PowerToysの使用）**  
+**(2) キー配置の最適化（PowerToysの使用）**  
 [Windows PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) の `Keyboard Manager` を使用して、ショートカットキーの割り当てをカスタマイズすると、左手のキーボード操作がしやすくなります。
 
 💡 たとえば、以下のように割り当てると快適です：  
@@ -113,8 +118,6 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 | `AbAddMasks` | SVG形式のマスク画像を対応するスライド上に重ねて配置 |
 | `AcDeleteBlackShapesWith70PercentTransparent` | 不要な黒背景を削除し、マスクを70%透過に設定 |
 
----
-
 #### 📝 作業手順：グループAマクロの使用
 
 1. PowerPointのウィンドウを**最前面**にしておく  
@@ -145,8 +148,6 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 | `BbCutimageWithPreviousShapeAndApplyColor` | 描画図形を使ってマスクを削る（減算） |
 | `BcMergeWithPreviousShapeAndApplyColor` | 描画図形を使ってマスクを広げる（加算） |
 
----
-
 #### 📝 作業手順：グループBマクロの使用
 
 1. 編集したいマスク（図形）をクリックして選択  
@@ -167,8 +168,6 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 | `CbExportToGrayPNG` | グレースケールPNGとして出力（→ Step 3で使用） |
 | `CbExportToPNG` | RGBカラーマスクをPNG形式で出力 |
 | `CcReturnToMaskEditing` | マスク編集モードに戻す（再編集したい場合） |
-
----
 
 #### 📝 作業手順：グループCマクロの使用
 
