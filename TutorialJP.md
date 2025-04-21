@@ -44,6 +44,8 @@
 6. セグメンテーション結果を確認  
 7. 生成ファイルをダウンロード
 
+<img src="images/GUIimage.jpg" alt="newmethod" width="50%">
+
 ---
 
 ### 📁 出力されるファイル
