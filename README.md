@@ -91,21 +91,24 @@ Introduction to "Seg & Ref" Segmentation Tool (English)
 <table>
 <tr>
 <td align="center">
-<b>🕒 10分で分かる操作デモ</b><br>
+<b>🕒 10分で分かる操作デモ｜10-Minute Demo</b><br>
 <a href="https://youtu.be/12ihvPAgfps">
   <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="10-min Demo" width="100">
 </a><br>
-基本操作をまとめたショートデモ（10分）
+基本操作をまとめたショートデモ（10分）<br>
+Short demonstration covering basic operations (10 min)
 </td>
 <td align="center">
-<b>🎬 フルライブデモ</b><br>
+<b>🎬 フルライブデモ｜Full Live Demonstration</b><br>
 <a href="https://youtu.be/-0zrfhaeAX4">
   <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Full Live Demo" width="100">
 </a><br>
-操作を実演するライブ収録（フルバージョン）
+操作を実演するライブ収録（フルバージョン）<br>
+Full-length live demonstration with step-by-step operation
 </td>
 </tr>
 </table>
+
 
 
 
