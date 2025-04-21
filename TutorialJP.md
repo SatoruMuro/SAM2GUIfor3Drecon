@@ -19,7 +19,7 @@
 ### 🚀 セグメンテーションツールの起動（Google Colab）
 
 **ツール名**：SAM2 GUI for Img Seq  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
+🔗 [こちらから開く（Google Colab）](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
 
 #### 起動手順：
 1. 「ランタイム」＞「ランタイムのタイプを変更」＞ **T4 GPU** を選択して保存  
@@ -27,6 +27,8 @@
 3. ノートブックの **最下部までスクロール**  →セルの下に表示される `Running on public URL` のリンクをクリック  
    → Gradio GUIが開きます  
 ⚠️ **Colabノートブックの画面は閉じないでください！**
+
+<img src="images/step1-01-2.PNG" alt="newmethod" width="100%">
 
 ---
 
