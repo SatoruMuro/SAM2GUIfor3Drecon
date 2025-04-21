@@ -1,6 +1,6 @@
 # Seg&Refの使い方 - Step 3
 
-## 3D再構築
+## 3D再構築とSTL出力
 
 このステップでは、無料ソフトウェア [3D Slicer](https://www.slicer.org/) を使って、Step 2 で修正したマスク画像から3Dモデルを構築します。  
 Amira-Avizo や ImageJ などの他ソフトでも、**グレースケールマスク**を使って同様の処理が可能です。
