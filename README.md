@@ -378,6 +378,45 @@ The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Cola
 
 ---
 
+## 📚 Citation
+
+### 🔖 ご利用の際の引用について（日本語）
+
+本ツールを研究・論文等で使用される場合は、以下の論文を引用してください：
+
+**Muro S, Ibara T, Nimura A, Akita K.**  
+**Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
+*Microscopy (Oxford)*. (in press)  
+🔗 [DOI: 10.1093/jmicro/dfaf015](https://academic.oup.com/jmicro/advance-article/doi/10.1093/jmicro/dfaf015/8051094?utm_source=authortollfreelink&utm_campaign=jmicro&utm_medium=email&guestAccessKey=d61820c6-f079-42aa-b81c-767f36f8d455)
+
+---
+
+### 🔖 Citation (for international users)
+
+If you use this tool for research or academic purposes, please cite the following article:
+
+**Muro S, Ibara T, Nimura A, Akita K.**  
+**Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
+*Microscopy (Oxford)*. (in press)  
+🔗 [DOI: 10.1093/jmicro/dfaf015](https://academic.oup.com/jmicro/advance-article/doi/10.1093/jmicro/dfaf015/8051094?utm_source=authortollfreelink&utm_campaign=jmicro&utm_medium=email&guestAccessKey=d61820c6-f079-42aa-b81c-767f36f8d455)
+
+---
+
+### 📎 BibTeX
+
+```bibtex
+@article{Muro2025,
+  author    = {Muro, Satoru and Ibara, T. and Nimura, A. and Akita, K.},
+  title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
+  journal   = {Microscopy (Oxford)},
+  year      = {in press},
+  doi       = {10.1093/jmicro/dfaf015}
+}
+
+
+
+
+
 # Citation
 本ツールを研究などに使用した場合は、以下の論文を引用してください。  
 If you use this tool for research or other academic purposes, please cite the following article:
