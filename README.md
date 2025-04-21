@@ -131,7 +131,7 @@ Full-length live demonstration with step-by-step operation
    - 🏥 Conversion of CT/MRI (DICOM format) → [DICOM Conversion](./toolforDICOM.md)
 
 1. 🟢 [Step 1: AI-Powered Automatic Segmentation](./TutorialEN1.md)  
-2. ✍️ [Step 2: Manual Correction of Segmentation Masks](./TutorialEN2.md)  
+2. ✍️ [Step 2: Refining Segmentation Masks](./TutorialEN2.md)  
 3. 🧱 [Step 3: 3D Reconstruction and STL Export](./TutorialEN3.md)
 
 
