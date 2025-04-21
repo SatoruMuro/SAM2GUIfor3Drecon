@@ -73,7 +73,7 @@ Note: For histological serial sections, registration (alignment) is required bef
    - 🏥 CT・MRI（DICOM形式）の変換 → [DICOM Conversion](./toolforDICOM.md)
 
 1. 🟢 [Step 1：AIによる自動セグメンテーション](./TutorialJP1.md)
-2. ✍️ [Step 2：インタラクティブな修正作業](./TutorialJP2.md)
+2. ✍️ [Step 2：セグメンテーションマスクの修正](./TutorialJP2.md)
 3. 🧱 [Step 3：3D再構築とSTL出力](./TutorialJP3.md)
 
 # Tutorial (English)
