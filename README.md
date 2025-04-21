@@ -110,38 +110,6 @@ Full-length live demonstration with step-by-step operation
 </table>
 
 
-
-
-
-
-
-## 解説動画  Demo Videos
-**連続画像用セグメンテーションツール『Seg & Ref（セグレフ）』のご紹介 (YouTube)** 
-<a href="https://youtu.be/Zs4pfO2FmXE">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
-</a>  
-
-**Introduction to "Seg & Ref" Segmentation Tool for Image Sequence (YouTube)** 
-<a href="https://youtu.be/rz2QdxfIM9w">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
-</a>  
-
-
-
-## 操作デモ動画  Demo Videos
-**10-Minute Demonstration (YouTube)** 
-<a href="https://youtu.be/12ihvPAgfps">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
-</a>  
-
-**Live Demonstration (FULL) (YouTube)** 
-<a href="https://youtu.be/-0zrfhaeAX4">
-  <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
-</a>  
-
-
-
-
 # 使い方（日本語）
 
 0. 🛠️ Step 0：画像の前処理（位置合わせ・DICOM変換）
