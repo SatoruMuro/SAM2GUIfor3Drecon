@@ -28,7 +28,7 @@
 2. Click `Runtime > Run all`  
    → When a warning appears, click “Run anyway” (Execution takes about 6 minutes)  
 3. Scroll to the **very bottom of the notebook**  
-4. Click the `Running on public URL` link that appears under Cell [2]  
+4. Click the `Running on public URL` link that appears under Cell  
    → This will open the Gradio GUI  
 ⚠️ **Do not close the Colab notebook while the GUI is running!**
 
