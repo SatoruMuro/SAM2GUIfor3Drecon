@@ -194,6 +194,6 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 
 ### ▶️ 次のステップへ進む 🔗
 
-- 👉 [Step 3：3D再構築はこちら](./TutorialJP03.md)
+- 👉 [Step 3：3D再構築はこちら](./Tutorial/TutorialJP03.md)
 
 ---
