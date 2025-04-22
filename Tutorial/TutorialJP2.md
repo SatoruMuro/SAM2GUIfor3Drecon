@@ -76,7 +76,7 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 
 💡 この姿勢により、片手でマスク修正、もう片手でマクロ実行やスライド移動がスムーズに行えます。
 
-<img src="images/setting01.jpg" alt="Settig" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/setting01.jpg" alt="Settig" width="50%">
 
 **(2) キー配置の最適化（PowerToysの使用）**  
 [Windows PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) の `Keyboard Manager` を使用して、ショートカットキーの割り当てをカスタマイズすると、左手のキーボード操作がしやすくなります。
@@ -102,7 +102,7 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
 
 🔁 **マクロ操作（Ba/Bb/Bc）についてはこのあと解説します。**
 
-<img src="images/setting02.png" alt="Settig" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/setting02.png" alt="Settig" width="50%">
 
 ---
 
@@ -158,7 +158,7 @@ Bグループのマクロ（Ba / Bb / Bc）は、よく使うためクイック�
    - `Bb` を実行 → マスク範囲を削る（減算） （キー配置により薬指でSを押すと実行されます）  
    - `Bc` を実行 → マスク範囲を広げる（加算） （キー配置により中指でDを押すと実行されます）  
 
-<img src="images/refine01.png" alt="Settig" width="80%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/refine01.png" alt="Settig" width="80%">
 
 ---
 
