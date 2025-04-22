@@ -28,7 +28,7 @@
    → Gradio GUIが開きます  
 ⚠️ **Colabノートブックの画面は閉じないでください！**
 
-<img src="images/step1-01-2.PNG" alt="newmethod" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step1-01-2.PNG" alt="newmethod" width="50%">
 
 ---
 
@@ -44,7 +44,7 @@
 6. セグメンテーション結果を確認  
 7. 生成ファイルをダウンロード
 
-<img src="images/GUIimage.JPG" alt="newmethod" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/GUIimage.JPG" alt="newmethod" width="50%">
 
 ---
 
@@ -62,7 +62,7 @@
 
 ### 🎨 セグメンテーションの色ラベル
 
-<img src="images/colorlabels1.jpg" alt="colorlist" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/colorlabels1.jpg" alt="colorlist" width="50%">
 
 
 ---
