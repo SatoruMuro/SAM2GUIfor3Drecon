@@ -30,9 +30,9 @@ Other software such as Amira-Avizo or ImageJ can also be used to generate 3D mod
 💡 As long as the ratio among `X`, `Y`, and `Z` is preserved, you may scale as needed (e.g., actual size or 10× scale)  
 💡 If the display shifts, use the `Center View` button to re-center the image
 
-<img src="images/step3-03.PNG" alt="Import Image" width="90%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step3-03.PNG" alt="Import Image" width="90%">
 
-<img src="images/step3-04.PNG" alt="Volume Info" width="90%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step3-04.PNG" alt="Volume Info" width="90%">
 
 ---
 
@@ -47,7 +47,7 @@ Other software such as Amira-Avizo or ImageJ can also be used to generate 3D mod
    (You can toggle smoothing via the ▼ icon)
 7. Use `Center View` if needed to re-center the display
 
-<img src="images/step3-06-3.PNG" alt="Segment Editor" width="70%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step3-06-3.PNG" alt="Segment Editor" width="70%">
 
 ---
 
@@ -57,7 +57,7 @@ Other software such as Amira-Avizo or ImageJ can also be used to generate 3D mod
 2. Select `Export to files`
 3. Export each segment as an individual STL file
 
-<img src="images/step3-07.PNG" alt="STL Export" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step3-07.PNG" alt="STL Export" width="50%">
 
 ---
 
