@@ -61,7 +61,7 @@ Enable via:
 Recommended position:
 - Pen in right hand, keyboard in left (or reversed for left-handed users)
 
-<img src="images/setting01.jpg" alt="Setting" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/setting01.jpg" alt="Setting" width="50%">
 
 **(2) Key Remapping with PowerToys**  
 Use [PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) to remap keys:
@@ -82,7 +82,7 @@ Use [PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) to 
 - Middle finger = Ctrl
 - Other hand = Mouse scroll for zoom
 
-<img src="images/setting02.png" alt="Setting" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/setting02.png" alt="Setting" width="50%">
 
 ---
 
@@ -120,7 +120,7 @@ Use [PowerToys](https://github.com/microsoft/PowerToys/releases/tag/v0.85.0) to 
 3. Use Freeform or Curve tool to draw  
 4. With shape selected, run `Bb` or `Bc`
 
-<img src="images/refine01.png" alt="Refine" width="80%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/refine01.png" alt="Refine" width="80%">
 
 ---
 
