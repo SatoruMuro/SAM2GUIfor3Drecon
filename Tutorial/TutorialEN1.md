@@ -32,7 +32,7 @@
    → This will open the Gradio GUI  
 ⚠️ **Do not close the Colab notebook while the GUI is running!**
 
-<img src="images/step1-01-2.PNG" alt="newmethod" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step1-01-2.PNG" alt="newmethod" width="50%">
 
 ---
 
@@ -48,7 +48,7 @@
 6. Review the segmentation results  
 7. Download the generated output files
 
-<img src="images/GUIimage.JPG" alt="newmethod" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/GUIimage.JPG" alt="newmethod" width="50%">
 
 ---
 
@@ -65,7 +65,7 @@
 
 ### 🎨 Segmentation Color Labels
 
-<img src="images/colorlabels1.jpg" alt="colorlist" width="50%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/colorlabels1.jpg" alt="colorlist" width="50%">
 
 ---
 
