@@ -21,7 +21,7 @@
 ### 🚀 Launching the Segmentation Tool (Google Colab)
 
 **Tool name**: SAM2 GUI for Img Seq  
-🔗 [Click here to open in Google Colab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_6.ipynb)
+🔗 [Click here to open in Google Colab](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_7.ipynb)
 
 #### How to launch:
 1. From the menu, go to `Runtime > Change runtime type`, and select **T4 GPU**, then save  
