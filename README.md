@@ -140,6 +140,9 @@ Full-length live demonstration with step-by-step operation
 
 
 # Update  
+**2025.7.3**  
+SAM2GUIのローカル実行版を公開。
+
 **2025.6.10**  
 SAM2GUIforImgSeqに、割り当て色番号の開始番号をユーザーが指定できる機能を追加（SAM2GUIforImgSeqv4.7.ipynb）。  
 
