@@ -51,10 +51,14 @@ pip install torch torchvision
 
 ## ▶️ 実行方法（.exe版）
 
-1. [Releases](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases) から `SAM2GUI_local.zip` をダウンロード
-2. ZIP を展開し、`SAM2GUI_local.exe` をダブルクリックして起動
+1. 下記リンクから `SAM2GUI_local.zip` をダウンロード
+   　👉 [SAM2GUI\_local.zip をダウンロード（Dropbox）](https://www.dropbox.com/scl/fi/dg2xlo0ttt6b1scm4tied/SAM2GUI_local.zip?rlkey=09n4blxnl2nc66ay5429y6nvv&st=kexneowk&dl=1)
 
-   * 初回起動時は数十秒かかることがあります
+   > （注）Dropbox の共有リンクです。どなたでもダウンロード可能ですが、ファイル内容は変更できません。
+
+2. ZIP を展開し、`SAM2GUI_local.exe` をダブルクリックして起動
+   　\* 初回起動時は数十秒かかることがあります
+
 3. ブラウザが自動で開かない場合は、表示された URL (例：[http://127.0.0.1:7860](http://127.0.0.1:7860)) をコピーしてブラウザに貼り付けてください
 
 ---
