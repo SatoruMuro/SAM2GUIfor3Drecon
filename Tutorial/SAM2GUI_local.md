@@ -129,7 +129,9 @@ segmentation using the AI model SAM2.
 
 Open Command Prompt and enter:
 
+```
 python -c "import torch; print(torch.__version__)"
+```
 
 → Version number shown = PyTorch installed  
 → Error shown = PyTorch not installed
@@ -151,10 +153,14 @@ python -c "import torch; print(torch.__version__)"
 In Command Prompt, run one of the following:
 
 🟢 CUDA GPU (Recommended):
+```
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+```
 
 🔴 CPU Only (Not Recommended):
+```
 pip install torch torchvision
+```
 
 More: https://pytorch.org/get-started/locally/
 
