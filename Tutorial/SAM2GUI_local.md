@@ -22,14 +22,32 @@ AIモデル「SAM2」による画像セグメンテーションを、ローカ�
 
 この `.exe` を起動する前に、**Python および PyTorch をインストールしておく必要があります**。
 
-### ❶ Python のインストール
+---
+
+### PyTorch の搭載状況確認
+
+#### PyTorch がすでにインストールされているか確認する方法
+
+1. 「スタートメニュー」から「コマンドプロンプト（cmd）」を開きます。
+2. 以下のコマンドを入力して、Enterキーを押してください。
+
+```
+python -c "import torch; print(torch.__version__)"
+```
+
+* バージョン番号（例：`2.1.0+cu118`）が表示された場合は、PyTorch がすでにインストールされています。
+* エラーが表示された場合は、PyTorch が未インストールです。以下の手順に従ってPythonとPyTorchをインストールしてください。
+
+---
+
+### （PyTorch未搭載の場合）Python のインストール
 
 1. [Python公式サイト](https://www.python.org/downloads/windows/) から **Python 3.10.x** をダウンロード
 2. インストール時に「**Add Python to PATH**」にチェックを入れてください
 
 ---
 
-### ❷ PyTorch のインストール
+### （PyTorch未搭載の場合）PyTorch のインストール
 
 コマンドプロンプトを開いて、下記のいずれかのコマンドを実行してください：
 
