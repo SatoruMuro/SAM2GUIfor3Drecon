@@ -93,3 +93,101 @@ pip install torch torchvision
 * `.exe` は PyInstaller でビルドされていますが、**Python と PyTorch が事前に実装されている必要があります**。
 * GPUがないPCでも動作しますが、処理速度が大幅に低下します。
 * セキュリティ警告が出る場合は「詳細情報」→「実行」を選んでください（自身でビルドした場合は問題ありません）。
+
+
+
+# SAM2GUI_local
+
+## Overview
+
+SAM2GUI_local is an offline segmentation tool that runs directly on Windows PCs
+without the need for Google Colab. It enables local execution of image
+segmentation using the AI model SAM2.
+
+------------------------------------------------------------
+
+🖥️ Recommended System Requirements
+
+- OS: Windows 10 / 11
+- GPU: NVIDIA CUDA-enabled GPU (recommended)
+    - Works on CPU, but processing will be significantly slower.
+- Python: Version 3.10.x
+- Required Libraries: PyTorch, torchvision (must be pre-installed)
+
+------------------------------------------------------------
+
+🛠️ Preparation Before Execution
+
+⚠️ Python and PyTorch must be installed **before** running the `.exe`.
+
+------------------------------------------------------------
+
+🔍 Check if PyTorch is Installed
+
+Open Command Prompt and enter:
+
+python -c "import torch; print(torch.__version__)"
+
+→ Version number shown = PyTorch installed  
+→ Error shown = PyTorch not installed
+
+------------------------------------------------------------
+
+🐍 Installing Python (if needed)
+
+1. Download Python 3.10.x from:  
+   https://www.python.org/downloads/windows/
+
+2. During install, check:  
+   ✅ Add Python to PATH
+
+------------------------------------------------------------
+
+📦 Installing PyTorch
+
+In Command Prompt, run one of the following:
+
+🟢 CUDA GPU (Recommended):
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+🔴 CPU Only (Not Recommended):
+pip install torch torchvision
+
+More: https://pytorch.org/get-started/locally/
+
+------------------------------------------------------------
+
+▶️ How to Run the Executable (.exe)
+
+1. Download:
+   https://www.dropbox.com/scl/fi/dg2xlo0ttt6b1scm4tied/SAM2GUI_local.zip?rlkey=09n4blxnl2nc66ay5429y6nvv&st=kexneowk&dl=1
+
+2. Unzip and double-click:
+   SAM2GUI_local.exe  
+   (First launch may take several seconds)
+
+3. If the browser doesn't open, paste this into it:
+   http://127.0.0.1:7860
+
+------------------------------------------------------------
+
+📂 Recommended Extraction Folder
+
+→ Extract to:
+   C:\SAM2GUI_local
+
+Avoid deep paths to prevent errors due to Windows limits.
+
+------------------------------------------------------------
+
+⚠️ Notes
+
+- The .exe is built with PyInstaller  
+  → Python and PyTorch must be installed beforehand  
+- Runs without GPU but is much slower  
+- If a SmartScreen warning appears:  
+  Click "More info" → "Run anyway"
+
+------------------------------------------------------------
+
+
