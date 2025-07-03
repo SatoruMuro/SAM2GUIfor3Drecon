@@ -9,7 +9,8 @@
   
 🧠 **Step 1. Seg: AI-Powered Segmentation**  
 - 🔗 [SAM2GUIforImgSeq (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/SAM2GUIforImgSeqv4_7.ipynb)
-  
+- 🖥️ [SAM2GUI_local (Windows Executable)](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/SAM2GUI_local.md)
+
  🎨 **Step 2. Ref: Interactive Refinement**  
 - 🔗 [ColorChanger (Colab)](https://colab.research.google.com/github/SatoruMuro/SAM2GUIfor3Drecon/blob/main/ColabNotebooks/ColorChanger_v1_4.ipynb)  (Optional)  
 - 🔗 [SegmentEditorPP](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/ref2.0) (with [Graphic2shape](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/gv1.2))  
