@@ -169,7 +169,7 @@ More: https://pytorch.org/get-started/locally/
 ▶️ How to Run the Executable (.exe)
 
 1. Download:
-   https://www.dropbox.com/scl/fi/dg2xlo0ttt6b1scm4tied/SAM2GUI_local.zip?rlkey=09n4blxnl2nc66ay5429y6nvv&st=kexneowk&dl=1
+   　👉 [Download SAM2GUI_local.zip（Dropbox）](https://www.dropbox.com/scl/fi/dg2xlo0ttt6b1scm4tied/SAM2GUI_local.zip?rlkey=09n4blxnl2nc66ay5429y6nvv&st=kexneowk&dl=1)
 
 2. Unzip and double-click:
    SAM2GUI_local.exe  
