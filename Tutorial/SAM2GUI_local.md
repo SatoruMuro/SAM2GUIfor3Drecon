@@ -1,5 +1,7 @@
 # SAM2GUI\_local
 
+### The English instructions are provided in the latter part of this page.
+
 ## 概要
 
 `SAM2GUI_local` は、Google Colab を使わずに、Windows PC 上で動作するオフライン版のセグメンテーションツールです。
@@ -94,9 +96,10 @@ pip install torch torchvision
 * GPUがないPCでも動作しますが、処理速度が大幅に低下します。
 * セキュリティ警告が出る場合は「詳細情報」→「実行」を選んでください（自身でビルドした場合は問題ありません）。
 
+---
+---
 
-
-# SAM2GUI_local
+# SAM2GUI_local -English instructions-
 
 ## Overview
 
