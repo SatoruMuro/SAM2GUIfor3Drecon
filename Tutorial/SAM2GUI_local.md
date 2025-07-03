@@ -1,6 +1,6 @@
 # SAM2GUI\_local
 
-### The English instructions are provided in the latter part of this page.
+### Note: The English instructions are provided in the latter part of this page.
 
 ## 概要
 
