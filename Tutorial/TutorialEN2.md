@@ -1,6 +1,155 @@
-# How to Use Seg&Ref - Step 2
+# How to Use Seg\&Ref - Step 2
 
-## Step 2: Refining Segmentation Masks
+## Step 2: Refining the Segmentation Mask
+
+In this step, you will use **RefTool** to refine the automatic segmentation results. RefTool is a tool that allows intuitive editing of segmentation masks (in SVG format) overlaid on medical images using pen operations.
+
+---
+
+# RefTool User Manual
+
+## Overview
+
+**RefTool** is a tool for editing, visualizing, converting, and exporting 3D data from medical images and segmentation masks. Each mask is categorized into 20 color-coded objects, and each object can be edited, transformed, extracted, and exported as an STL model.
+
+## Installation
+
+### Download from GitHub
+
+Download `RefToolPyQt.exe` from the GitHub release page:
+👉 [https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/RefTool](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/RefTool)
+
+### Unpack the File
+
+Place `RefToolPyQt.exe` in any folder (no installation required).
+
+### Launch
+
+Double-click `RefToolPyQt.exe` to start the application.
+
+---
+
+## Basic Usage
+
+### 1. Load Folders
+
+**Load Image Folder**
+
+* Load a folder containing images (.jpg/.png/.tif/.dcm).
+* DICOM images are automatically converted to JPEG.
+
+**Load Mask Folder**
+
+* Load a folder containing SVG mask files.
+* Any colors outside the predefined 20 are automatically removed.
+
+### 2. Drawing and Editing
+
+**Pen Color Selection**
+
+* Choose pen color from Gray / White / Black.
+
+**Drawing Operations**
+
+* **Undo Line**: Undo the last line drawn
+* **Redo Line**: Redo a previously undone line
+* **Clear Lines**: Clear all drawn lines
+
+### 3. Object Editing
+
+After selecting a **Target Object (1–20)**:
+
+* **Add to Mask**: Add the drawn region to the object
+* **Erase from Mask**: Erase the drawn region from the object
+* **Transfer To**: Transfer the drawn region to another object
+* **Undo Edit / Redo Edit**: Undo or redo SVG-level edits
+
+### 4. Visualization & Display Control
+
+* Use checkboxes for each object to toggle visibility
+* **Rescan Used Colors**: Re-scan mask files and update UI with used colors
+
+### 5. Object Conversion & Layer Order
+
+**Convert Object Color**
+
+* Convert all instances of one color in all SVGs to another color
+
+**Bring to Front / Send to Back**
+
+* Change the display order of selected objects
+
+### 6. Calibration & 3D Export
+
+**Draw Calibration Line**
+
+* Draw a line on the image and input the real length in mm to calculate scale (mm/px)
+
+**Line Length (mm) / Z Interval (mm)**
+
+* Set the measured line length and Z slice interval (used for STL export)
+
+**Smooth Level**
+
+* Smoothing level during STL export (Z-direction interpolation level: 0–10)
+
+**Export STL per Color**
+
+* Export STL files per object color. Output folder is named like `stl_output_YYYYMMDD_HHMMSS`
+
+### 7. Exporting Masks as Images
+
+**Export TIFF**
+
+* Convert SVG masks to grayscale TIFF images
+
+**Export TIFF (Reversed)**
+
+* Export TIFFs in reverse image order
+
+Output folders are automatically generated (e.g., `tiff_output_YYYYMMDD_HHMMSS`).
+
+---
+
+## Keyboard Shortcuts
+
+| Key      | Action                          |
+| -------- | ------------------------------- |
+| ↑ / R    | Previous image                  |
+| ↓ / F    | Next image                      |
+| Ctrl + Z | Undo drawing or SVG edit (auto) |
+| E / Q    | Zoom in / Zoom out              |
+| W/A/S/D  | Scroll up/left/down/right       |
+
+---
+
+## Output File Locations
+
+* Edited masks (SVG): `masks_YYYYMMDD_HHMMSS`
+* TIFF exports: `tiff_output_YYYYMMDD_HHMMSS`
+* STL exports: `stl_output_YYYYMMDD_HHMMSS`
+* Calibration info: `*_volinf.csv`
+
+---
+
+## Notes
+
+* Edited `.svg` masks are overwritten, but the original files remain unchanged.
+* Colors not corresponding to defined object colors (e.g., black background) are automatically removed.
+* All operations are performed locally; no internet connection is required.
+
+---
+
+### ▶️ Proceed to Next Step 🔗
+
+👉 [Step 3: 3D Reconstruction](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialEN3.md)
+
+---
+
+---
+---
+
+The following is the old manual (using the SegmentEditorPP method).
 
 ---
 
