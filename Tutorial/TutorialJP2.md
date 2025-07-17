@@ -1,6 +1,156 @@
-# Seg&Refの使い方 - Step 2
+# Seg\&Refの使い方 - Step 2
 
 ## Step 2：セグメンテーションマスクの修正
+
+このステップでは、**RefTool** を用いて自動セグメンテーション結果を修正します。RefTool は、医用画像に重ねたセグメンテーションマスク（SVG形式）を、直感的なペン操作で編集できるツールです。
+
+---
+
+# RefTool 操作マニュアル
+
+## 概要
+
+**RefTool** は、医用画像やマスク画像に対して、編集・可視化・変換・3D出力を行うためのツールです。マスクは20種類の色（オブジェクト）に分類され、それぞれの編集・変換・抽出・STL出力が可能です。
+
+## インストール方法
+
+### GitHubからダウンロード
+
+GitHubリリースページから `RefToolPyQt.exe` をダウンロードします。
+👉 [https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/RefTool](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/RefTool)
+
+### ファイルを展開
+
+任意のフォルダに `RefToolPyQt.exe` を配置してください（インストールは不要です）。
+
+### 起動
+
+`RefToolPyQt.exe` をダブルクリックして起動します。
+
+---
+
+## 基本操作
+
+### 1. フォルダの読み込み
+
+**Load Image Folder**
+
+* 画像（.jpg/.png/.tif/.dcmなど）の入ったフォルダを読み込みます。
+* DICOMは自動でJPEGに変換されます。
+
+**Load Mask Folder**
+
+* `.svg` 形式のマスクファイルが入ったフォルダを読み込みます。
+* 既定の20色以外は自動で削除されます。
+
+### 2. 描画と編集
+
+**ペン色の選択（Pen Color）**
+
+* 描画用の線色を「Gray / White / Black」から選びます。
+
+**描画した線の操作**
+
+* **Undo Line**: 最後の線を取り消し
+* **Redo Line**: 取り消した線を再適用
+* **Clear Lines**: 全ての線を削除
+
+### 3. オブジェクト編集
+
+**Target Object（1～20）** を選択後：
+
+* **Add to Mask**：描画範囲をオブジェクトとして追加
+* **Erase from Mask**：描画範囲を対象オブジェクトから削除
+* **Transfer To**：描画範囲を別のオブジェクトに転送
+* **Undo Edit / Redo Edit**：SVG編集のやり直し
+
+### 4. 可視化と表示制御
+
+* 各オブジェクトのチェックボックスで、表示・非表示を切り替え可能
+* **Rescan Used Colors**：マスクファイル内の使用色を再スキャンしてUIを更新
+
+### 5. オブジェクト変換・順序変更
+
+**Convert Object Color**
+
+* すべてのマスク内の色を一括で別の色に変換
+
+**Bring to Front / Send to Back**
+
+* 特定オブジェクトを前面／背面に表示変更（表示順制御）
+
+### 6. キャリブレーションと3D出力
+
+**Draw Calibration Line**
+
+* 画像上に実寸線を描き、長さを入力してスケール（mm/px）を取得
+
+**Line Length (mm) / Z Interval (mm)**
+
+* 実線長・スライス間隔を設定（STL出力時に使用）
+
+**Smooth Level**
+
+* STL出力時の滑らかさ（Z方向補間レベル 0〜10）
+
+**Export STL per Color**
+
+* 色ごとに3D STLを一括出力。出力先フォルダは `stl_output_YYYYMMDD_HHMMSS`
+
+### 7. マスクの画像出力
+
+**Export TIFF**
+
+* SVGマスクをグレースケールTIFFに変換して出力
+
+**Export TIFF (Reversed)**
+
+* 順番を逆にしてTIFF出力
+
+出力先フォルダは自動生成されます（例：`tiff_output_YYYYMMDD_HHMMSS`）。
+
+---
+
+## ショートカットキー
+
+| キー       | 動作                    |
+| -------- | --------------------- |
+| ↑ / R    | 前の画像へ                 |
+| ↓ / F    | 次の画像へ                 |
+| Ctrl + Z | 描画のUndo／編集のUndo（自動判定） |
+| E / Q    | 拡大 / 縮小               |
+| W/A/S/D  | 上下左右スクロール             |
+
+---
+
+## 出力ファイルの保存場所
+
+* 編集済みマスク（SVG）: `masks_YYYYMMDD_HHMMSS`
+* TIFF出力: `tiff_output_YYYYMMDD_HHMMSS`
+* STL出力: `stl_output_YYYYMMDD_HHMMSS`
+* キャリブレーション情報: `*_volinf.csv`
+
+---
+
+## 注意点
+
+* `.svg` マスクは編集時に上書きされますが、元のファイルは変更されません。
+* 編集対象外の色（黒背景など）は自動で削除されます。
+* 全操作はローカルPC上で完結します（インターネット接続不要）。
+
+---
+
+### ▶️ 次のステップへ進む 🔗
+
+- 👉 [Step 3：3D再構築はこちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialJP3.md)
+
+---
+
+
+---
+---
+
+以下は Segment Editor PP　（Step2の旧ver） の操作マニュアルです。
 
 ---
 
