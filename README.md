@@ -48,6 +48,12 @@ Download the pre-built executable version of SegRef3D:
 
 Make sure to keep the `_internal` folder in the **same directory** as the `SegRef3D.exe`.
 
+> 📁 **Tip:** After downloading and unzipping, place the folder (containing `SegRef3D.exe` and `_internal/`) directly under `C:\`  
+> For example: `C:\SegRef3D\SegRef3D.exe`  
+> ❗ Avoid placing the folder in locations with long paths, Japanese characters, or spaces (e.g., Desktop or Documents folders), as it may cause runtime errors.
+
+
+
 ### 2. Preparation Before Execution
 
 ⚠️ Python and PyTorch must be installed **before** running the `.exe`.
