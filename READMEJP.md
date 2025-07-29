@@ -1,4 +1,4 @@
-# SegRef3D（日本語版）
+# SegRef3D
 
 **SegRef3D** は、2D／3D画像のセグメンテーションおよび修正をインタラクティブに行える PyQt6 ベースのGUIツールです。Meta社の Segment Anything Model 2（SAM2）を統合し、AIによる自動セグメンテーション、複数フレームにわたるオブジェクト追跡、編集、3D STL出力までをサポートします。
 
