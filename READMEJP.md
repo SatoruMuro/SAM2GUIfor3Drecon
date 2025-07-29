@@ -104,6 +104,14 @@ pip install torch torchvision
 
 ---
 
+## 📘 詳細チュートリアル
+
+詳しい操作手順はこちら：  
+👉 [使用方法チュートリアル（日本語）](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegRef3DJP.md)
+
+
+---
+
 ## 📂 入力フォーマット
 
 * 入力画像形式：`.jpg`, `.png`, **または DICOM (.dcm)**
