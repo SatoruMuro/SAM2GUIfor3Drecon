@@ -6,17 +6,16 @@
 
 ## 🧠 Features
 
-* 🖼 Load image folders and corresponding mask (SVG) files
-* 🖊 Freehand, point-to-point, and snap-to-boundary drawing modes
-* 🎨 Mask editing for up to 20 objects, with per-object color toggling
+* 🖼 Load image folders
 * 📆 Integration with **SAM2** for box-prompted segmentation and video tracking
 * ✨ Object tracking with start/end frame selection and batch execution
-* 🔺 Threshold-based region extraction (CT/MRI presets or manual)
-* ↔ Convert and reassign object colors across all masks
+* 🎨 Mask editing for up to 20 objects, with per-object color toggling
+* 🖊 Freehand, point-to-point, and snap-to-boundary drawing modes
 * ✏ Undo/redo support for editing
+* ↔ Convert and reassign object colors across all masks
+* 🔺 Threshold-based region extraction (CT/MRI presets or manual)
 * 🗈 Thinning: reduce number of images by keeping every N-th
 * 🧲 Export:
-
   * Mask images as grayscale TIFF (ascending/descending order)
   * 3D STL models by color (with mm/px and z-spacing calibration)
   * Volume statistics per object as CSV
@@ -115,22 +114,12 @@ Double-click `SegRef3D.exe` to start the application.
 
 To use SAM2 for segmentation and tracking:
 
-1. Press **Set Box Prompt** and select a rectangular area
-2. Press **Run Seg** to apply SAM2 segmentation
-3. Use **Set Tracking Start / End** and **Run Tracking** to propagate mask
-4. Optionally use **Run Batch Tracking** for multiple object prompts
+* Press **Set Box Prompt** and select a rectangular area
+* Press **Run Seg** to apply SAM2 segmentation
+* Use **Set Tracking Start / End** and **Run Tracking** to propagate mask
+* Optionally use **Run Batch Tracking** for multiple object prompts
 
 > 📌 Note: `sam2_interface.py` internally loads the `build_sam2` module from `sam2pkg/sam2`.
-
----
-
-## ⚙️ STL and Volume Export
-
-* First, calibrate scale:
-
-  * Draw a line using **Draw Calibration Line**
-  * Input actual mm length and z-spacing
-* Then, click **Export STL** or **Export Volume CSV**
 
 ---
 
@@ -142,6 +131,42 @@ To use SAM2 for segmentation and tracking:
 * **Overlap Detection**: visualize and extract overlapping areas
 * **Undo/Redo Edit**: fully reversible editing
 
+---
+
+## ⚙️ STL and Volume Export
+
+* If your input images are DICOM files, calibration is **not required**.
+* For other image types (e.g., `.jpg`, `.png`):
+
+  * Draw a line using **Draw Calibration Line**
+  * Input actual mm length and z-spacing
+* Then, click **Export STL** or **Export Volume CSV**
+
+---
+
+## 🖥️ For Non-GPU Environments
+
+If you do not have a CUDA GPU environment, you can still perform segmentation using a hybrid approach:
+
+* Run automatic segmentation on the web (Google Colaboratory)
+* Perform manual refinement and 3D STL export locally using SegRef3D
+
+### 🔗 Web-based Segmentation Tutorial
+
+* 🇯🇵 Japanese: [TutorialJP1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialJP1.md)
+* 🇺🇸 English: [TutorialEN1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialEN1.md)
+
+### 📷 Notes for Web-based Workflow
+
+* The web version only supports `.jpg` images as input.
+* When you load DICOM images into SegRef3D, the corresponding `.jpg` versions are automatically saved in the new folder.
+* You can then upload those `.jpg` images to Google Colab for segmentation.
+
+### 🔁 Final Integration
+
+* Import the `.svg` mask files generated on the web into SegRef3D.
+* You can edit them interactively and export STL models even without a GPU.
+* On non-GPU systems, all automatic SAM2 features will be disabled by default.
 
 ---
 
@@ -184,7 +209,7 @@ SAM2 GUI for Img Seqにベクター化機能（SVGファイル出力機能）を
 ---
 
 # License
-The code for the JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
+The code for the SegRef3D, JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
 
 ---
 
