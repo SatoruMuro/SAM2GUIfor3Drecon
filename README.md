@@ -105,6 +105,14 @@ Double-click `SegRef3D.exe` to start the application.
 
 ---
 
+## 📘 Full Tutorial
+
+Looking for step-by-step instructions?  
+👉 [Read the full usage tutorial here](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegRef3DEN.md)
+
+---
+
+
 ## 📂 Input Format
 
 * Input images: `.jpg`, `.png`, **or DICOM (.dcm)** files stored in a folder
