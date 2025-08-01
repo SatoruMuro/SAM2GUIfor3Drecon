@@ -4,22 +4,29 @@
 
 ## 🕹️ Basic Controls
 
-* **Switch images**:
+- **🔄 Switch images**  
+  - Next image: `PageDown`, `F`, or `J`  
+  - Previous image: `PageUp`, `R`, or `U`
 
-  * Keyboard `F`, `R` or `↓`, `↑`
+- **🔍 Zoom in/out**  
+  - Zoom in: `E`, `I`, `+`, or `=`  
+  - Zoom out: `Q`, `P`, or `-`  
+  - (You can also use `Ctrl` + scroll)
 
-* **Zoom in/out**:
+- **🧭 Pan (when zoomed)**  
+  - Move up: `W`, `O`, or `↑`  
+  - Move down: `S`, `L`, or `↓`  
+  - Move left: `A`, `K`, or `←`  
+  - Move right: `D`, `;`, or `→`  
+  - (Alternatively, use scroll or `Shift` + scroll for horizontal panning)
 
-  * `Ctrl` + Scroll or `E`, `Q`
+- **✏️ Drawing (Click mode)**  
+  - Confirm current drawing: `G` or `H`  
+  - Undo last click point: `T` or `Y`
 
-* **Pan when zoomed**:
+- **↩️ Undo drawing/editing**  
+  - `Ctrl + Z` (if implemented separately)
 
-  * Vertical: Scroll or `W`, `S`
-  * Horizontal: `Shift` + Scroll or `A`, `D`
-
-* **Undo drawing/editing**:
-
-  * `Ctrl + Z`
 
 ---
 
