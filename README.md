@@ -5,7 +5,7 @@
 日本語は[こちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/READMEJP.md)  
 
 ---
-<img src="images/SegRef3Dimage01.jpg" alt="image">
+<img src="images/SegRef3Dimage01.jpg" alt="image"  width="100%">
 
 
 ## 🧠 Features
