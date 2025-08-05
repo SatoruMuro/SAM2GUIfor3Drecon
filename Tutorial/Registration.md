@@ -5,12 +5,12 @@ In the case of serial sections of histology, registration is required prior to s
 Here, I introduce a method for registration using [MultiStackReg](https://github.com/miura/MultiStackRegistration), a plugin for ImageJ.  
 
 ## 操作デモ動画  Demo Videos
-**ImageJ/Fiji Tutorial: Registration (Alignment) of Histological Serial Section using MultiStackReg (YouTube)** 
+**ImageJ/Fiji Tutorial: [Registration (Alignment) of Histological Serial Section using MultiStackReg](https://youtu.be/bWF2HW5yjOI) (YouTube)** 
 <a href="https://youtu.be/bWF2HW5yjOI">
   <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
 </a>  
 
-**ImageJ/Fiji  Tutorial: How to Easily Crop an Image Sequence (YouTube)** 
+**ImageJ/Fiji  Tutorial: [How to Easily Crop an Image Sequence](https://youtu.be/Rx8TdUN40ig) (YouTube)** 
 <a href="https://youtu.be/Rx8TdUN40ig">
   <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/watchvideoicon1.png" alt="Open in YouTube" width="100">
 </a>  
