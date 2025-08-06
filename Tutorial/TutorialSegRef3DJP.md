@@ -106,6 +106,15 @@
 
 ---
 
+### 🖍️ RGBカラー抽出
+
+* `Target RGB` に R/G/B の数値と許容範囲（±Tol）を指定  
+* `Extract by RGB` を押すと、指定した色に近い領域を抽出  
+* `Pick Color` を使えば、画像上をクリックしてRGB値を取得可能  
+* `Add to Mask` でターゲットオブジェクトに追加可能  
+
+---
+
 ### 🧱 オブジェクトの前面／背面移動
 
 * 対象のオブジェクト番号を `Reorder` に指定
@@ -131,6 +140,15 @@
 
 * `Smooth mode` を選択
 * z-interpolation／mesh smoothing のON/OFF選択可
+
+---
+
+### 📏 距離の測定（2点間距離）
+
+* `Measurement Line` を押す  
+* 測定したい2点をクリックして直線を引く  
+* キャリブレーションが済んでいれば、実際の長さ（mm）で表示される  
+* 測定結果は画面上に一時表示され、`Export Measurements` ボタンでCSVとして出力可能  
 
 ---
 
