@@ -118,6 +118,14 @@ Looking for step-by-step instructions?
 
 ---
 
+## 🔄 Registration (Alignment)
+
+For serial images such as histological sections, alignment (registration) is essential before segmentation or 3D reconstruction.  
+👉 [See detailed registration steps here](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/Registration.md)
+
+> 💡 **Note:** Registration is typically **not required** for CT or MRI images, since they are already aligned during acquisition. However, **histological serial sections** often need registration (alignment) due to physical distortion and sectioning artifacts.
+
+---
 
 ## 📂 Input Format
 
