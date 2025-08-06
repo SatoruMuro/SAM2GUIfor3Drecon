@@ -5,7 +5,8 @@
 ## 📦 Download and Launch the App
 
 1. Download `AlignRef.exe` from the following link:  
-👉 [AlignRef v1.0 Download Page](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/releases/tag/AlignRefv1.0)
+👉 [Download AlignRef.exe via Dropbox](https://www.dropbox.com/scl/fi/xgc0czggdzfe3fzdzj153/AlignRef.exe?rlkey=2981juzc8p3jtuo7e3ove5gq3&st=rzqy9mvg&dl=1)  
+※ Due to its large file size, the application is distributed via Dropbox instead of GitHub.
 
 2. Double-click `AlignRef.exe` to launch the application  
 ※ On first launch, Windows SmartScreen may show a warning. Click “More info” → “Run anyway” to proceed.
