@@ -4,7 +4,7 @@
 
 ---
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3Dimage01.png" alt="image" width="100%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3Dimage02.png" alt="image" width="100%">
 
 ## 🧠 主な機能
 
