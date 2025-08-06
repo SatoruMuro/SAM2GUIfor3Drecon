@@ -40,12 +40,14 @@
 
 ### 1. ダウンロード
 
-以下の実行ファイルをダウンロードしてください：
+以下の SegRef3D アプリケーション（ZIP形式）をダウンロードしてください：
 
-* [`SegRef3D.exe`](https://www.dropbox.com/scl/fi/ut5msgvrq9uv94015jk8z/SegRef3D.exe?rlkey=eel5lome8hvcr1ibkpbjurdjx&st=lz9rquo2&dl=1)  
-  （**Python + PyTorch の事前インストールが必要**）
+* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=0)  
+  （**Python + PyTorch の事前インストールが必要です**）
 
-> 📁 **補足:** `C:\SegRef3D\` のように **Cドライブ直下に専用のフォルダを作成し、その中に `SegRef3D.exe` を置くことを推奨**します。  
+ダウンロード後、ZIPファイルを解凍してください。
+
+> 📁 **補足:** 解凍してできたフォルダ（`SegRef3D.exe` と `_internal` を含む）を、`C:\SegRef3D\` のように **Cドライブ直下に配置することを推奨**します。  
 > ❗ デスクトップやドキュメントなど、**パスが長い場所、日本語や空白を含むパス**に置くと、実行時にエラーが発生する可能性があります。
 
 
@@ -101,12 +103,13 @@ pip install torch torchvision
 
 ### 3. 起動
 
-`SegRef3D.exe` をダブルクリックで起動してください。
-
-> 🕒 **初回起動時は数十秒〜1分程度かかる**場合があります。内部で一時ファイルを展開しているためで、**2回目以降は高速に起動**します。
+`SegRef3D.exe` をダブルクリックで起動してください。  
+実行には、同じフォルダ内にある `_internal` フォルダが必要です。
 
 > ⚠️ SAM2 の機能（AIセグメンテーション・トラッキング）は、NVIDIA製GPUとCUDA対応ドライバが必要です。  
-> 環境が対応していない場合は、関連ボタンが自動的に無効になります。
+> 環境が対応していない場合は、関連ボタンが自動的に無効になります。  
+> ❗ `_internal` フォルダを誤って削除しないようご注意ください。削除するとアプリが起動できなくなります。
+
 
 ---
 
