@@ -4,16 +4,21 @@
 
 ## 📦 アプリのダウンロードと起動
 
-1. 以下のリンクから `AlignRef.exe` をダウンロードしてください  
-👉 [AlignRef.exe を Dropbox からダウンロード](https://www.dropbox.com/scl/fi/xgc0czggdzfe3fzdzj153/AlignRef.exe?rlkey=2981juzc8p3jtuo7e3ove5gq3&st=rzqy9mvg&dl=1)  
+1. 以下のリンクから `AlignRef.zip` をダウンロードしてください  
+👉 [AlignRef.zip を Dropbox からダウンロード](https://www.dropbox.com/scl/fi/dggt20l4g0w8cgq097i35/AlignRef.zip?rlkey=fck23rub5t2edgyxcn0ycnvpq&st=hb6skgpf&dl=1)  
 ※ ファイルサイズが大きいため、GitHub ではなく Dropbox 経由での配布となっています。
 
-2. `C:\AlignRef\` のように **Cドライブ直下に専用のフォルダを作成し、その中に `AlignRef.exe` を配置してください。**  
-❗ デスクトップやドキュメントなど、**日本語・空白・長いパス**を含む場所に置くと、実行時にエラーが発生する可能性があります。
+2. ダウンロードした zip を解凍し、`AlignRef.exe` と `_internal` フォルダが含まれているフォルダを  
+`C:\AlignRef\` のように **Cドライブ直下に配置してください。**
 
-3. 配置後、`AlignRef.exe` をダブルクリックして起動してください。  
-※ 初回起動時はリソース展開のため**数十秒ほどかかる**ことがあります。以降は高速に起動します。  
-※ Windows SmartScreen による警告が表示された場合は「詳細情報」→「実行」を選択してください。
+> ❗ デスクトップやドキュメントなど、**日本語・空白・長いパス**を含む場所に置くと、実行時にエラーが発生する可能性があります。
+
+3. 配置後、`AlignRef.exe` をダブルクリックして起動してください。
+
+> ※ Windows SmartScreen による警告が表示された場合は「詳細情報」→「実行」を選択してください。  
+> ❗ `_internal` フォルダはアプリ実行に必要です。**削除しないでください。**
+
+
 
 
 ---
