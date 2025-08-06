@@ -42,7 +42,7 @@
 
 以下の SegRef3D アプリケーション（ZIP形式）をダウンロードしてください：
 
-* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=0)  
+* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)  
   （**Python + PyTorch の事前インストールが必要です**）
 
 ダウンロード後、ZIPファイルを解凍してください。
