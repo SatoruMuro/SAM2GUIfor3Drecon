@@ -100,6 +100,30 @@ MultiStackRegに基づく結果を発表または公開する場合は、必ず�
 If you plan to present or publish results based on MultiStackReg, you must include a citation or acknowledgment. For more details, please refer to [this page](https://github.com/miura/MultiStackRegistration).
 
 
+---
+
+## 🧩 AlignRefによる位置修正 / Alignment Adjustment with AlignRef
+
+MultiStackRegで位置合わせを行ったあとでも、  
+**セグメンテーション結果にズレや不自然な箇所が残る場合**があります。  
+そのような場合には、位置修正専用ツール **AlignRef** を使うことで、  
+画像の移動・回転・クロップを手動で微調整することができます。
+
+Even after registration with MultiStackReg,  
+**some misalignments or unnatural segmentation artifacts** may remain.  
+In such cases, the dedicated alignment correction tool **AlignRef**  
+allows you to manually adjust image positions through translation, rotation, and cropping.
+
+AlignRefは、直感的なGUIと、マウス・キーボードによる精密な制御に対応しており、  
+複数画像への一括適用も可能です。
+
+AlignRef offers an intuitive GUI, fine control via keyboard and mouse,  
+and the ability to apply transformations across multiple images at once.
+
+👉 [AlignRefの詳しい使い方はこちら（日本語）](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialAlignRefJP.md)  
+👉 [See the AlignRef tutorial in English](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialAlignRefEN.md)
+
+---
 
 
 
