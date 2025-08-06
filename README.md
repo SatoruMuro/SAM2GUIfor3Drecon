@@ -41,13 +41,16 @@
 
 ### 1. Download
 
-Download the pre-built executable version of SegRef3D:
+Download the ready-to-use SegRef3D application as a ZIP file:
 
-* [`SegRef3D.exe`](https://www.dropbox.com/scl/fi/ut5msgvrq9uv94015jk8z/SegRef3D.exe?rlkey=eel5lome8hvcr1ibkpbjurdjx&st=lz9rquo2&dl=1)  
-  (**Requires Python + PyTorch installed**)
+* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=0)  
+  (**Python + PyTorch must be pre-installed on your system**)
 
-> 📁 **Tip:** Create a dedicated folder such as `C:\SegRef3D\` and place `SegRef3D.exe` inside it.  
-> ❗ Avoid placing the executable in locations with **long paths, Japanese characters, or spaces** (e.g., Desktop or Documents), as this may cause runtime errors.
+After downloading, unzip the file.
+
+> 📁 **Tip:** Move the entire unzipped folder (which includes `SegRef3D.exe` and the `_internal` folder) to a simple path like `C:\SegRef3D\`.  
+> ❗ Avoid placing the folder in locations with **long paths, Japanese characters, or spaces** (e.g., Desktop or Documents), as this may cause runtime errors.
+
 
 
 ### 2. Preparation Before Execution
@@ -102,8 +105,6 @@ More: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started
 ### 3. Run
 
 Double-click `SegRef3D.exe` to start the application.
-
-> 🕒 **Note:** On first launch, the application may take some time to start, as it unpacks resources internally. Subsequent launches will be faster.
 
 > ⚠️ SAM2-based features (AI segmentation and tracking) require an NVIDIA GPU and installed CUDA-compatible drivers. If unavailable, related buttons will be disabled automatically.
 
