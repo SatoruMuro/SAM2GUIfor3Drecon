@@ -104,9 +104,12 @@ More: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started
 
 ### 3. Run
 
-Double-click `SegRef3D.exe` to start the application.
+Double-click `SegRef3D.exe` to start the application.  
+The `_internal` folder **must be located in the same directory** as `SegRef3D.exe`.
 
-> ⚠️ SAM2-based features (AI segmentation and tracking) require an NVIDIA GPU and installed CUDA-compatible drivers. If unavailable, related buttons will be disabled automatically.
+> ⚠️ SAM2 features (AI segmentation and tracking) require an NVIDIA GPU and CUDA-compatible drivers.  
+> If your system is not compatible, the related buttons will be automatically disabled.  
+> ❗ Be careful **not to delete the `_internal` folder** — the application will fail to launch without it.
 
 
 ---
