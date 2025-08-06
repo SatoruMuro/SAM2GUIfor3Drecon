@@ -45,9 +45,9 @@
 * [`SegRef3D.exe`](https://www.dropbox.com/scl/fi/ut5msgvrq9uv94015jk8z/SegRef3D.exe?rlkey=eel5lome8hvcr1ibkpbjurdjx&st=lz9rquo2&dl=1)  
   （**Python + PyTorch の事前インストールが必要**）
 
-> 📁 **補足:** ダウンロードして解凍したフォルダ（`SegRef3D.exe`を含む）は、`C:\` 直下に置くことを推奨します。  
-> 例：`C:\SegRef3D\SegRef3D.exe`  
-> ❗ デスクトップやドキュメントなど、**パスが長い場所や日本語・空白を含む場所**に置くと、実行時にエラーが発生する可能性があります。
+> 📁 **補足:** `C:\SegRef3D\` のように **Cドライブ直下に専用のフォルダを作成し、その中に `SegRef3D.exe` を置くことを推奨**します。  
+> ❗ デスクトップやドキュメントなど、**パスが長い場所、日本語や空白を含むパス**に置くと、実行時にエラーが発生する可能性があります。
+
 
 
 ### 2. 実行前の準備
