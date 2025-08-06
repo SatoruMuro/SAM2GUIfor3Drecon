@@ -40,9 +40,9 @@
 
 ### 1. ダウンロード
 
-以下の実行ファイルをダウンロード：
+以下の実行ファイルをダウンロードしてください：
 
-* [`SegRef3D.exe`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&dl=1)
+* [`SegRef3D.exe`](https://www.dropbox.com/scl/fi/ut5msgvrq9uv94015jk8z/SegRef3D.exe?rlkey=eel5lome8hvcr1ibkpbjurdjx&st=lz9rquo2&dl=1)  
   （**Python + PyTorch の事前インストールが必要**）
 
 `_internal` フォルダは `SegRef3D.exe` と同じ場所に配置してください。
