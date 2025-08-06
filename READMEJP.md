@@ -114,6 +114,15 @@ pip install torch torchvision
 詳しい操作手順はこちら：  
 👉 [使用方法チュートリアル（日本語）](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegRef3DJP.md)
 
+---
+
+## 🔄 位置合わせ
+
+連続組織切片の画像などでは、セグメンテーションや3D再構築の前に位置合わせが必要です。  
+👉 [詳細なレジストレーション手順はこちらをご覧ください](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/Registration.md)
+
+> 💡 **補足:** CTやMRI画像は撮影時にすでに整列されているため、通常は位置合わせは**不要**です。  
+> 一方で、**組織の連続切片**では、物理的な歪みや切片ズレの影響により、位置合わせが必要になることがあります。
 
 ---
 
