@@ -43,7 +43,7 @@
 
 Download the ready-to-use SegRef3D application as a ZIP file:
 
-* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=0)  
+* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)  
   (**Python + PyTorch must be pre-installed on your system**)
 
 After downloading, unzip the file.
