@@ -106,6 +106,15 @@
 
 ---
 
+### 🖍️ RGB Color Extraction
+
+* Specify the `Target RGB` values along with tolerance (`±Tol`)  
+* Click `Extract by RGB` to extract regions close to the selected color  
+* Use `Pick Color` to click on the image and automatically retrieve the RGB values  
+* Use `Add to Mask` to assign the extracted region to the target object  
+
+---
+
 ### 🧱 Change Drawing Order (Front/Back)
 
 * Enter object number in `Reorder`
@@ -134,3 +143,11 @@
 
 ---
 
+### 📏 Distance Measurement (between two points)
+
+* Click `Draw Measurement Line`  
+* Click two points on the image to draw a line  
+* If calibration is completed, the actual distance (in mm) will be shown  
+* The result is temporarily displayed on screen and can be exported as a CSV using the `Export Measurements` button  
+
+---
