@@ -4,16 +4,17 @@
 
 ## 📦 Download and Launch the App
 
-1. Download `AlignRef.exe` from the following link:  
-👉 [Download AlignRef.exe via Dropbox](https://www.dropbox.com/scl/fi/xgc0czggdzfe3fzdzj153/AlignRef.exe?rlkey=2981juzc8p3jtuo7e3ove5gq3&st=rzqy9mvg&dl=1)  
-※ Due to its large file size, the application is distributed via Dropbox instead of GitHub.
+1. Download the application from the following link:  
+👉 [Download AlignRef.zip via Dropbox](https://www.dropbox.com/scl/fi/dggt20l4g0w8cgq097i35/AlignRef.zip?rlkey=fck23rub5t2edgyxcn0ycnvpq&st=hb6skgpf&dl=1)
 
-2. Create a dedicated folder such as `C:\AlignRef\` and place `AlignRef.exe` inside it.  
-❗ Avoid placing the executable in locations with **long paths, Japanese characters, or spaces** (e.g., Desktop or Documents), as this may cause runtime errors.
+2. Unzip the file and create a dedicated folder such as `C:\AlignRef\`, then place **all contents** of the ZIP file into that folder  
+   (including `AlignRef.exe` and the `_internal` folder).  
+❗ Avoid placing the folder in locations with **long paths, Japanese characters, or spaces** (e.g., Desktop or Documents), as this may cause runtime errors.
 
-3. Double-click `AlignRef.exe` to launch the application.  
-※ On the first launch, it may take **several tens of seconds** to start as it extracts internal resources. Subsequent launches will be faster.  
-※ If Windows SmartScreen shows a warning, click “More info” → “Run anyway” to proceed.
+3. Double-click `AlignRef.exe` to launch the application.
+
+> ⚠️ If Windows SmartScreen shows a warning, click “More info” → “Run anyway” to proceed.  
+> ❗ Do **not delete** the `_internal` folder. It is required for the app to run properly.
 
 
 ---
