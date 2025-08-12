@@ -6,6 +6,17 @@
 
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3Dimage02.png" alt="image" width="100%">
 
+---
+
+## 🎥 SegRef3D 操作紹介動画
+
+SegRef3Dの基本的な操作手順をご覧いただける動画を掲載しています。以下の動画では、インターフェースの使い方、セグメンテーションの実行手順、マスク編集やトラッキングの一連の流れを確認できます。
+
+[How to use SegRef3D: 01. Basic Workflow (YouTube)](https://youtu.be/JModwfnBTYU)
+
+---
+
+
 ## 🧠 主な機能
 
 * 🖼 画像フォルダの一括読み込み（DICOM含む）
