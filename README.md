@@ -11,6 +11,8 @@
 
 ## 🎥 SegRef3D Tutorial Videos
 
+Watch the **Basic Workflow** video to learn how to use SegRef3D, from loading images to AI-powered segmentation, mask editing, tracking, and exporting results.  
+
 [How to use SegRef3D: 01. Basic Workflow (YouTube)](https://youtu.be/JModwfnBTYU)
 
 ---
