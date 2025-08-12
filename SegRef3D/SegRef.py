@@ -304,18 +304,67 @@ class CustomGraphicsView(QGraphicsView):
 
 
                 
+    # def mouseMoveEvent(self, event: QMouseEvent):
+    #     scene_pos = self.mapToScene(event.pos())
+    
+    #     # ✅ freeモード（従来の手描き）
+    #     if self.draw_mode == 'free' and self.drawing and self.current_path:
+    #         self.current_path.lineTo(scene_pos)
+    #         self.current_path_item.setPath(self.current_path)
+    
+    #     # ✅ clickモード（仮のスムーズ曲線プレビュー）
+    #     # elif self.draw_mode == 'click' and len(self.click_points) >= 1:
+    #     elif self.draw_mode in ('click', 'click_snap') and len(self.click_points) >= 1:
+
+    #         temp_points = self.click_points + [scene_pos]
+    #         smooth_path = self.create_smooth_path(temp_points)
+    
+    #         # 🔒 temp_preview_item の存在と有効性をチェック
+    #         if self.temp_preview_item:
+    #             if self.temp_preview_item.scene() is not None:
+    #                 self.temp_preview_item.setPath(smooth_path)
+    #             else:
+    #                 print("[WARN] temp_preview_item is deleted or invalid")
+    #                 self.temp_preview_item = None
+    
+    #         if not self.temp_preview_item:
+    #             self.temp_preview_item = QGraphicsPathItem()
+    #             self.temp_preview_item.setPen(QPen(Qt.GlobalColor.gray, 1, Qt.PenStyle.DashLine))  # 仮表示は点線で
+    #             self.temp_preview_item.setPath(smooth_path)
+    #             self.scene().addItem(self.temp_preview_item)
+    
+    #     event.accept()
+
     def mouseMoveEvent(self, event: QMouseEvent):
         scene_pos = self.mapToScene(event.pos())
     
         # ✅ freeモード（従来の手描き）
-        if self.draw_mode == 'free' and self.drawing and self.current_path:
+        if self.draw_mode == 'free' and self.drawing:
+            if self.current_path is None or self.current_path_item is None:
+                print("[WARN] Drawing path or item is None. Cancelling drawing.")
+                self.drawing = False
+                return
+    
+            try:
+                # ⚠️ この行でRuntimeErrorを防止
+                if self.current_path_item.scene() is None:
+                    print("[WARN] current_path_item was removed from scene. Cancelling drawing.")
+                    self.current_path = None
+                    self.current_path_item = None
+                    self.drawing = False
+                    return
+            except RuntimeError:
+                print("[WARN] current_path_item already deleted. Cancelling drawing.")
+                self.current_path = None
+                self.current_path_item = None
+                self.drawing = False
+                return
+    
             self.current_path.lineTo(scene_pos)
             self.current_path_item.setPath(self.current_path)
     
         # ✅ clickモード（仮のスムーズ曲線プレビュー）
-        # elif self.draw_mode == 'click' and len(self.click_points) >= 1:
         elif self.draw_mode in ('click', 'click_snap') and len(self.click_points) >= 1:
-
             temp_points = self.click_points + [scene_pos]
             smooth_path = self.create_smooth_path(temp_points)
     
@@ -334,6 +383,7 @@ class CustomGraphicsView(QGraphicsView):
                 self.scene().addItem(self.temp_preview_item)
     
         event.accept()
+
             
 
     
@@ -377,59 +427,6 @@ class CustomGraphicsView(QGraphicsView):
 
 
 
-    # def mouseReleaseEvent(self, event: QMouseEvent):
-    #     if self.draw_mode == 'free':
-    #         if event.button() == Qt.MouseButton.LeftButton and self.drawing:
-    #             self.drawing = False
-    #             path = self.current_path_item.path()
-    #             path.closeSubpath()
-    #             self.current_path_item.setPath(path)
-    #             self.paths.append(self.current_path_item)
-    #             if self.save_callback:
-    #                 self.save_callback(self.current_path_item.path())
-    #             self.scene().update()
-    
-
-    #     elif self.draw_mode == 'click':
-    #         if event.button() == Qt.MouseButton.RightButton:
-    #             if self.click_points and self.current_path_item:
-    #                 # ✅ 点列をスムージングしたパスに置き換える
-    #                 smooth_path = self.create_smooth_path(self.click_points)
-    #                 smooth_path.closeSubpath()
-    #                 self.current_path_item.setPath(smooth_path)
-    #                 self.paths.append(self.current_path_item)
-    #                 if self.save_callback:
-    #                     self.save_callback(smooth_path)
-        
-    #                 # ✅ 🔽 ここに仮プレビュー削除を追加
-    #                 if self.temp_preview_item:
-    #                     self.scene().removeItem(self.temp_preview_item)
-    #                     self.temp_preview_item = None        
-        
-    #                 self.click_points = []
-    #                 self.current_path = None
-    #                 self.current_path_item = None
-    #                 self.scene().update()
-
-        
-    #     elif self.draw_mode == 'click_snap':
-    #         if event.button() == Qt.MouseButton.RightButton:
-    #             if self.click_points and self.current_path_item:
-    #                 smooth_path = self.create_smooth_path(self.click_points)
-    #                 smooth_path.closeSubpath()
-    #                 self.current_path_item.setPath(smooth_path)
-    #                 self.paths.append(self.current_path_item)
-    #                 if self.save_callback:
-    #                     self.save_callback(smooth_path)
-        
-    #                 if self.temp_preview_item:
-    #                     self.scene().removeItem(self.temp_preview_item)
-    #                     self.temp_preview_item = None
-        
-    #                 self.click_points = []
-    #                 self.current_path = None
-    #                 self.current_path_item = None
-    #                 self.scene().update()
 
         event.accept()
 
@@ -486,6 +483,8 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
         
         
         self.btn_load_images.clicked.connect(self.load_image_folder)
+        self.btn_fit_to_window.clicked.connect(self.fit_view_to_window)
+
         self.btn_thin_images.clicked.connect(self.thin_images_and_reload)
 
         
@@ -502,9 +501,10 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
 
 
         self.btn_extract_threshold.clicked.connect(self.extract_by_threshold)
-        # self.btn_otsu_threshold.clicked.connect(self.on_set_min_threshold_by_otsu)
 
 
+        self.btn_rgb_extract.clicked.connect(self.extract_by_rgb)
+        self.btn_rgb_pick.clicked.connect(self.enable_rgb_picker)
 
 
 
@@ -547,9 +547,16 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
         self.btn_export_tiff_reversed.clicked.connect(self.export_all_svgs_to_grayscale_tiff_reversed)
         
         self.btn_draw_calibration_line.clicked.connect(self.start_calibration)
+        self.btn_draw_measurement_line.clicked.connect(self.start_measurement_mode)
+
+        
         self.btn_export_stl_colorwise.clicked.connect(self.export_colorwise_stl_with_scale)
         self.btn_export_volume_csv.clicked.connect(self.export_colorwise_volumes_to_csv)
-
+        
+        self.measurement_mode = False
+        self.measurement_points = []
+        self.temp_measurement_line_item = None
+        self.measurement_results = []
 
 
 
@@ -665,6 +672,114 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
     
     import re
     
+
+    
+    # def extract_by_rgb(self):
+    #     key = self.get_current_image_key()
+    #     if not key or key not in self.image_paths:
+    #         self.label_status.setText("⚠ No image selected.")
+    #         return
+    
+    #     img = cv2.imread(self.image_paths[key])
+    #     if img is None:
+    #         self.label_status.setText("⚠ Failed to load image.")
+    #         return
+    
+    #     # 入力されたRGBと許容幅を取得
+    #     target = np.array([
+    #         self.spin_b.value(),
+    #         self.spin_g.value(),
+    #         self.spin_r.value()
+    #     ])
+    #     tol = self.spin_rgb_tol.value()
+    
+    #     lower = np.clip(target - tol, 0, 255)
+    #     upper = np.clip(target + tol, 0, 255)
+    
+    #     mask = cv2.inRange(img, lower, upper)
+    
+    #     # マスク → QPainterPath
+    #     qpath = self.sam2_interface.mask_to_qpath(mask)
+    #     path_item = QGraphicsPathItem()
+    #     path_item.setPen(self.graphicsView.pen)
+    #     path_item.setPath(qpath)
+    #     self.scene.addItem(path_item)
+    
+    #     self.save_drawn_path(qpath)
+    #     self.label_status.setText("✅ RGB-based extraction complete.")
+    
+    def extract_by_rgb(self):
+        if not self.image_paths:
+            self.label_status.setText("⚠ No images loaded.")
+            return
+    
+        current_key = self.get_current_image_key()
+    
+        # 入力されたRGBと許容幅を取得
+        target = np.array([
+            self.spin_b.value(),
+            self.spin_g.value(),
+            self.spin_r.value()
+        ])
+        tol = self.spin_rgb_tol.value()
+    
+        lower = np.clip(target - tol, 0, 255)
+        upper = np.clip(target + tol, 0, 255)
+    
+        for key, image_path in self.image_paths.items():
+            img = cv2.imread(image_path)
+            if img is None:
+                print(f"[WARN] Failed to load image: {image_path}")
+                continue
+    
+            mask = cv2.inRange(img, lower, upper)
+    
+            # マスク → QPainterPath
+            qpath = self.sam2_interface.mask_to_qpath(mask)
+    
+            # 現在の画像だけ画面に描画
+            if key == current_key:
+                path_item = QGraphicsPathItem()
+                path_item.setPen(self.graphicsView.pen)
+                path_item.setPath(qpath)
+                self.scene.addItem(path_item)
+    
+            # マスク保存（Undo/Redo対応）
+            self.save_drawn_path_for_image(key, qpath)
+    
+            print(f"[INFO] RGB mask extracted from {image_path} (key: {key})")
+    
+        self.label_status.setText("✅ RGB-based extraction completed for all images.")
+    
+    
+    def enable_rgb_picker(self):
+        self.label_status.setText("🎯 Click image to pick color.")
+        self.graphicsView.setCursor(Qt.CursorShape.CrossCursor)
+        self.graphicsView.mousePressEvent = self.pick_color_from_click
+    
+    def pick_color_from_click(self, event: QMouseEvent):
+        scene_pos = self.graphicsView.mapToScene(event.pos())
+        x, y = int(scene_pos.x()), int(scene_pos.y())
+    
+        key = self.get_current_image_key()
+        if key and key in self.image_paths:
+            img = cv2.imread(self.image_paths[key])
+            if img is not None and 0 <= y < img.shape[0] and 0 <= x < img.shape[1]:
+                b, g, r = img[y, x]
+                self.spin_r.setValue(r)
+                self.spin_g.setValue(g)
+                self.spin_b.setValue(b)
+                self.label_status.setText(f"🎯 Picked RGB: ({r}, {g}, {b})")
+    
+        # マウスイベントを戻す
+        self.graphicsView.setCursor(Qt.CursorShape.ArrowCursor)
+        self.graphicsView.mousePressEvent = self.graphicsView.__class__.mousePressEvent
+
+
+
+
+
+
 
 
 
@@ -1862,6 +1977,25 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
         self.calibration_points = []
         self.label_status.setText("Click two points to draw calibration line.")
 
+
+            
+    def start_measurement_mode(self):
+        self.measurement_mode = True
+        self.measurement_points = []
+    
+        if self.temp_measurement_line_item:
+            self.scene.removeItem(self.temp_measurement_line_item)
+            self.temp_measurement_line_item = None
+    
+        self.label_status.setText("Click two points to measure distance.")
+
+
+
+
+
+
+
+
         
 
     def get_current_image_key(self):
@@ -2006,6 +2140,21 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
     
     
     def load_image_folder(self):
+                
+        # ✅ 既存の画像／マスク／描画パス／Undo情報などをすべてリセット
+        self.image_paths.clear()
+        self.mask_paths.clear()
+        self.drawn_paths_per_image.clear()
+        self.undo_stack.clear()
+        self.redo_stack.clear()
+        self.modified_svg_trees.clear()
+        self.path_elements_by_color.clear()
+        self.pixmap_cache.clear()
+        self.svg_renderer_cache.clear()
+        
+        self.current_index = 0
+        self.drawing = False  # 念のため描画中もリセット
+
         import pathlib
     
         folder = QFileDialog.getExistingDirectory(self, "Select Image Folder")
@@ -2125,9 +2274,15 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
 
         self.image_pristine = True
         self.display_current_image()
+        self.fit_view_to_window()
+        
+        self.label_status.setText("✅ Images loaded. Use ↓↑, F/R, or J/U to switch images.")
+
             
             
-            
+    def fit_view_to_window(self):
+        self.graphicsView.fitInView(self.scene.itemsBoundingRect(), Qt.AspectRatioMode.KeepAspectRatio)
+        self.label_status.setText("✅ View fitted to window.")            
 
 
     
@@ -2613,6 +2768,28 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
                 self.scene.addItem(self.temp_line_item)
         
                 return True
+            
+                        
+            # ✅ 測定モード：仮線の表示
+            if self.measurement_mode and len(self.measurement_points) == 1:
+                p1 = self.measurement_points[0]
+                p2 = self.graphicsView.mapToScene(event.pos())
+            
+                # 既存の仮線を削除
+                if self.temp_measurement_line_item:
+                    self.scene.removeItem(self.temp_measurement_line_item)
+            
+                path = QPainterPath()
+                path.moveTo(p1)
+                path.lineTo(p2)
+                self.temp_measurement_line_item = QGraphicsPathItem(path)
+                self.temp_measurement_line_item.setPen(QPen(Qt.GlobalColor.green, 1, Qt.PenStyle.DashLine))
+                self.temp_measurement_line_item.setZValue(999)
+                self.scene.addItem(self.temp_measurement_line_item)
+            
+                return True
+            
+            
 
         
         elif event.type() == event.Type.MouseButtonPress and event.button() == Qt.MouseButton.LeftButton:
@@ -2657,6 +2834,53 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
                     self.calibration_points = []
 
                 return True
+                        
+            
+            # 🔹 測定モード
+            if self.measurement_mode:
+                self.measurement_points.append(scene_pos)
+            
+                if len(self.measurement_points) == 2:
+                    p1, p2 = self.measurement_points
+            
+                    # 確定線
+                    path = QPainterPath()
+                    path.moveTo(p1)
+                    path.lineTo(p2)
+                    line_item = QGraphicsPathItem(path)
+                    line_item.setPen(QPen(Qt.GlobalColor.green, 2))
+                    line_item.setZValue(10)
+                    self.scene.addItem(line_item)
+            
+                    # 仮線削除
+                    if self.temp_measurement_line_item:
+                        self.scene.removeItem(self.temp_measurement_line_item)
+                        self.temp_measurement_line_item = None
+            
+                    # 長さ計算
+                    px_length = ((p1.x() - p2.x()) ** 2 + (p1.y() - p2.y()) ** 2) ** 0.5
+                    mm_per_px = self.mm_per_px
+                    mm_length = px_length * mm_per_px if mm_per_px else None
+            
+                    # 保存
+                    self.measurement_results.append((p1, p2, px_length, mm_length))
+            
+                    # ステータス表示
+                    msg = f"Measured: {px_length:.2f} px"
+                    if mm_length:
+                        msg += f" = {mm_length:.2f} mm"
+                    else:
+                        msg += " (mm/px not calibrated)"
+                    self.label_status.setText(msg)
+            
+                    # リセット
+                    self.measurement_mode = False
+                    self.measurement_points = []
+            
+                return True
+            
+            
+            
 
             # 🔹 ボックスプロンプトモード
             if self.box_mode:
@@ -4984,18 +5208,69 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
     
         voxel_volume_mm3 = (self.mm_per_px ** 2) * self.z_spacing_mm
     
+    
+    
+    
+    
+        # results = []
+        # overlap_results = []
+    
+        # # 通常体積
+        # for i, volume in enumerate(masks_per_color):
+        #     voxel_count = np.count_nonzero(volume)
+        #     total_volume_mm3 = voxel_count * voxel_volume_mm3
+        #     total_volume_cm3 = total_volume_mm3 / 1000
+        #     print(f"[RESULT] Object {i+1:02}: {total_volume_cm3:.3f} cm³")
+        #     results.append((f"Object {i+1}", total_volume_mm3, total_volume_cm3))
+    
+        # # オーバーラップ体積
+        # for i in range(num_colors):
+        #     for j in range(i + 1, num_colors):
+        #         overlap = np.logical_and(masks_per_color[i], masks_per_color[j])
+        #         voxel_count = np.count_nonzero(overlap)
+        #         total_volume_mm3 = voxel_count * voxel_volume_mm3
+        #         total_volume_cm3 = total_volume_mm3 / 1000
+        #         if voxel_count > 0:
+        #             print(f"[OVERLAP] Object {i+1} & Object {j+1}: {total_volume_cm3:.3f} cm³")
+        #             overlap_results.append((f"Object {i+1} & {j+1}", total_volume_mm3, total_volume_cm3))
+    
+        # # 出力
+        # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # output_csv = os.path.join(os.getcwd(), f"volume_output_{timestamp}.csv")
+        # with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+        #     writer = csv.writer(f)
+        #     writer.writerow(["Label", "Volume (mm^3)", "Volume (cm^3)"])
+        #     writer.writerows(results)
+        #     if overlap_results:
+        #         writer.writerow([])
+        #         writer.writerow(["Overlapping Volumes"])
+        #         writer.writerow(["Overlap Pair", "Volume (mm^3)", "Volume (cm^3)"])
+        #         writer.writerows(overlap_results)
+    
+        # self.label_status.setText(f"[Done] Volume results saved to: {output_csv}")
+        
         results = []
         overlap_results = []
-    
-        # 通常体積
+
+        # 通常体積 + 各スライスの面積
+        per_slice_areas_all = []  # 各オブジェクトのスライスごとの面積（mm²）
+
         for i, volume in enumerate(masks_per_color):
             voxel_count = np.count_nonzero(volume)
             total_volume_mm3 = voxel_count * voxel_volume_mm3
             total_volume_cm3 = total_volume_mm3 / 1000
             print(f"[RESULT] Object {i+1:02}: {total_volume_cm3:.3f} cm³")
             results.append((f"Object {i+1}", total_volume_mm3, total_volume_cm3))
-    
-        # オーバーラップ体積
+
+            # 各スライスの面積を計算
+            slice_areas_mm2 = []
+            for z in range(volume.shape[0]):
+                slice_pixel_count = np.count_nonzero(volume[z])
+                slice_area_mm2 = slice_pixel_count * (self.mm_per_px ** 2)
+                slice_areas_mm2.append(slice_area_mm2)
+            per_slice_areas_all.append(slice_areas_mm2)
+
+        # オーバーラップ体積（面積は不要なので省略）
         for i in range(num_colors):
             for j in range(i + 1, num_colors):
                 overlap = np.logical_and(masks_per_color[i], masks_per_color[j])
@@ -5005,7 +5280,7 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
                 if voxel_count > 0:
                     print(f"[OVERLAP] Object {i+1} & Object {j+1}: {total_volume_cm3:.3f} cm³")
                     overlap_results.append((f"Object {i+1} & {j+1}", total_volume_mm3, total_volume_cm3))
-    
+
         # 出力
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_csv = os.path.join(os.getcwd(), f"volume_output_{timestamp}.csv")
@@ -5013,14 +5288,40 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
             writer = csv.writer(f)
             writer.writerow(["Label", "Volume (mm^3)", "Volume (cm^3)"])
             writer.writerows(results)
+
+            # 各断面の面積を書き出し
+            writer.writerow([])
+            writer.writerow(["Slice Areas (mm^2)"])
+            header = ["Slice Index"] + [f"Obj {i+1}" for i in range(num_colors)]
+            writer.writerow(header)
+            num_slices = len(svg_files)
+            for z in range(num_slices):
+                row = [z + 1]
+                for i in range(num_colors):
+                    area = per_slice_areas_all[i][z] if i < len(per_slice_areas_all) else 0
+                    row.append(f"{area:.2f}")
+                writer.writerow(row)
+
             if overlap_results:
                 writer.writerow([])
                 writer.writerow(["Overlapping Volumes"])
                 writer.writerow(["Overlap Pair", "Volume (mm^3)", "Volume (cm^3)"])
                 writer.writerows(overlap_results)
-    
-        self.label_status.setText(f"[Done] Volume results saved to: {output_csv}")
-        
+
+            # ✅ 測定結果（距離）を追記
+            if self.measurement_results:
+                writer.writerow([])
+                writer.writerow(["Measurement Results"])
+                writer.writerow(["Label", "Length (px)", "Length (mm)"])
+                for i, (_, _, px, mm) in enumerate(self.measurement_results):
+                    label = f"Measurement {i+1:02d}"
+                    mm_str = f"{mm:.2f}" if mm is not None else "N/A"
+                    writer.writerow([label, f"{px:.2f}", mm_str])
+
+
+
+
+        self.label_status.setText(f"[Done] Volume and area results saved to: {output_csv}")
         
 
 

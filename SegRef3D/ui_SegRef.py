@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import (
     QCheckBox, QScrollArea, QFrame, QComboBox,  # ← ここに QComboBox を追加
     QDoubleSpinBox, QSpinBox  # ✅ ← これを追加
 )
-from PyQt6.QtGui import QColor, QPixmap
+from PyQt6.QtGui import QColor, QPixmap, QFont
 from PyQt6.QtCore import Qt
 
 
@@ -27,7 +27,8 @@ class Ui_MainWindow:
     
         # 🔹 上段：ボタン2つ
         button_layout1 = QHBoxLayout()
-        self.btn_load_images = QPushButton("Load Image Folder")
+        self.btn_load_images = QPushButton("Load Images")
+        self.btn_fit_to_window = QPushButton("Fit to Window")
                 
         # 🔸 間引きUI
         self.label_thin_factor = QLabel("Thin Every N-th:")
@@ -37,30 +38,14 @@ class Ui_MainWindow:
         self.spin_thin_factor.setValue(1)  # デフォルト=1（間引かない）
         self.btn_thin_images = QPushButton("Apply Thinning")
         
-        self.btn_load_masks = QPushButton("Load Mask Folder")
+        self.btn_load_masks = QPushButton("Load Masks")
         self.btn_save_svg_as = QPushButton("Save SVG")
         self.btn_export_tiff = QPushButton("Export TIFF")
         # self.btn_export_grayscale_png = QPushButton("Export PNG")   
         self.btn_export_tiff_reversed = QPushButton("Export TIFF (Reversed)")
-        # self.btn_export_target_mask = QPushButton("🧪 Export Target Mask") #実験用
-        
-        button_layout1.addWidget(self.btn_load_images)
-        button_layout1.addWidget(self.label_thin_factor)
-        button_layout1.addWidget(self.spin_thin_factor)
-        button_layout1.addWidget(self.btn_thin_images)
-        button_layout1.addWidget(self.btn_load_masks)
-        button_layout1.addWidget(self.btn_save_svg_as)
-        button_layout1.addWidget(self.btn_export_tiff)
-        # button_layout1.addWidget(self.btn_export_grayscale_png)
-        button_layout1.addWidget(self.btn_export_tiff_reversed)
-        # button_layout1.addWidget(self.btn_export_target_mask)
 
 
 
-
-        # 🔹 ボタン行：2段目
-        button_layout2 = QHBoxLayout()
-        
         # 🔹 色選択UI（ラベル + ComboBox）とボタン3つ
         self.label_color = QLabel("Pen Color:")
         self.label_color.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
@@ -80,6 +65,44 @@ class Ui_MainWindow:
         ])        
         
         self.combo_draw_mode.setCurrentText("Free")        
+        
+
+
+        self.btn_undo = QPushButton("Undo Line")
+        self.btn_redo = QPushButton("Redo Line")
+        self.btn_clear_current_path = QPushButton("Clear Lines")
+        self.btn_clear_all_paths = QPushButton("Clear All Lines")        
+
+
+        
+        button_layout1.addWidget(self.btn_load_images)
+        button_layout1.addWidget(self.btn_fit_to_window)
+        
+        button_layout1.addWidget(self.label_thin_factor)
+        button_layout1.addWidget(self.spin_thin_factor)
+        button_layout1.addWidget(self.btn_thin_images)
+        button_layout1.addWidget(self.btn_load_masks)
+        button_layout1.addWidget(self.btn_save_svg_as)
+        button_layout1.addWidget(self.btn_export_tiff)
+        # button_layout1.addWidget(self.btn_export_grayscale_png)
+        button_layout1.addWidget(self.btn_export_tiff_reversed)
+
+
+        button_layout1.addWidget(self.label_color)
+        button_layout1.addWidget(self.combo_color)
+                
+        button_layout1.addWidget(self.label_draw_mode)
+        button_layout1.addWidget(self.combo_draw_mode)
+
+        button_layout1.addWidget(self.btn_undo)
+        button_layout1.addWidget(self.btn_redo)
+        button_layout1.addWidget(self.btn_clear_current_path)
+        button_layout1.addWidget(self.btn_clear_all_paths)
+        
+        # 🔹 ボタン行：2段目
+        button_layout2 = QHBoxLayout()
+        
+
         
         
         
@@ -105,53 +128,113 @@ class Ui_MainWindow:
         
         
         # 🔹 グレースケールしきい値範囲（脂肪抽出向け初期値）
-        self.label_threshold_min = QLabel("Gray Threshold Min:")
-        self.label_threshold_min.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        # self.label_threshold_min = QLabel("Gray Threshold Min:")
+        # self.label_threshold_min.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        # self.spin_threshold_min = QSpinBox()
+        # self.spin_threshold_min.setRange(0, 255)
+        # self.spin_threshold_min.setValue(180)  # 脂肪抽出向け初期値
+        
+        # self.label_threshold_max = QLabel("Max:")
+        # self.label_threshold_max.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        # self.spin_threshold_max = QSpinBox()
+        # self.spin_threshold_max.setRange(0, 255)
+        # self.spin_threshold_max.setValue(255)
+        
+        # self.btn_extract_threshold = QPushButton("Extract by Threshold")
+                
+        # 🔹 グレースケールしきい値範囲（Min–Max統合）
+        self.label_threshold_range = QLabel("Gray Threshold (Min–Max):")
+        self.label_threshold_range.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        
         self.spin_threshold_min = QSpinBox()
         self.spin_threshold_min.setRange(0, 255)
-        self.spin_threshold_min.setValue(180)  # 脂肪抽出向け初期値
+        self.spin_threshold_min.setValue(180)
+        self.spin_threshold_min.setFixedWidth(80)
         
-        self.label_threshold_max = QLabel("Max:")
-        self.label_threshold_max.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
         self.spin_threshold_max = QSpinBox()
         self.spin_threshold_max.setRange(0, 255)
         self.spin_threshold_max.setValue(255)
+        self.spin_threshold_max.setFixedWidth(80)
         
         self.btn_extract_threshold = QPushButton("Extract by Threshold")
         
+
+
         
-        # self.btn_otsu_threshold = QPushButton("Auto (Otsu)")  # ✅ 追加
+        # 🔹 RGB抽出設定
+        # 🔹 RGB抽出 UI 追加要素
+        self.label_rgb = QLabel("Target RGB:")
+        self.label_rgb.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        
+        self.spin_r = QSpinBox()
+        self.spin_r.setRange(0, 255)
+        self.spin_r.setPrefix("R:")
+        self.spin_r.setFixedWidth(80)
+        
+        self.spin_g = QSpinBox()
+        self.spin_g.setRange(0, 255)
+        self.spin_g.setPrefix("G:")
+        self.spin_g.setFixedWidth(80)
+        
+        self.spin_b = QSpinBox()
+        self.spin_b.setRange(0, 255)
+        self.spin_b.setPrefix("B:")
+        self.spin_b.setFixedWidth(80)
+        
+        self.label_rgb_tol = QLabel("±Tol:")
+        self.label_rgb_tol.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        
+        self.spin_rgb_tol = QSpinBox()
+        self.spin_rgb_tol.setRange(0, 128)
+        self.spin_rgb_tol.setValue(30)
+        self.spin_rgb_tol.setFixedWidth(80)
+        
+        self.btn_rgb_pick = QPushButton("Pick Color")
+        self.btn_rgb_extract = QPushButton("Extract by RGB")
+        
+
+
+
+
+
+
+
+
                
 
-        self.btn_undo = QPushButton("Undo Line")
-        self.btn_redo = QPushButton("Redo Line")
-        self.btn_clear_current_path = QPushButton("Clear Lines")
-        self.btn_clear_all_paths = QPushButton("Clear All Lines")
 
-        button_layout2.addWidget(self.label_color)
-        button_layout2.addWidget(self.combo_color)
-                
-        button_layout2.addWidget(self.label_draw_mode)
-        button_layout2.addWidget(self.combo_draw_mode)
                 
         button_layout2.addWidget(self.label_threshold_preset)
         button_layout2.addWidget(self.combo_threshold_preset)
 
         
-        button_layout2.addWidget(self.label_threshold_min)
+        # button_layout2.addWidget(self.label_threshold_min)
+        # button_layout2.addWidget(self.spin_threshold_min)
+        # button_layout2.addWidget(self.label_threshold_max)
+        # button_layout2.addWidget(self.spin_threshold_max)
+        # button_layout2.addWidget(self.btn_extract_threshold)
+        button_layout2.addWidget(self.label_threshold_range)
         button_layout2.addWidget(self.spin_threshold_min)
-        button_layout2.addWidget(self.label_threshold_max)
         button_layout2.addWidget(self.spin_threshold_max)
         button_layout2.addWidget(self.btn_extract_threshold)
+
         
-        # button_layout2.addWidget(self.btn_otsu_threshold)  # ✅ 追加
+        # 🔽 button_layout2 に追加
+        button_layout2.addWidget(self.label_rgb)
+        button_layout2.addWidget(self.spin_r)
+        button_layout2.addWidget(self.spin_g)
+        button_layout2.addWidget(self.spin_b)
+        button_layout2.addWidget(self.label_rgb_tol)
+        button_layout2.addWidget(self.spin_rgb_tol)
+        button_layout2.addWidget(self.btn_rgb_pick)
+        button_layout2.addWidget(self.btn_rgb_extract)        
         
         
         
-        button_layout2.addWidget(self.btn_undo)
-        button_layout2.addWidget(self.btn_redo)
-        button_layout2.addWidget(self.btn_clear_current_path)
-        button_layout2.addWidget(self.btn_clear_all_paths)
+        
+        
+        
+
 
         # 🔽 2段レイアウトとして追加
         outer_layout.addLayout(button_layout1)
@@ -205,6 +288,11 @@ class Ui_MainWindow:
 
         self.label_target_object = QLabel("Target Object:")
         self.label_target_object.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+                
+        # ✅ 太字を適用
+        bold_font = QFont()
+        bold_font.setBold(True)
+        self.label_target_object.setFont(bold_font)        
 
         self.combo_target_object = QComboBox()
         self.combo_target_object.addItems([str(i+1) for i in range(20)])
@@ -382,6 +470,7 @@ class Ui_MainWindow:
 
         self.label_mm_input = QLabel("Line Length (mm):")
         self.label_mm_input.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        self.label_mm_input.setFont(bold_font)
         self.spin_mm_input = QDoubleSpinBox()
         self.spin_mm_input.setDecimals(2)
         self.spin_mm_input.setRange(0.01, 1000.0)
@@ -390,17 +479,18 @@ class Ui_MainWindow:
 
         self.label_z_spacing = QLabel("Z Interval (mm):")
         self.label_z_spacing.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
+        self.label_z_spacing.setFont(bold_font)
         self.spin_z_interval = QDoubleSpinBox()
         self.spin_z_interval.setDecimals(3)
         self.spin_z_interval.setRange(0.001, 10.0)
         self.spin_z_interval.setSingleStep(0.01)
         self.spin_z_interval.setValue(0.2)
         
-        self.btn_draw_calibration_line = QPushButton("Draw Calibration Line")
+        self.btn_draw_calibration_line = QPushButton("Calibration Line")
         
-        
-        
+        self.btn_draw_measurement_line = QPushButton("Measurement Line")  # ✅ 新ボタン追加
 
+        
         
         self.label_stack_order = QLabel("Stacking Direction:")
         self.label_stack_order.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
@@ -439,15 +529,15 @@ class Ui_MainWindow:
         self.combo_smooth_mode.setCurrentIndex(0)  # デフォルト: なし
         
 
-        self.btn_export_stl_colorwise = QPushButton("Export STL per Color")
-        self.btn_export_volume_csv = QPushButton("Export Volume CSV")  # 🔽 体積出力ボタン
+        self.btn_export_stl_colorwise = QPushButton("Export 3D")
+        self.btn_export_volume_csv = QPushButton("Export Measurements")  # 🔽 体積出力ボタン
 
         calibration_layout.addWidget(self.label_mm_input)
         calibration_layout.addWidget(self.spin_mm_input)
         calibration_layout.addWidget(self.label_z_spacing)
         calibration_layout.addWidget(self.spin_z_interval)
         calibration_layout.addWidget(self.btn_draw_calibration_line)
-        # calibration_layout.addWidget(self.btn_toggle_interpolation)
+        calibration_layout.addWidget(self.btn_draw_measurement_line)  # ✅ ここに追加
         
         calibration_layout.addWidget(self.label_stack_order)
         calibration_layout.addWidget(self.combo_stack_order)
@@ -480,7 +570,8 @@ class Ui_MainWindow:
         for btn in [
             self.btn_run_sam2,
             self.btn_run_tracking,
-            self.btn_export_stl_colorwise
+            self.btn_export_stl_colorwise,
+            self.btn_save_svg_as
         ]:
             btn.setStyleSheet(heavy_style)
                     
@@ -509,3 +600,43 @@ class Ui_MainWindow:
         thin_style = "background-color: #dcdcdc; color: black;"  # ライトグレー
         self.btn_thin_images.setStyleSheet(thin_style)
         
+        # ✅ 測定・出力ボタン（緑系）
+        measure_export_style = "background-color: #ccffcc; color: black;"  # 明るいグリーン
+        for btn in [
+            self.btn_draw_measurement_line,
+            self.btn_export_volume_csv
+        ]:
+            btn.setStyleSheet(measure_export_style)
+
+        # ✅ 読み込み・保存ボタン（青系）
+        load_style = "background-color: #cce5ff; color: black;"  # 明るい青（読み込み系）
+        for btn in [
+            self.btn_load_images,
+            self.btn_load_masks
+        ]:
+            btn.setStyleSheet(load_style)
+
+
+        # ✅ 特定の基本操作ボタンに黒枠を追加（背景色はそのまま維持）
+        basic_frame_style = """
+            border: 2px solid black;
+            border-radius: 6px;
+            font-weight: bold;
+        """
+        for btn in [
+            self.btn_load_images,
+            self.btn_save_svg_as,
+            self.btn_prepare_tracking,
+            self.btn_set_box_prompt,
+            self.btn_set_tracking_start,
+            self.btn_set_tracking_end,
+            self.btn_run_tracking,
+            self.btn_add_to_mask,
+            self.btn_cut_from_mask,
+            self.btn_draw_calibration_line,
+            self.btn_export_stl_colorwise
+        ]:
+            prev_style = btn.styleSheet()
+            btn.setStyleSheet(prev_style + basic_frame_style)
+
+
