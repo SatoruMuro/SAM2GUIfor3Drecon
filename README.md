@@ -7,6 +7,13 @@
 ---
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3Dimage02.png" alt="image"  width="100%">
 
+---
+
+## 🎥 SegRef3D Tutorial Videos
+
+[How to use SegRef3D: 01. Basic Workflow (YouTube)](https://youtu.be/JModwfnBTYU)
+
+---
 
 ## 🧠 Features
 
