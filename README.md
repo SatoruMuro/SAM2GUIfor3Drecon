@@ -37,12 +37,13 @@ Watch the **Basic Workflow** video to learn how to use SegRef3D, from loading im
 
 ## ⚙️ System Requirements
 
-* Operating System: **Windows 10/11** (64-bit)
-* Required Hardware: **NVIDIA GPU with CUDA support**
-* Software:
+* **Operating System:** Windows 10/11 (64-bit)  
+* **Hardware:** NVIDIA GPU with CUDA support (for using SAM-based segmentation and tracking)  
+  - CPU-only environment: SegRef3D can run, but **SAM features are disabled**.  
+    Other functions (e.g., file handling, visualization, basic utilities) remain available.  
+* **Software:** No need to install Python or PyTorch — they are already bundled with SegRef3D  
 
-  * Python 3.10 or later
-  * PyTorch (with CUDA if GPU used)
+
 
 ---
 
@@ -50,10 +51,9 @@ Watch the **Basic Workflow** video to learn how to use SegRef3D, from loading im
 
 ### 1. Download
 
-Download the ready-to-use SegRef3D application as a ZIP file:
+Download the ready-to-use **SegRef3D** application as a ZIP file:
 
 * [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)  
-  (**Python + PyTorch must be pre-installed on your system**)
 
 After downloading, unzip the file.
 
@@ -61,55 +61,17 @@ After downloading, unzip the file.
 > ❗ Avoid placing the folder in locations with **long paths, Japanese characters, or spaces** (e.g., Desktop or Documents), as this may cause runtime errors.
 
 
-
 ### 2. Preparation Before Execution
 
-⚠️ Python and PyTorch must be installed **before** running the `.exe`.
+✅ **No need to install Python or PyTorch.**  
+Everything required to run SegRef3D is already bundled inside the application.
 
----
+⚠️ **Requirement:**  
+If you want to use **SAM-based segmentation and tracking**, make sure the PC has an **NVIDIA GPU with a compatible driver installed**.  
 
-### 🐍 Installing Python (Required)
+- **GPU environment:** Full functionality (including SAM)  
+- **CPU environment:** SAM features are disabled, but other tools remain usable  
 
-1. Download Python 3.10.x from:
-   [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
-
-2. During install, check:
-   ✅ Add Python to PATH
-
----
-
-### 🔍 Check if PyTorch is Installed
-
-Open Command Prompt and enter:
-
-```
-python -c "import torch; print(torch.__version__)"
-```
-
-→ Version number shown = PyTorch installed
-→ Error shown = PyTorch not installed
-
----
-
-### 📦 Installing PyTorch
-
-In Command Prompt, run one of the following:
-
-🟢 CUDA GPU (Recommended):
-
-```
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-```
-
-🔴 CPU Only (Not Recommended):
-
-```
-pip install torch torchvision
-```
-
-More: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
-
----
 
 ### 3. Run
 
@@ -118,7 +80,8 @@ The `_internal` folder **must be located in the same directory** as `SegRef3D.ex
 
 > ⚠️ SAM2 features (AI segmentation and tracking) require an NVIDIA GPU and CUDA-compatible drivers.  
 > If your system is not compatible, the related buttons will be automatically disabled.  
-> ❗ Be careful **not to delete the `_internal` folder** — the application will fail to launch without it.
+> ❗ Be careful **not to delete the `_internal` folder** — the application will fail to launch without it.  
+> 💡 **Tip:** The first startup may take longer than usual while the environment initializes.  
 
 
 ---
