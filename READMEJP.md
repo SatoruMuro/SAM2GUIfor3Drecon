@@ -38,12 +38,11 @@ SegRef3Dの基本的な操作手順をご覧いただける動画を掲載して
 
 ## ⚙️ 動作環境
 
-* OS：**Windows 10/11（64bit）**
-* GPU：**CUDA対応NVIDIA GPU**（SAM2使用時）
-* ソフトウェア：
-
-  * Python 3.10以降
-  * PyTorch（GPU環境ではCUDA版）
+* **OS:** Windows 10/11 (64-bit)  
+* **ハードウェア:** CUDA 対応の NVIDIA GPU（SAM ベースのセグメンテーションとトラッキングを使用する場合）  
+  - CPU 環境: SegRef3D は起動できますが、**SAM 機能は無効化**されます。  
+    その他の機能（ファイル操作、可視化、基本ツールなど）は利用可能です。  
+* **ソフトウェア:** Python や PyTorch のインストールは不要です。SegRef3D に同梱されています。  
 
 ---
 
@@ -51,75 +50,42 @@ SegRef3Dの基本的な操作手順をご覧いただける動画を掲載して
 
 ### 1. ダウンロード
 
-以下の SegRef3D アプリケーション（ZIP形式）をダウンロードしてください：
+以下のリンクから **SegRef3D** アプリケーションを ZIP 形式でダウンロードしてください：
 
 * [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)  
-  （**Python + PyTorch の事前インストールが必要です**）
 
-ダウンロード後、ZIPファイルを解凍してください。
+ダウンロード後、ZIP を解凍してください。
 
-> 📁 **補足:** 解凍してできたフォルダ（`SegRef3D.exe` と `_internal` を含む）を、`C:\SegRef3D\` のように **Cドライブ直下に配置することを推奨**します。  
-> ❗ デスクトップやドキュメントなど、**パスが長い場所、日本語や空白を含むパス**に置くと、実行時にエラーが発生する可能性があります。
+> 📁 **ヒント:** 解凍したフォルダ（`SegRef3D.exe` と `_internal` フォルダを含む）は、  
+> `C:\SegRef3D\` のようなシンプルなパスに置いてください。  
+> ❗ パスが長すぎたり、日本語やスペースを含む場所（例: デスクトップやドキュメント）には置かないでください。  
+> 実行時にエラーが発生する場合があります。  
 
-
+---
 
 ### 2. 実行前の準備
 
-⚠️ `.exe` を起動する前に **PythonとPyTorchをインストール**しておく必要があります。
+✅ **Python や PyTorch のインストールは不要です。**  
+SegRef3D を動かすのに必要なものはすべてアプリケーションに同梱されています。  
+
+⚠️ **注意:**  
+**SAM ベースのセグメンテーションとトラッキング** を使用するには、  
+**CUDA 対応の NVIDIA GPU と互換ドライバ** が必要です。  
+
+- **GPU 環境:** SAM を含むすべての機能が利用可能  
+- **CPU 環境:** SAM 機能は無効化されますが、その他のツールは利用可能  
 
 ---
 
-### 🐍 Pythonのインストール（必須）
+### 3. 実行
 
-1. Python 3.10.x を以下からダウンロード：
-   [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+`SegRef3D.exe` をダブルクリックしてアプリケーションを起動してください。  
+このとき、`_internal` フォルダが **必ず同じディレクトリ** に存在している必要があります。  
 
-2. インストール時に以下を必ずチェック：
-   ✅ Add Python to PATH
-
----
-
-### 🔍 PyTorchがインストール済みか確認
-
-コマンドプロンプトで以下を実行：
-
-```
-python -c "import torch; print(torch.__version__)"
-```
-
-→ バージョンが表示されればOK
-→ エラーが出る場合は未インストール
-
----
-
-### 📦 PyTorchのインストール方法
-
-以下のいずれかをコマンドプロンプトで実行：
-
-🟢 CUDA GPUあり（推奨）：
-
-```
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-```
-
-🔴 CPUのみ（非推奨）：
-
-```
-pip install torch torchvision
-```
-
-詳細: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
-
----
-
-### 3. 起動
-
-`SegRef3D.exe` をダブルクリックで起動してください。  
-実行には、同じフォルダ内にある `_internal` フォルダが必要です。
-
-> ⚠️ SAM2 の機能（AIセグメンテーション・トラッキング）は、NVIDIA製GPUとCUDA対応ドライバが必要です。  
-> 環境が対応していない場合は、関連ボタンが自動的に無効になります。  
-> ❗ `_internal` フォルダを誤って削除しないようご注意ください。削除するとアプリが起動できなくなります。
+> ⚠️ SAM2 機能（AI セグメンテーションとトラッキング）は NVIDIA GPU と CUDA 対応ドライバが必須です。  
+> 非対応環境では、関連するボタンは自動的に無効化されます。  
+> ❗ `_internal` フォルダを削除しないでください。削除するとアプリケーションは起動できません。  
+> 💡 **ヒント:** 初回起動時は環境の初期化のため、起動に時間がかかる場合があります。  
 
 
 ---
