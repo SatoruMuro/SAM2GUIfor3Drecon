@@ -174,6 +174,9 @@ If you do not have a CUDA GPU environment, you can still perform segmentation us
 
 
 # Update  
+**2025.8.21**
+SegRef3Dのpytorch同封ビルド版を公開。ユーザーはpythonおよびpytorchのインストールが不要になります。
+
 **2025.7.29**  
 SegRef3Dを公開。
 
