@@ -49,11 +49,21 @@ This `.slicerrc.py` script **automatically adds the following buttons** to the 3
 📎 Download the script here:  
 🔗 [`.slicerrc.py` on GitHub](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/.slicerrc.py)
 
-### 🛠 How to use:
-1. Download the `.slicerrc.py` file from the link above and verify/rename it if needed (see notes below).
-2. Place the file in the following folder: `C:\Users\<YourUsername>`
-3. Restart 3D Slicer.
-4. Three new buttons will automatically appear in the toolbar.
+### 🛠 How to Use
+
+1. Download the `.slicerrc.py` file from the link above and **make sure the file extension is `.py`**.  
+   If necessary, rename the file to `.slicerrc.py` (the file name must be exactly this).  
+
+2. Place the file in the same folder as `Slicer.exe`.  
+   - **On Windows**  
+     - Type “Slicer” in the search bar, right-click the icon → **Open file location**  
+     - If a shortcut appears, right-click the shortcut again → **Open file location**  
+     - This will take you to the folder where `Slicer.exe` is located  
+
+3. Restart 3D Slicer.  
+
+4. Three new buttons will automatically appear in the toolbar.  
+
 
 This will enable fast and easy DICOM processing inside 3D Slicer!
 
