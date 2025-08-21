@@ -1,7 +1,7 @@
 # SegRef3D
 
 **SegRef3D** is a PyQt6-based GUI tool for interactive image segmentation and refinement. It integrates the Segment Anything Model 2 (SAM2) for AI-powered segmentation and supports multi-frame object tracking, editing, and export for 3D reconstruction workflows.    
-  
+👉 [Read the full usage tutorial here](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegRef3DEN.md)    
 日本語は[こちら](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/READMEJP.md)  
 
 ---
