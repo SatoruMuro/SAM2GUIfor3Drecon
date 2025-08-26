@@ -1,3 +1,20 @@
+import sys, torch, warnings
+
+print("=== SegRef3D GPU Diagnostic ===")
+print("Python:", sys.executable)
+print("Torch:", torch.__version__, "CUDA", torch.version.cuda)
+print("ARCH:", torch.cuda.get_arch_list())
+print("CUDA available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    try:
+        print("GPU:", torch.cuda.get_device_name(0))
+    except Exception as e:
+        print("GPU: <unavailable>", e)
+print("===============================")
+
+
+
+
 import sys
 import os
 import re
@@ -14,6 +31,7 @@ from PyQt6.QtWidgets import (
 )
 
 from PyQt6.QtSvgWidgets import QGraphicsSvgItem
+from PyQt6.QtWidgets import QMessageBox
 
 from PyQt6.QtGui import (
     QPixmap,
@@ -2155,25 +2173,94 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
         self.current_index = 0
         self.drawing = False  # 念のため描画中もリセット
 
+
+
+
+
+
+        # import pathlib
+    
+        # folder = QFileDialog.getExistingDirectory(self, "Select Image Folder")
+        # if not folder:
+        #     return
+    
+        # # 🔽 新しいフォルダを作成（元のフォルダ名 + jpg）
+        # # input_folder = pathlib.Path(folder)
+        # # jpg_folder = input_folder.parent / f"{input_folder.name}jpg"
+        # input_folder = pathlib.Path(folder)
+        # jpg_folder = pathlib.Path(os.getcwd()) / f"{input_folder.name}jpg"
+        # # jpg_folder.mkdir(exist_ok=True)
+    
+        # # 🔽 対応拡張子（大文字も許容）
+        # valid_exts = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".dcm"}
+        # self.image_paths = {}
+        # self.image_sizes = {}  # ✅ 追加：画像サイズ保存用
+    
+        # # 🔽 変換処理
+        # for i, filename in enumerate(sorted(os.listdir(folder))):
+        #     ext = pathlib.Path(filename).suffix.lower()
+        #     if ext not in valid_exts:
+        #         continue
+    
+        #     input_path = os.path.join(folder, filename)
+        #     key = f"{i+1:04}"
+        #     output_jpg_path = os.path.join(jpg_folder, f"image{key}.jpg")  # ✅ ← image0001.jpg形式に
+                            
+        #     try:
+        #         if ext == ".dcm":
+        #             if not jpg_folder.exists():  # 🔑 必要になったタイミングで作成
+        #                 jpg_folder.mkdir(exist_ok=True)
+                    
+        #             # DICOM を JPEG に変換
+        #             ds = pydicom.dcmread(input_path)
+        #             arr = ds.pixel_array
+        #             arr = self._normalize_grayscale(arr)
+        #             image = Image.fromarray(arr).convert("RGB")
+        #             image.save(output_jpg_path, "JPEG")
+        #             self.image_paths[key] = output_jpg_path
+        #             self.image_sizes[key] = image.size  # ✅ サイズ記録
+            
+        #         elif ext == ".jpg":
+        #             # すでにJPEGならそのまま使う（再保存しない）
+        #             self.image_paths[key] = input_path
+        #             image = Image.open(input_path)
+        #             self.image_sizes[key] = image.size  # ✅ サイズ記録
+            
+        #         else:
+        #             if not jpg_folder.exists():  # 🔑 必要になったタイミングで作成
+        #                 jpg_folder.mkdir(exist_ok=True)
+        #             # 他の画像形式はJPEGに変換して保存
+        #             image = Image.open(input_path).convert("RGB")
+        #             image.save(output_jpg_path, "JPEG")
+        #             self.image_paths[key] = output_jpg_path
+        #             self.image_sizes[key] = image.size  # ✅ サイズ記録
+                
+        #     except Exception as e:
+        #         print(f"[WARN] Failed to process {filename}: {e}")
+    
+        # self.label_status.setText(f"Loaded {len(self.image_paths)} images (converted to JPG).")
+        # self.current_index = 0
+    
+        
+
+    
         import pathlib
     
         folder = QFileDialog.getExistingDirectory(self, "Select Image Folder")
         if not folder:
             return
     
-        # 🔽 新しいフォルダを作成（元のフォルダ名 + jpg）
-        # input_folder = pathlib.Path(folder)
-        # jpg_folder = input_folder.parent / f"{input_folder.name}jpg"
         input_folder = pathlib.Path(folder)
         jpg_folder = pathlib.Path(os.getcwd()) / f"{input_folder.name}jpg"
-        # jpg_folder.mkdir(exist_ok=True)
     
-        # 🔽 対応拡張子（大文字も許容）
         valid_exts = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".dcm"}
         self.image_paths = {}
-        self.image_sizes = {}  # ✅ 追加：画像サイズ保存用
+        self.image_sizes = {}
     
-        # 🔽 変換処理
+        # ✅ BMP専用: ユーザー選択を一度だけ尋ねて記憶
+        bmp_convert_preference = None  # None=未決定, True=JPGに変換, False=BMPのまま
+        num_converted = 0
+    
         for i, filename in enumerate(sorted(os.listdir(folder))):
             ext = pathlib.Path(filename).suffix.lower()
             if ext not in valid_exts:
@@ -2181,42 +2268,98 @@ class SegRefMain(QMainWindow, Ui_MainWindow):
     
             input_path = os.path.join(folder, filename)
             key = f"{i+1:04}"
-            output_jpg_path = os.path.join(jpg_folder, f"image{key}.jpg")  # ✅ ← image0001.jpg形式に
-                            
+            output_jpg_path = os.path.join(jpg_folder, f"image{key}.jpg")
+    
             try:
                 if ext == ".dcm":
-                    if not jpg_folder.exists():  # 🔑 必要になったタイミングで作成
+                    if not jpg_folder.exists():
                         jpg_folder.mkdir(exist_ok=True)
-                    
-                    # DICOM を JPEG に変換
                     ds = pydicom.dcmread(input_path)
                     arr = ds.pixel_array
                     arr = self._normalize_grayscale(arr)
                     image = Image.fromarray(arr).convert("RGB")
                     image.save(output_jpg_path, "JPEG")
                     self.image_paths[key] = output_jpg_path
-                    self.image_sizes[key] = image.size  # ✅ サイズ記録
-            
-                elif ext == ".jpg":
-                    # すでにJPEGならそのまま使う（再保存しない）
+                    self.image_sizes[key] = image.size
+                    num_converted += 1
+    
+                elif ext == ".jpg" or ext == ".jpeg":
+                    # そのまま利用
                     self.image_paths[key] = input_path
-                    image = Image.open(input_path)
-                    self.image_sizes[key] = image.size  # ✅ サイズ記録
-            
-                else:
-                    if not jpg_folder.exists():  # 🔑 必要になったタイミングで作成
-                        jpg_folder.mkdir(exist_ok=True)
-                    # 他の画像形式はJPEGに変換して保存
-                    image = Image.open(input_path).convert("RGB")
-                    image.save(output_jpg_path, "JPEG")
-                    self.image_paths[key] = output_jpg_path
-                    self.image_sizes[key] = image.size  # ✅ サイズ記録
+                    with Image.open(input_path) as im:
+                        self.image_sizes[key] = im.size
+    
+    
+    
+    
                 
+                
+                elif ext == ".bmp":
+                    # 🔸 Only ask once when encountering the first BMP
+                    if bmp_convert_preference is None:
+                        reply = QMessageBox.question(
+                            self,
+                            "BMP Import",
+                            "Do you want to convert BMP images to JPG before importing?\n"
+                            "Selecting 'No' will import them as BMP without conversion.\n"
+                            "(Cancel will abort the loading process.)",
+                            QMessageBox.StandardButton.Yes
+                            | QMessageBox.StandardButton.No
+                            | QMessageBox.StandardButton.Cancel,
+                            QMessageBox.StandardButton.Yes
+                        )
+                        if reply == QMessageBox.StandardButton.Cancel:
+                            self.label_status.setText("❌ Image loading has been canceled.")
+                            return
+                        bmp_convert_preference = (reply == QMessageBox.StandardButton.Yes)
+                
+                    if bmp_convert_preference:
+                        if not jpg_folder.exists():
+                            jpg_folder.mkdir(exist_ok=True)
+                        with Image.open(input_path) as im:
+                            im = im.convert("RGB")
+                            im.save(output_jpg_path, "JPEG")
+                            self.image_paths[key] = output_jpg_path
+                            self.image_sizes[key] = im.size
+                        num_converted += 1
+                    else:
+                        # Import as BMP without conversion
+                        self.image_paths[key] = input_path
+                        with Image.open(input_path) as im:
+                            self.image_sizes[key] = im.size
+
+    
+    
+    
+    
+    
+    
+                else:
+                    # PNG/TIFなどは従来通りJPGへ変換
+                    if not jpg_folder.exists():
+                        jpg_folder.mkdir(exist_ok=True)
+                    with Image.open(input_path) as im:
+                        im = im.convert("RGB")
+                        im.save(output_jpg_path, "JPEG")
+                        self.image_paths[key] = output_jpg_path
+                        self.image_sizes[key] = im.size
+                    num_converted += 1
+    
             except Exception as e:
                 print(f"[WARN] Failed to process {filename}: {e}")
     
-        self.label_status.setText(f"Loaded {len(self.image_paths)} images (converted to JPG).")
+        total = len(self.image_paths)
+        self.label_status.setText(f"Loaded {total} images (converted {num_converted} to JPG).")
         self.current_index = 0
+    
+        # …（以降の output_mask_dir 初期化、空SVG生成、DICOMメタ保存、表示更新は既存のまま）…
+    
+    
+    
+    
+    
+    
+    
     
         # 🔽 output_mask_dir を初期化
         now = datetime.now().strftime("%Y%m%d_%H%M%S")
