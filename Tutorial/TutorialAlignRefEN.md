@@ -26,6 +26,14 @@
 3. Use `←`/`→` or `F`/`R`/`J`/`U` keys to switch between images  
 4. Click `Fit to Window` to fit the image display to the screen
 
+💡 **File Naming Note**  
+Images must be **sequentially numbered with the same number of digits**.  
+For example:  
+✅ `image0001.jpg`, `image0002.jpg`, `image0003.jpg` ...  
+❌ `image1.jpg`, `image2.jpg`, ..., `image10.jpg`, `image11.jpg`  
+
+Inconsistent numbering will cause **incorrect sorting order** when loading images.
+
 ---
 
 ## 🎨 Canvas Background and Expansion
