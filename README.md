@@ -221,11 +221,17 @@ The code for the SegRef3D, JPG Converter, SAM2  for Img Seq, ColorChanger, Vecto
 # 📚 Citation｜引用
 
 本ツールを研究・論文等で使用される場合は、以下の論文を引用してください。  
-If you use this tool for research or academic purposes, please cite the following article:
+If you use this tool for research or academic purposes, please cite the following articles:
 
 **Muro S, Ibara T, Nimura A, Akita K.**  
-**Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
-*Microscopy (Oxford)*. (in press)  
+**SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research.**  
+*(September 26, 2025)*  
+🔗 [SSRN: https://ssrn.com/abstract=5547238](https://ssrn.com/abstract=5547238)  
+🔗 [DOI: 10.2139/ssrn.5547238](http://dx.doi.org/10.2139/ssrn.5547238)
+
+**Muro S, Ibara T, Nimura A, Akita K.**  
+**Seg and Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
+*Microscopy (Oxford)*. Published online March 3, 2025.  
 🔗 [DOI: 10.1093/jmicro/dfaf015](https://academic.oup.com/jmicro/advance-article/doi/10.1093/jmicro/dfaf015/8051094?utm_source=authortollfreelink&utm_campaign=jmicro&utm_medium=email&guestAccessKey=d61820c6-f079-42aa-b81c-767f36f8d455)
 
 ---
@@ -233,11 +239,23 @@ If you use this tool for research or academic purposes, please cite the followin
 ### 📎 BibTeX
 
 ```bibtex
-@article{Muro2025,
-  author    = {Muro, Satoru and Ibara, T. and Nimura, A. and Akita, K.},
-  title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
+@article{Muro2025a,
+  author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
+  title     = {SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research},
+  year      = {2025},
+  month     = {September},
+  note      = {Available at SSRN},
+  url       = {https://ssrn.com/abstract=5547238},
+  doi       = {10.2139/ssrn.5547238}
+}
+
+@article{Muro2025b,
+  author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
+  title     = {Seg and Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
   journal   = {Microscopy (Oxford)},
-  year      = {in press},
+  year      = {2025},
+  month     = {March},
+  note      = {Published online},
   doi       = {10.1093/jmicro/dfaf015}
 }
 ```
