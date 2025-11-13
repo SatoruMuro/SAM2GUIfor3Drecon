@@ -58,9 +58,6 @@ Newest build with updated features and UI improvements:
 
 * [`SegRef3D-ver1.1.0.zip`](https://www.dropbox.com/scl/fi/sw4r6plklm5666qdy63lh/SegRef3D-ver1.1.0.zip?rlkey=e4l1tijjz3ih5mapcvq5ftl6a&st=q7cn11jk&dl=1)
 
-After downloading, unzip the file.
-
----
 
 #### **Stable Version — ver.1.0.1**
 
