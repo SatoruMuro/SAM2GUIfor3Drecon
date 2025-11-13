@@ -51,11 +51,21 @@ SegRef3Dの基本的な操作手順をご覧いただける動画を掲載して
 
 ### 1. ダウンロード
 
-以下のリンクから **SegRef3D** アプリケーションを ZIP 形式でダウンロードしてください：
+#### **最新バージョン — ver.1.1.0**
 
-* [`SegRef3D.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)  
+新機能やUI改善を含む最新版：
 
-ダウンロード後、ZIP を解凍してください。
+* [`SegRef3D-ver1.1.0.zip`](https://www.dropbox.com/scl/fi/sw4r6plklm5666qdy63lh/SegRef3D-ver1.1.0.zip?rlkey=e4l1tijjz3ih5mapcvq5ftl6a&st=q7cn11jk&dl=1)
+
+
+#### **安定版 — ver.1.0.1**
+
+複数の環境で動作確認済みの安定バージョン：
+
+* [`SegRef3D-ver1.0.1.zip`](https://www.dropbox.com/scl/fi/1xgq28szs6by1sp1qbskw/SegRef3D.zip?rlkey=3jtwph3muk24888rpya54f222&st=ajyyhjrm&dl=1)
+
+ダウンロード後、ZIPファイルを解凍してご利用ください。
+
 
 > 📁 **ヒント:** 解凍したフォルダ（`SegRef3D.exe` と `_internal` フォルダを含む）は、  
 > `C:\SegRef3D\` のようなシンプルなパスに置いてください。  
