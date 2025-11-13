@@ -183,6 +183,16 @@ If you do not have a CUDA GPU environment, you can still perform segmentation us
 
 
 # Update  
+**2025.11.13**  
+SegRef3D **ver.1.1.0** を公開。  
+拡張子なしの dcm データの読み込みに対応。  
+画像ファイル名のナチュラルソートに対応。  
+CT/MRI データ使用時、ボリューム情報 CSV の z spacing が整数化されてしまう不具合を修正。  
+NIfTI 形式での出力機能を追加。  
+バージョン情報を表示するボタンを追加。  
+出力した STL を別ウィンドウでプレビュー表示できる機能を追加。  
+UI 改善：基本操作ボタンを常設とし、拡張機能は最下段に整理。
+
 **2025.8.21**
 SegRef3Dのpytorch同封ビルド版を公開。ユーザーはpythonおよびpytorchのインストールが不要になります。
 
