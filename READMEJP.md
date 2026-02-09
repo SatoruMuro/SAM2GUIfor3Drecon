@@ -193,23 +193,42 @@ The code for the SegRef3D, JPG Converter, SAM2  for Img Seq, ColorChanger, Vecto
 # 📚 Citation｜引用
 
 本ツールを研究・論文等で使用される場合は、以下の論文を引用してください。  
-If you use this tool for research or academic purposes, please cite the following article:
+If you use this tool for research or academic purposes, please cite the following articles:
 
 **Muro S, Ibara T, Nimura A, Akita K.**  
-**Seg & Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
-*Microscopy (Oxford)*. (in press)  
-🔗 [DOI: 10.1093/jmicro/dfaf015](https://academic.oup.com/jmicro/advance-article/doi/10.1093/jmicro/dfaf015/8051094?utm_source=authortollfreelink&utm_campaign=jmicro&utm_medium=email&guestAccessKey=d61820c6-f079-42aa-b81c-767f36f8d455)
+**SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research.**  
+*Int J Imaging Syst Technol.* 2026;36(2):e70313.  
+🔗 [https://doi.org/10.1002/ima.70313](https://doi.org/10.1002/ima.70313)
+
+**Muro S, Ibara T, Nimura A, Akita K.**  
+**Seg and Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
+*Microscopy (Oxford)*. Published online March 3, 2025.  
+🔗 [https://doi.org/10.1093/jmicro/dfaf015](https://doi.org/10.1093/jmicro/dfaf015)
 
 ---
 
 ### 📎 BibTeX
 
 ```bibtex
-@article{Muro2025,
-  author    = {Muro, Satoru and Ibara, T. and Nimura, A. and Akita, K.},
-  title     = {Seg \& Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
+@article{Muro2026,
+  author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
+  title     = {SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research},
+  journal   = {International Journal of Imaging Systems and Technology},
+  volume    = {36},
+  number    = {2},
+  pages     = {e70313},
+  year      = {2026},
+  doi       = {10.1002/ima.70313}
+}
+
+
+@article{Muro2025b,
+  author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
+  title     = {Seg and Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction},
   journal   = {Microscopy (Oxford)},
-  year      = {in press},
+  year      = {2025},
+  month     = {March},
+  note      = {Published online},
   doi       = {10.1093/jmicro/dfaf015}
 }
 ```
