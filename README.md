@@ -244,29 +244,30 @@ If you use this tool for research or academic purposes, please cite the followin
 
 **Muro S, Ibara T, Nimura A, Akita K.**  
 **SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research.**  
-*(September 26, 2025)*  
-🔗 [SSRN: https://ssrn.com/abstract=5547238](https://ssrn.com/abstract=5547238)  
-🔗 [DOI: 10.2139/ssrn.5547238](http://dx.doi.org/10.2139/ssrn.5547238)
+*Int J Imaging Syst Technol.* 2026;36(2):e70313.  
+🔗 [https://doi.org/10.1002/ima.70313](https://doi.org/10.1002/ima.70313)
 
 **Muro S, Ibara T, Nimura A, Akita K.**  
 **Seg and Ref: A Newly Developed Toolset for Artificial Intelligence-Powered Segmentation and Interactive Refinement for Labor-Saving Three-Dimensional Reconstruction.**  
 *Microscopy (Oxford)*. Published online March 3, 2025.  
-🔗 [DOI: 10.1093/jmicro/dfaf015](https://academic.oup.com/jmicro/advance-article/doi/10.1093/jmicro/dfaf015/8051094?utm_source=authortollfreelink&utm_campaign=jmicro&utm_medium=email&guestAccessKey=d61820c6-f079-42aa-b81c-767f36f8d455)
+🔗 [https://doi.org/10.1093/jmicro/dfaf015](https://doi.org/10.1093/jmicro/dfaf015)
 
 ---
 
 ### 📎 BibTeX
 
 ```bibtex
-@article{Muro2025a,
+@article{Muro2026,
   author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
   title     = {SegRef3D: A Versatile Open-Source Platform for Artificial Intelligence-Assisted Segmentation and Three-Dimensional Reconstruction in Morphological Research},
-  year      = {2025},
-  month     = {September},
-  note      = {Available at SSRN},
-  url       = {https://ssrn.com/abstract=5547238},
-  doi       = {10.2139/ssrn.5547238}
+  journal   = {International Journal of Imaging Systems and Technology},
+  volume    = {36},
+  number    = {2},
+  pages     = {e70313},
+  year      = {2026},
+  doi       = {10.1002/ima.70313}
 }
+
 
 @article{Muro2025b,
   author    = {Muro, Satoru and Ibara, Takuya and Nimura, Akimoto and Akita, Keiichi},
