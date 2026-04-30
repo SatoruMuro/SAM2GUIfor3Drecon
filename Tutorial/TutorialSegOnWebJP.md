@@ -19,32 +19,31 @@
 
 ---
 
-## 🚀 Seg on Web の起動（Google Colab）
+## 🚀 Seg on Web の起動
 
-**ツール名**：Seg on Web  
-🔗 [Seg on Web を開く](https://satorumuro.github.io/SAM2GUIfor3Drecon/ColabNotebooks/segonweb.html)
+Seg on Web は、ローカル版 SegRef3D から起動できます。
 
 ### 起動手順
 
-1. Google Colab が開いたら、メニューから  
+1. ローカル版 SegRef3D を起動します。
+2. 画面右上部にある **Seg on Web** ボタンをクリックします。
+3. ブラウザで Google Colab ノートブックが開きます。
+4. Google Colab が開いたら、メニューから  
    **「ランタイム」＞「ランタイムのタイプを変更」** を選択します。
-
-2. ハードウェアアクセラレータで **T4 GPU** を選択して保存します。
-
-3. メニューから  
+5. ハードウェアアクセラレータで **T4 GPU** を選択して保存します。
+6. メニューから  
    **「ランタイム」＞「すべてのセルを実行」** を選択します。
-
-4. 警告が表示された場合は、内容を確認したうえで  
+7. 警告が表示された場合は、内容を確認したうえで  
    **「このまま実行」** を選択します。
-
-5. 実行完了まで数分かかります。  
+8. 実行完了まで数分かかります。  
    ノートブックの最下部までスクロールし、セルの下に表示される  
    `Running on public URL` のリンクをクリックします。
-
-6. Gradio GUI が開きます。
+9. Gradio GUI が開きます。
 
 ⚠️ **Colabノートブックの画面は閉じないでください。**  
 Gradio GUI は、Colabノートブックが実行中の間だけ使用できます。
+
+※ SegRef3D を起動できない場合は、[Seg on Web](https://satorumuro.github.io/SAM2GUIfor3Drecon/ColabNotebooks/segonweb.html) から直接開くこともできます。
 
 <img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/step1-01-2.PNG" alt="Colab launch" width="50%">
 
