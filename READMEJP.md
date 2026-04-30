@@ -169,8 +169,8 @@ CUDA非対応環境でも、以下のように段階的に処理することで 
 
 ### 🔗 Webベースのセグメンテーション手順
 
-* 🇯🇵 日本語: [TutorialJP1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialJP1.md)
-* 🇺🇸 英語: [TutorialEN1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialEN1.md)
+* 🇯🇵 日本語: [TutorialSegOnWebJP.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegOnWebJP.md)
+* 🇺🇸 英語: [TutorialSegOnWebEN.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegOnWebEN.md)
 
 ### 📷 Web処理用画像の注意点
 
