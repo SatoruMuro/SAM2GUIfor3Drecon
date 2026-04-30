@@ -157,10 +157,11 @@ To use SAM2 for segmentation and tracking:
 
 ## 🖥️ For Non-GPU Environments
 
-If you do not have a CUDA GPU environment, you can still perform segmentation using a hybrid approach:
+If you do not have a CUDA-compatible GPU, you can still use SegRef3D through a hybrid workflow:
 
-* Run automatic segmentation on the web (Google Colaboratory)
-* Perform manual refinement and 3D STL export locally using SegRef3D
+* Run automatic segmentation on the web using Google Colaboratory
+* Download the generated **standard PNG label masks**
+* Load the masks into the local SegRef3D application for manual refinement, STL export, NIfTI export, and measurement CSV output
 
 ### 🔗 Web-based Segmentation Tutorial
 
@@ -169,15 +170,20 @@ If you do not have a CUDA GPU environment, you can still perform segmentation us
 
 ### 📷 Notes for Web-based Workflow
 
-* The web version only supports `.jpg` images as input.
-* When you load DICOM images into SegRef3D, the corresponding `.jpg` versions are automatically saved in the new folder.
-* You can then upload those `.jpg` images to Google Colab for segmentation.
+* The web version currently supports `.jpg` images as input.
+* When DICOM images are loaded into SegRef3D, corresponding `.jpg` images are automatically saved in a new folder.
+* These `.jpg` images can be uploaded to Google Colab for automatic segmentation.
+* The web version outputs **standard PNG label masks** with the same image size as the original input images.
 
 ### 🔁 Final Integration
 
-* Import the `.svg` mask files generated on the web into SegRef3D.
-* You can edit them interactively and export STL models even without a GPU.
-* On non-GPU systems, all automatic SAM2 features will be disabled by default.
+* Import the **standard PNG label masks** generated on the web into SegRef3D using **Load Masks**.
+* The standard PNG mask is a single-channel label image:
+  * `0` = background
+  * `1–20` = object labels
+* You can then edit the masks interactively and export STL models, NIfTI label maps, and measurement CSV files locally.
+* Legacy `.svg` mask files from older versions can still be loaded, but the recommended format is now the single-channel PNG label mask.
+* On non-GPU systems, all automatic SAM2 features in the local SegRef3D application are disabled by default.
 
 ---
 
