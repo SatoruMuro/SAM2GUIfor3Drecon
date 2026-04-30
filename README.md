@@ -165,8 +165,8 @@ If you do not have a CUDA-compatible GPU, you can still use SegRef3D through a h
 
 ### 🔗 Web-based Segmentation Tutorial
 
-* 🇯🇵 Japanese: [TutorialJP1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialJP1.md)
-* 🇺🇸 English: [TutorialEN1.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialEN1.md)
+* 🇯🇵 Japanese: [TutorialSegOnWebJP.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegOnWebJP.md)
+* 🇺🇸 English: [TutorialSegOnWebEN.md](https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/Tutorial/TutorialSegOnWebEN.md)
 
 ### 📷 Notes for Web-based Workflow
 
