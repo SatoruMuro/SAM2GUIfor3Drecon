@@ -194,7 +194,7 @@ If you do not have a CUDA-compatible GPU, you can still use SegRef3D through a h
 
 
 # Update  
-2026.5.1  
+**2026.5.1**   
 SegRef3D **ver.1.2.0** を公開。  
 マスク処理をラスター処理ベースに統一し、編集・保存・読み込みの安定性を改善。  
 UIを整理し、基本操作を常設ボタンに、応用機能を `Extensions` に集約。  
