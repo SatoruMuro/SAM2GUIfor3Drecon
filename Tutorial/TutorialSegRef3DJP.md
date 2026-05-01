@@ -24,9 +24,12 @@
   - 描画を確定：`G`, `H`  
   - 直前のクリックポイントをUndo：`T`, `Y`
 
-- **↩️ Undo（描画や編集の取り消し）**  
-  - `Ctrl + Z`（別途実装されている場合）
-
+- **↩️ Undo / Redo**  
+  - 描画線の取り消し：`Undo Line`
+  - 描画線のやり直し：`Redo Line`
+  - 編集操作の取り消し：`Undo Edit`
+  - 編集操作のやり直し：`Redo Edit`
+  - ショートカット：`Ctrl + Z`（実装されている場合）
 
 ---
 
@@ -34,121 +37,143 @@
 
 ### 🤖 自動セグメンテーション（Segmentation）
 
-1. `Load Image Folder` で画像を読み込み
-2. `Prepare Tracking` でトラッキングの準備
-3. `Set Box Prompt` で対象を囲む矩形を設定
-4. トラッキングの開始位置の画像を表示 → `Set Tracking Start`
-5. 終了位置の画像を表示 → `Set Tracking End`
-6. `Run Tracking` を押す（※時間がかかる場合あり）
-7. `Target Object` 番号を指定し、`Add to Mask` を押してマスクを登録
-8. オブジェクト表示は画面下のチェックボックスでON/OFF可能
+1. `Load Images` で画像を読み込みます。
+2. `Prepare Tracking` でトラッキングの準備を行います。
+3. `Set Box Prompt` で対象を囲む矩形を設定します。
+4. トラッキング開始位置の画像を表示し、`Set Tracking Start` を押します。
+5. トラッキング終了位置の画像を表示し、`Set Tracking End` を押します。
+6. `Run Tracking` を押します。  
+   ※画像枚数やPC環境によって時間がかかる場合があります。
+7. `Target Object` 番号を指定し、`Add to Mask` を押してマスクを登録します。
+8. オブジェクト表示は、画面下のチェックボックスでON/OFFできます。
 
 ---
 
 ### ✏️ 編集（Refinement）
 
-* マウスまたはタッチペンで画像上に描画
-* `Target Object` に対して `Add` または `Erase` を選んでマスクを編集
-* ペン色：`Gray`, `White`, `Black`
-* 描画モード：`Free`, `Click`, `Click (Snap)`
+* マウスまたはタッチペンで画像上に描画します。
+* `Target Object` で編集対象のオブジェクト番号を選択します。
+* 描画した領域を対象オブジェクトに追加する場合は、`Add to Mask` を押します。
+* 描画した領域を対象オブジェクトから削除する場合は、`Erase from Mask` を押します。
+* ペン色は `Pen Color` で選択します。
+* 描画モードは `Draw Mode` で選択します。
+* 描画線は、`Undo Line`、`Redo Line`、`Clear Lines`、`Clear All Lines` で操作できます。
+* 編集操作は、`Undo Edit`、`Redo Edit` で取り消し・やり直しできます。
+
+---
+
+### 🔁 オブジェクト間のマスク転送
+
+* `Target Object` で転送元のオブジェクトを選択します。
+* `Transfer To:` で転送先のオブジェクト番号を指定します。
+* 必要に応じて、現在のマスクを別オブジェクトに移すことができます。
 
 ---
 
 ### 💾 セグメンテーションデータの保存
 
-* `Save SVG` で作業内容をSVG形式で保存
-* 次回編集時は：
+* `Save Masks` で作業内容を保存します。
+* 次回編集時は、以下の順に読み込みます。
 
-  * `Load Image Folder` で画像読み込み
-  * `Load Mask Folder` で保存済みSVGフォルダを指定
+  * `Load Images` で画像を読み込みます。
+  * `Load Masks` で保存済みマスクを読み込みます。
 
 ---
 
-### 📏 キャリブレーション（DICOM画像以外）
+### 📏 キャリブレーション
 
-* 実寸長と切片間隔を入力
-* `Draw Calibration Line` を押して、画像上に線を描画
+* `Line Length (mm)` に、画像上で指定する基準線の実際の長さを入力します。
+* `Z Interval (mm)` に、画像間のZ方向間隔を入力します。
+* `Calibration Line` を押して、画像上に基準線を描画します。
+* キャリブレーション後、距離測定や3D出力時のスケールに反映されます。
 
 ---
 
 ### 📐 3D出力
 
-* `Export STL per Color` を押すとオブジェクトごとにSTL出力
-* STLの閲覧は外部ツール（例：3D Slicer, MeshLab）を使用
+* 必要に応じて `Smooth Level` と `Smooth Mode` を設定します。
+* `Export 3D` を押すと、3Dデータを出力できます。
+* 出力した3Dデータの確認には、外部ツールを使用してください。  
+  例：3D Slicer, MeshLab
 
 ---
 
-### 📊 計測
+### 📊 体積情報の確認
 
-* `Export Volume CSV` でオブジェクトごとの体積をCSV出力
-
----
-
-## 🧩 応用機能
-
-### 🔁 複数オブジェクトの一括トラッキング
-
-1. 各オブジェクトに対し：
-
-   * Box Promptの指定
-   * Tracking Start/End の指定
-   * `Add Object Prompt` を押す
-2. すべて指定後、`Run Batch Tracking` を押す
-
----
-
-### 🎚️ 閾値抽出
-
-* `Threshold min` と `max` を指定
-* `Extract by Threshold` を押すと該当領域を抽出
-* `Add to Mask` でターゲットオブジェクトに追加
-* プリセット設定あり（例：CT Soft Tissue など）
-
----
-
-### 🖍️ RGBカラー抽出
-
-* `Target RGB` に R/G/B の数値と許容範囲（±Tol）を指定  
-* `Extract by RGB` を押すと、指定した色に近い領域を抽出  
-* `Pick Color` を使えば、画像上をクリックしてRGB値を取得可能  
-* `Add to Mask` でターゲットオブジェクトに追加可能  
-
----
-
-### 🧱 オブジェクトの前面／背面移動
-
-* 対象のオブジェクト番号を `Reorder` に指定
-* `Bring to Front` または `Send to Back` を押す
-
----
-
-### 🧹 小さいマスク片の削除
-
-* `Delete Object` に対象番号と `Threshold(px^2)` を指定
-* `Remove Small Parts` を押す
-
----
-
-### ❌ セグメンテーションマスクの削除
-
-* `Delete Object CurrentImg`：現在画像のマスク削除
-* `Delete Object AllImg`：すべての画像で削除
-
----
-
-### 💠 3D STLファイルのスムージング
-
-* `Smooth mode` を選択
-* z-interpolation／mesh smoothing のON/OFF選択可
+* `Load VolInfo` で体積情報を読み込みます。
+* `Show VolInfo` で体積情報を表示します。
+* 体積計算には、キャリブレーション情報とZ方向間隔が反映されます。
 
 ---
 
 ### 📏 距離の測定（2点間距離）
 
-* `Measurement Line` を押す  
-* 測定したい2点をクリックして直線を引く  
-* キャリブレーションが済んでいれば、実際の長さ（mm）で表示される  
-* 測定結果は画面上に一時表示され、`Export Measurements` ボタンでCSVとして出力可能  
+* `Measurement Line` を押します。
+* 測定したい2点をクリックして直線を引きます。
+* キャリブレーションが済んでいれば、実際の長さ（mm）で表示されます。
+* 測定結果は画面上に一時表示されます。
+* `Export Measurements` で測定結果を出力できます。
 
 ---
 
+## 🧩 応用機能
+
+以下の機能は、画面左下の `Extensions` から選択して使用します。
+
+---
+
+### 🔁 複数オブジェクトの一括トラッキング
+
+1. `Extensions` から一括トラッキング機能を選択します。
+2. 各オブジェクトに対して、以下を指定します。
+
+   * Box Promptの指定
+   * Tracking Start/End の指定
+   * `Add Object Prompt`
+
+3. すべての対象を指定後、`Run Batch Tracking` を押します。
+
+---
+
+### 🎚️ 閾値抽出
+
+1. `Extensions` から閾値抽出機能を選択します。
+2. `Threshold min` と `max` を指定します。
+3. `Extract by Threshold` を押すと、指定した閾値範囲の領域を抽出できます。
+4. `Add to Mask` でターゲットオブジェクトに追加できます。
+5. プリセット設定がある場合は、CT Soft Tissue などを選択できます。
+
+---
+
+### 🖍️ RGBカラー抽出
+
+1. `Extensions` からRGBカラー抽出機能を選択します。
+2. `Target RGB` に R/G/B の数値と許容範囲（±Tol）を指定します。
+3. `Extract by RGB` を押すと、指定した色に近い領域を抽出できます。
+4. `Pick Color` を使うと、画像上をクリックしてRGB値を取得できます。
+5. `Add to Mask` でターゲットオブジェクトに追加できます。
+
+---
+
+### 🧹 小さいマスク片の削除
+
+1. `Extensions` から小さいマスク片の削除機能を選択します。
+2. `Delete Object` に対象オブジェクト番号を指定します。
+3. `Threshold(px^2)` に削除対象とする面積の閾値を指定します。
+4. `Remove Small Parts` を押すと、指定した面積以下の小さいマスク片を削除できます。
+
+---
+
+### ❌ セグメンテーションマスクの削除
+
+1. `Extensions` からマスク削除機能を選択します。
+2. `Delete Object CurrentImg` を押すと、現在表示中の画像のみ、対象オブジェクトのマスクを削除します。
+3. `Delete Object AllImg` を押すと、すべての画像で対象オブジェクトのマスクを削除します。
+
+---
+
+## 📝 補足
+
+* `Reorder`、`Bring to Front`、`Send to Back` は削除済みのため、ver.1.2.0では使用しません。
+* ver.1.2.0では、画像処理の内部処理を改善し、マスク処理をラスター処理で統一しています。
+* UI上に常時表示されていない機能は、基本的に `Extensions` から選択して使用します。
