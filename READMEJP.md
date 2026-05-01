@@ -5,7 +5,7 @@
 
 ---
 
-<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3Dimage02.png" alt="image" width="100%">
+<img src="https://github.com/SatoruMuro/SAM2GUIfor3Drecon/blob/main/images/SegRef3D-v1.2.0-GUI.png" alt="image" width="100%">
 
 ---
 
