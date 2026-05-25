@@ -56,7 +56,7 @@ Watch the **Basic Workflow** video to learn how to use SegRef3D, from loading im
 
 Newest build with improved image-processing workflow, unified raster-based mask handling, and UI improvements.
 
-* [`SegRef3D-ver1.2.0.zip`](https://www.dropbox.com/scl/fi/vdu2oz7aauooiwekc3p2p/SegRef3D-ver1.2.0.zip?rlkey=19ym10zhawr1rbi6gam5s0b05&st=pp8tcgbr&dl=1)
+* [`SegRef3D-ver1.2.1.zip`](https://www.dropbox.com/scl/fi/um7pvcdw1nygwcj8d1x76/SegRef3D-ver1.2.1.zip?rlkey=n6p8ewi5nvjji4ds39ij0ghfu&st=kqwc6w63&dl=1)
 
 #### **Previous Stable Version — ver.1.1.0**
 
