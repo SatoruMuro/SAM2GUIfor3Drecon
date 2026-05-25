@@ -56,7 +56,7 @@ SegRef3Dの基本的な操作手順をご覧いただける動画を掲載して
 画像処理の内部処理を改善し、マスク処理をラスター処理で統一しました。  
 また、UIも改善した最新版です。
 
-* [`SegRef3D-ver1.2.0.zip`](https://www.dropbox.com/scl/fi/vdu2oz7aauooiwekc3p2p/SegRef3D-ver1.2.0.zip?rlkey=19ym10zhawr1rbi6gam5s0b05&st=pp8tcgbr&dl=1)
+* [`SegRef3D-ver1.2.1.zip`](https://www.dropbox.com/scl/fi/um7pvcdw1nygwcj8d1x76/SegRef3D-ver1.2.1.zip?rlkey=n6p8ewi5nvjji4ds39ij0ghfu&st=kqwc6w63&dl=1)
 
 #### **旧安定版 — ver.1.1.0**
 
