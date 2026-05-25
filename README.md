@@ -52,7 +52,7 @@ Watch the **Basic Workflow** video to learn how to use SegRef3D, from loading im
 
 ### 1. Download
 
-#### **Latest Version — ver.1.2.0**
+#### **Latest Version — ver.1.2.1**
 
 Newest build with improved image-processing workflow, unified raster-based mask handling, and UI improvements.
 
