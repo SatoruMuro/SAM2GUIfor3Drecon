@@ -197,6 +197,19 @@ CUDA非対応環境でも、以下のように段階的に処理することで 
 ---
 
 
+## Related Tool: SegRef3D Viewer
+
+SegRef3D Viewerは、SegRef3Dから出力されたSTLファイルを確認・可視化するための、Windows用スタンドアロン3Dビューアーです。
+
+複数のSTLファイルを読み込み、各構造を個別の色付きオブジェクトとして表示できます。表示・非表示、色、透明度の調整、断面表示、スクリーンショット保存、色付きOBJ＋MTL形式でのエクスポートに対応しています。
+
+SegRef3D Viewerは、SegRef3Dで作成したSTLモデルの出力後確認・可視化を目的としたビューアーです。STLメッシュの編集、修復、平滑化、改変は行いません。
+
+Repository and download:
+https://github.com/SatoruMuro/SegRef3DViewer
+
+---
+
 # License
 The code for the SegRef3D, JPG Converter, SAM2  for Img Seq, ColorChanger, Vectorizer Colab, Segment Editor PP, Graphic2shape, and Object Mask Splitter is licensed under the [Apache 2.0 License](https://github.com/SatoruMuro/SAM2for3Drecon/blob/main/LICENSE).
 
