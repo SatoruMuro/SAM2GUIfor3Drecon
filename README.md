@@ -192,7 +192,7 @@ If you do not have a CUDA-compatible GPU, you can still use SegRef3D through a h
 
 ---
 
-### Related Tool: SegRef3D Viewer
+## Related Tool: SegRef3D Viewer
 
 SegRef3D Viewer is a standalone Windows 3D viewer for STL files exported from SegRef3D.
 
