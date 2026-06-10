@@ -192,6 +192,18 @@ If you do not have a CUDA-compatible GPU, you can still use SegRef3D through a h
 
 ---
 
+### Related Tool: SegRef3D Viewer
+
+SegRef3D Viewer is a standalone Windows 3D viewer for STL files exported from SegRef3D.
+
+It allows users to load multiple STL files, display each structure as a separate colored object, adjust visibility, color, and opacity, inspect models using section cuts, and export visible objects as a colored OBJ + MTL pair.
+
+SegRef3D Viewer is intended for post-export inspection and visualization. It does not edit, repair, smooth, or modify STL meshes.
+
+Repository and download:
+https://github.com/SatoruMuro/SegRef3DViewer
+
+---
 
 # Update  
 **2026.5.1**   
